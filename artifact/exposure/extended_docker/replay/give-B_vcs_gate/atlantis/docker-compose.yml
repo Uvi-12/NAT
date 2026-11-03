@@ -1,0 +1,58 @@
+# APF / APF - REPLAY reproduction: Atlantis (+ Gitea) (#38)
+# Atlantis gates `atlantis apply` on the VCS PR approval (apply_requirements: approved).
+# It therefore inherits the approval-binding of the VCS: if Gitea does not dismiss stale
+# approvals, an approval of plan A authorizes an apply of a swapped-in plan B.
+#
+# Bring up:  docker compose up -d && ./init_atlantis.sh
+# Run:       python3 harness_atlantis.py
+# Tear down: docker compose down -v
+services:
+  gitea:
+    image: gitea/gitea:1.22.3-rootless
+    pull_policy: missing
+    container_name: apf-atl-gitea
+    environment:
+      GITEA__security__INSTALL_LOCK: "true"
+      GITEA__database__DB_TYPE: "sqlite3"
+      GITEA__server__ROOT_URL: "http://gitea:3000/"
+      GITEA__server__OFFLINE_MODE: "true"
+      GITEA__webhook__ALLOWED_HOST_LIST: "*"
+    ports:
+      - "3000:3000"
+    volumes:
+      - atl-gitea-data:/var/lib/gitea
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/healthz || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  atlantis:
+    image: ghcr.io/runatlantis/atlantis:v0.31.0
+    pull_policy: missing
+    container_name: apf-atl-atlantis
+    depends_on:
+      gitea:
+        condition: service_healthy
+    command: server
+    environment:
+      ATLANTIS_ATLANTIS_URL: "http://atlantis:4141"
+      ATLANTIS_GITEA_USER: "author"
+      ATLANTIS_GITEA_TOKEN: "${AUTHOR_TOKEN}"
+      ATLANTIS_GITEA_WEBHOOK_SECRET: "apfsecret"
+      ATLANTIS_GITEA_BASE_URL: "http://gitea:3000"
+      ATLANTIS_REPO_ALLOWLIST: "gitea:3000/author/*"
+      ATLANTIS_REPO_CONFIG: "/etc/atlantis/repos.yaml"
+      ATLANTIS_WRITE_GIT_CREDS: "true"
+      ATLANTIS_DISABLE_APPLY_ALL: "true"
+      ATLANTIS_HIDE_PREV_PLAN_COMMENTS: "true"
+      ATLANTIS_LOG_LEVEL: "info"
+    ports:
+      - "4141:4141"
+    volumes:
+      - ./repos.yaml:/etc/atlantis/repos.yaml:ro
+      - atl-data:/atlantis-data
+
+volumes:
+  atl-gitea-data:
+  atl-data:

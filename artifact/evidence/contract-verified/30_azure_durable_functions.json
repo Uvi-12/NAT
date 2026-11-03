@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "EventRaised row in Azure Storage History or Instances",
+  "evidence_class": "N2",
+  "id": "30",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Azure Durable Functions",
+  "tested_basis": "durable extension pinned",
+  "verdict": "Conditional exposed"
+}

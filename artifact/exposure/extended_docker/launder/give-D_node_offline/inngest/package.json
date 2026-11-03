@@ -1,0 +1,10 @@
+{
+  "name": "apf-replay-inngest",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "inngest": "^3.22.0",
+    "express": "^4.19.2"
+  }
+}

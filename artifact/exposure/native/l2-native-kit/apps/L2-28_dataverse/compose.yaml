@@ -1,0 +1,35 @@
+# Dataverse (L2-28) — app + PostgreSQL + Solr. Heavy stack; the forge targets the
+# documented datasetversion.versionstate column directly in PostgreSQL.
+name: apf-l2-dataverse
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: dataverse
+      POSTGRES_PASSWORD: dataverse
+      POSTGRES_DB: dataverse
+    ports:
+      - "5428:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dataverse"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  solr:
+    image: solr:9
+    command: ["solr-precreate", "collection1"]
+  dataverse:
+    image: gdcc/dataverse:6.3
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATAVERSE_DB_HOST: db
+      DATAVERSE_DB_USER: dataverse
+      DATAVERSE_DB_PASSWORD: dataverse
+      DATAVERSE_DB_NAME: dataverse
+      DATAVERSE_SOLR_HOST: solr
+      # dev bootstrap token used by the harness to seed via the native API
+      APF_API_TOKEN: "apf-dev-token"
+    ports:
+      - "8080:8080"

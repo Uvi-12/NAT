@@ -1,0 +1,568 @@
+repo_id,framework,status,stars_bucket,files,durable,verifier_anywhere,verifier_near_approval
+d0842c7013632cf7,LangGraph,api_not_used,,,,,
+c6f3bafc71c3c4fd,LangGraph,ok,0-9,893,True,True,True
+b2dca5caf66b43b4,LangGraph,ok,0-9,529,False,True,True
+d52108c922ec9699,LangGraph,ok,10-99,17,True,False,False
+470d7ae516444bda,LangGraph,ok,0-9,81,True,True,False
+1d8cbe33402d2494,LangGraph,ok,10-99,23,False,False,False
+219a6ce3bf16cfc8,LangGraph,ok,0-9,2147,False,True,True
+602d0f24dcbd4c68,LangGraph,ok,0-9,3,True,False,False
+f59309d3edf3fd61,LangGraph,ok,0-9,75,False,False,False
+b805a278af992c80,LangGraph,api_not_used,,,,,
+f2b12346c768b81c,LangGraph,ok,0-9,108,True,False,False
+bddf830446758532,LangGraph,ok,0-9,48,True,False,False
+0c93283bd8d922a7,LangGraph,ok,0-9,9,False,False,False
+75659c5cc04a1948,LangGraph,ok,0-9,61,True,True,True
+4444fa811e6e7f45,LangGraph,ok,0-9,65,False,False,False
+c6bbb18283c58cee,LangGraph,ok,0-9,58,True,False,False
+06ba2ef972a9bf96,LangGraph,ok,10-99,24,True,False,False
+02ab0a4e7c4f1b20,LangGraph,ok,0-9,46,False,False,False
+0bb6f5090fc735fd,LangGraph,ok,0-9,404,False,True,True
+0cd9aa6371e81390,LangGraph,ok,0-9,54,True,False,False
+5a99f9badb5c899f,LangGraph,ok,100+,2,False,False,False
+2e49cf18d62c61ca,LangGraph,ok,0-9,22,True,False,False
+72e23aa19f2f9085,LangGraph,ok,0-9,69,True,True,False
+b25a32dcbad8219e,LangGraph,ok,0-9,15,True,False,False
+d71c9eb628512a7b,LangGraph,ok,0-9,17,False,False,False
+481c6e7380b95534,LangGraph,ok,100+,222,False,True,True
+e47d79a6f9016672,LangGraph,ok,10-99,3276,False,True,True
+ffa51b9cf43d6e80,LangGraph,api_not_used,,,,,
+72b511219a0dec68,LangGraph,ok,0-9,120,False,False,False
+100e5c642775c093,LangGraph,ok,0-9,4,False,False,False
+c38cc06f838ddcc5,LangGraph,ok,0-9,122,True,True,True
+905e777670b47d9e,LangGraph,ok,0-9,32,False,False,False
+46c2f51586c84f42,LangGraph,ok,0-9,6,True,False,False
+1efb413a4210e96b,LangGraph,api_not_used,,,,,
+e5ff85f27cd402d4,LangGraph,ok,10-99,657,True,True,True
+a2ef0f7d66e02c6f,LangGraph,ok,0-9,8,False,False,False
+30c85a9f954bc41d,LangGraph,ok,0-9,79,True,True,True
+d8a3f533cb08ee62,LangGraph,ok,0-9,4,True,False,False
+23a8ac9bbfd48d89,LangGraph,ok,0-9,216,True,True,True
+32060bea5cfd04cc,LangGraph,ok,0-9,11,True,False,False
+46e1675316a521ca,LangGraph,ok,0-9,270,True,True,True
+2e7b1048654037a1,LangGraph,ok,0-9,738,True,True,True
+2f529c1be8b4d468,LangGraph,ok,0-9,16,True,True,False
+0505ff4525ba4bca,LangGraph,ok,0-9,565,True,True,True
+cc5eb5e6248762aa,LangGraph,ok,0-9,242,True,True,True
+be7cfcd2e3905d75,LangGraph,ok,0-9,53,True,False,False
+1765f2d52c899f2d,LangGraph,ok,100+,417,True,True,True
+024b1a8fde212b03,LangGraph,ok,0-9,72,True,True,True
+f122e3ce9d3f778f,LangGraph,api_not_used,,,,,
+102222ef7198b8ff,LangGraph,api_not_used,,,,,
+a0c6397d34a60fb7,LangGraph,api_not_used,,,,,
+5467d81d122104c5,LangGraph,ok,0-9,35,True,False,False
+e183675f8b406175,LangGraph,ok,0-9,2,False,False,False
+c85b85091c638abf,LangGraph,ok,10-99,491,True,False,False
+ebd133f43050b360,LangGraph,ok,0-9,468,False,True,True
+fe92f2c1e8c8dab3,LangGraph,ok,0-9,43,False,False,False
+40fab17cf09c9561,LangGraph,ok,0-9,38,False,True,True
+1a8684ee41748794,OpenAI Agents SDK,api_not_used,,,,,
+1ac496e7e0592ce4,OpenAI Agents SDK,api_not_used,,,,,
+4c828a9be9de8694,OpenAI Agents SDK,api_not_used,,,,,
+5a8d117728b301bc,OpenAI Agents SDK,api_not_used,,,,,
+7584f09887b355f4,OpenAI Agents SDK,ok,0-9,14,False,False,False
+2e528a1c63f891fb,OpenAI Agents SDK,ok,0-9,171,True,True,True
+6d8743d2562d43bc,OpenAI Agents SDK,api_not_used,,,,,
+14c90e37f9ecc29c,OpenAI Agents SDK,api_not_used,,,,,
+7721972f29ef1d14,OpenAI Agents SDK,api_not_used,,,,,
+fa5cbddb1ea07388,OpenAI Agents SDK,api_not_used,,,,,
+1c138d87cfc11aa9,OpenAI Agents SDK,api_not_used,,,,,
+2c03038c607b20c2,OpenAI Agents SDK,ok,0-9,849,True,True,True
+8603f66647223be5,OpenAI Agents SDK,api_not_used,,,,,
+4edb684abdbc3328,OpenAI Agents SDK,api_not_used,,,,,
+c2b7e53fae41db40,OpenAI Agents SDK,api_not_used,,,,,
+a06ae37f0a288599,OpenAI Agents SDK,api_not_used,,,,,
+f6b3961d260bb0d1,OpenAI Agents SDK,api_not_used,,,,,
+1cdbda2a2a52a70c,OpenAI Agents SDK,api_not_used,,,,,
+1efcf7b47153646b,OpenAI Agents SDK,ok,0-9,63,True,False,False
+f7c42fc5ee64886f,OpenAI Agents SDK,api_not_used,,,,,
+0781eb4f559b8208,OpenAI Agents SDK,ok,0-9,633,False,True,True
+19045adc0cc81b4a,OpenAI Agents SDK,ok,100+,37,False,False,False
+68a7b4008f2282e9,OpenAI Agents SDK,ok,0-9,75,False,False,False
+06551644be21eeac,OpenAI Agents SDK,api_not_used,,,,,
+02ac66a60f380e19,OpenAI Agents SDK,api_not_used,,,,,
+dcdb5d3eebc4d343,OpenAI Agents SDK,api_not_used,,,,,
+2d790fb2940816ec,OpenAI Agents SDK,api_not_used,,,,,
+b86b1d571126c71e,OpenAI Agents SDK,api_not_used,,,,,
+6e8f80427b3a6a03,OpenAI Agents SDK,api_not_used,,,,,
+0e18f0474c2bb948,OpenAI Agents SDK,api_not_used,,,,,
+5f457e3f24741c05,OpenAI Agents SDK,api_not_used,,,,,
+eab95514d24f310b,OpenAI Agents SDK,ok,10-99,917,True,True,True
+a906f1592db04a6f,OpenAI Agents SDK,api_not_used,,,,,
+3ae6fb1844103d9e,OpenAI Agents SDK,api_not_used,,,,,
+06b490a3c45a3e32,OpenAI Agents SDK,api_not_used,,,,,
+cfa14d6b98202ea7,OpenAI Agents SDK,api_not_used,,,,,
+fd7430c56725372b,OpenAI Agents SDK,api_not_used,,,,,
+c0e03bab311060a8,OpenAI Agents SDK,api_not_used,,,,,
+807d6807b6487f95,OpenAI Agents SDK,api_not_used,,,,,
+9342ddb3ca17219b,OpenAI Agents SDK,ok,0-9,3533,True,True,True
+86b322fd21eac6b6,OpenAI Agents SDK,ok,0-9,813,True,True,True
+0f2d302a6ccff684,OpenAI Agents SDK,api_not_used,,,,,
+6fd5bca6be483c91,OpenAI Agents SDK,api_not_used,,,,,
+2aa0da1192f2f43c,OpenAI Agents SDK,api_not_used,,,,,
+6ae0dbbb8c105029,OpenAI Agents SDK,api_not_used,,,,,
+265cb86d54211fb9,OpenAI Agents SDK,api_not_used,,,,,
+9c423c666ffdab27,OpenAI Agents SDK,api_not_used,,,,,
+36bef72280ee6cb9,OpenAI Agents SDK,api_not_used,,,,,
+e174372469da422c,OpenAI Agents SDK,ok,0-9,259,False,True,True
+e37708f60b728e63,OpenAI Agents SDK,api_not_used,,,,,
+b1fa23d21ab9091c,OpenAI Agents SDK,api_not_used,,,,,
+d32c664bff4c8095,OpenAI Agents SDK,api_not_used,,,,,
+06715f7805fcc792,OpenAI Agents SDK,api_not_used,,,,,
+3806e1fe3e93f895,OpenAI Agents SDK,api_not_used,,,,,
+be36d913f76999d6,OpenAI Agents SDK,api_not_used,,,,,
+9a296c125e9f8ce2,OpenAI Agents SDK,api_not_used,,,,,
+27cb1c9b69815e75,OpenAI Agents SDK,api_not_used,,,,,
+16ed1c39206b026e,OpenAI Agents SDK,api_not_used,,,,,
+7b0a1699df753791,OpenAI Agents SDK,api_not_used,,,,,
+5af5e4835ad55f07,OpenAI Agents SDK,api_not_used,,,,,
+4af67efd1c2f6533,OpenAI Agents SDK,ok,100+,432,True,True,False
+3fe00f25ffc9c762,OpenAI Agents SDK,api_not_used,,,,,
+8d36d8e2006ec428,OpenAI Agents SDK,api_not_used,,,,,
+dd836c99ec5e7dc7,OpenAI Agents SDK,ok,0-9,754,False,False,False
+169a704af183ee19,OpenAI Agents SDK,api_not_used,,,,,
+5462c40c57666e5a,OpenAI Agents SDK,api_not_used,,,,,
+74d21e20219b0e0f,OpenAI Agents SDK,api_not_used,,,,,
+2d615394a3e3c302,OpenAI Agents SDK,api_not_used,,,,,
+4641405fcd915e7d,OpenAI Agents SDK,ok,0-9,23,False,True,False
+01f57c5a2de4c4d0,OpenAI Agents SDK,api_not_used,,,,,
+a57d53448a569aa9,OpenAI Agents SDK,api_not_used,,,,,
+27531c975b37fad0,OpenAI Agents SDK,ok,100+,1399,True,True,True
+6fa1e5b13089a72f,OpenAI Agents SDK,api_not_used,,,,,
+5e0185e4393cefcd,OpenAI Agents SDK,api_not_used,,,,,
+ffe7a2970090172b,OpenAI Agents SDK,api_not_used,,,,,
+d2d8373d4b90fa09,OpenAI Agents SDK,api_not_used,,,,,
+0b9baa7a7502145f,OpenAI Agents SDK,api_not_used,,,,,
+f2d91522edd9d2dd,OpenAI Agents SDK,api_not_used,,,,,
+7aaab4b8b55c1ff8,OpenAI Agents SDK,api_not_used,,,,,
+f8228bf3fb25d818,OpenAI Agents SDK,ok,0-9,4,False,False,False
+3e951f369e30c323,OpenAI Agents SDK,api_not_used,,,,,
+90364d59186101d1,OpenAI Agents SDK,ok,0-9,342,True,True,False
+815ab26516840b9d,OpenAI Agents SDK,ok,0-9,416,False,True,True
+f762c6541fb0267b,OpenAI Agents SDK,api_not_used,,,,,
+bbde6a51d923b14b,OpenAI Agents SDK,api_not_used,,,,,
+994f0c10646de49d,OpenAI Agents SDK,api_not_used,,,,,
+1f1a909ed9f37282,OpenAI Agents SDK,api_not_used,,,,,
+7f0e9d960c707dc7,OpenAI Agents SDK,api_not_used,,,,,
+4e1c6628622f4164,OpenAI Agents SDK,ok,10-99,247,True,True,True
+7e404a83ca0bc061,OpenAI Agents SDK,api_not_used,,,,,
+fe69d0c315c380cc,OpenAI Agents SDK,ok,0-9,3327,True,True,False
+da3be805a8e87e3b,OpenAI Agents SDK,api_not_used,,,,,
+a8297a11795fea89,OpenAI Agents SDK,ok,0-9,213,False,True,True
+b39e36676e53e5bf,OpenAI Agents SDK,api_not_used,,,,,
+75a37dd6576fe15a,OpenAI Agents SDK,api_not_used,,,,,
+36cbef78d0014213,OpenAI Agents SDK,api_not_used,,,,,
+e31dd70109fe55bb,OpenAI Agents SDK,api_not_used,,,,,
+e921190a2e0727da,OpenAI Agents SDK,api_not_used,,,,,
+44f7c54c1fe55147,OpenAI Agents SDK,api_not_used,,,,,
+3379c2a2b391454e,OpenAI Agents SDK,api_not_used,,,,,
+2df6e1d5ae691774,OpenAI Agents SDK,ok,0-9,111,True,True,False
+2bc8c04d6d5b87b2,OpenAI Agents SDK,api_not_used,,,,,
+0e385ace97221f37,OpenAI Agents SDK,api_not_used,,,,,
+00fc7216cb9985c2,OpenAI Agents SDK,api_not_used,,,,,
+15dd2dbd58b7cc6b,OpenAI Agents SDK,api_not_used,,,,,
+3512ea58120f0a9e,OpenAI Agents SDK,api_not_used,,,,,
+aca5a7538f055264,OpenAI Agents SDK,api_not_used,,,,,
+52a7779ad5bcf3ef,OpenAI Agents SDK,api_not_used,,,,,
+be0d8477e29fa0fa,OpenAI Agents SDK,api_not_used,,,,,
+3d96b82aa058ae2f,OpenAI Agents SDK,api_not_used,,,,,
+80b42089154b808a,OpenAI Agents SDK,ok,0-9,201,False,True,False
+a4ca0e81a55d6fec,OpenAI Agents SDK,api_not_used,,,,,
+e2b8418b11111503,OpenAI Agents SDK,ok,0-9,261,True,True,True
+8523b0d088388d98,OpenAI Agents SDK,api_not_used,,,,,
+5948e460a7774a75,OpenAI Agents SDK,api_not_used,,,,,
+48c49f367a35ea02,OpenAI Agents SDK,api_not_used,,,,,
+fb0fb9fa649560c9,OpenAI Agents SDK,api_not_used,,,,,
+3bb749ae3b5a1fe8,OpenAI Agents SDK,ok,0-9,4989,True,True,True
+e6e6aa55ca7f1647,OpenAI Agents SDK,api_not_used,,,,,
+a17f4c1a8c0c3fdc,OpenAI Agents SDK,api_not_used,,,,,
+21229cf0d73c4ca6,OpenAI Agents SDK,api_not_used,,,,,
+05e2bc25caeb5fd4,OpenAI Agents SDK,api_not_used,,,,,
+1624aaa6e2214b6b,OpenAI Agents SDK,api_not_used,,,,,
+a1ff91398606e433,OpenAI Agents SDK,ok,100+,4130,True,True,True
+4983f16d806914bc,OpenAI Agents SDK,api_not_used,,,,,
+fb2666311ebddebe,OpenAI Agents SDK,api_not_used,,,,,
+b260b80f97200d6a,OpenAI Agents SDK,api_not_used,,,,,
+b6fb4c76de4657fb,OpenAI Agents SDK,api_not_used,,,,,
+1eac8fbc5ee35352,OpenAI Agents SDK,api_not_used,,,,,
+ab7df94385d647dc,OpenAI Agents SDK,ok,100+,6589,True,True,True
+7e820b82a111d47c,OpenAI Agents SDK,api_not_used,,,,,
+86f36c373c0d7d33,OpenAI Agents SDK,api_not_used,,,,,
+74049b5d6bed360d,OpenAI Agents SDK,api_not_used,,,,,
+31ea3b9f46df102f,OpenAI Agents SDK,ok,0-9,1595,True,True,True
+eab801c1074cc63d,OpenAI Agents SDK,api_not_used,,,,,
+82e052bf2d586914,OpenAI Agents SDK,api_not_used,,,,,
+c2a5aa626fda4188,OpenAI Agents SDK,api_not_used,,,,,
+8791d931368030b8,OpenAI Agents SDK,api_not_used,,,,,
+74f33a560d82435e,OpenAI Agents SDK,api_not_used,,,,,
+274fb0f9a6a90b9d,OpenAI Agents SDK,ok,0-9,265,False,False,False
+438b13a150157f39,OpenAI Agents SDK,api_not_used,,,,,
+8137d3abaf654fb8,OpenAI Agents SDK,ok,0-9,245,False,True,True
+9cfcc3e81a6cd875,OpenAI Agents SDK,api_not_used,,,,,
+49f1f5a80549e137,OpenAI Agents SDK,api_not_used,,,,,
+d5345e1ea9c0090e,OpenAI Agents SDK,ok,0-9,556,True,False,False
+1d62a9e82064f5a1,OpenAI Agents SDK,ok,0-9,2206,True,True,True
+90a7422d0ecf0328,OpenAI Agents SDK,api_not_used,,,,,
+fe533806a5f518d1,OpenAI Agents SDK,api_not_used,,,,,
+6af5540b550be857,OpenAI Agents SDK,api_not_used,,,,,
+1ef01c6d44497a87,OpenAI Agents SDK,api_not_used,,,,,
+917daf5b82ffc6ce,OpenAI Agents SDK,api_not_used,,,,,
+9c4bea6b0dccc01d,OpenAI Agents SDK,api_not_used,,,,,
+85a0d8013cc006ce,OpenAI Agents SDK,ok,0-9,124,False,False,False
+ffa0aebee8c70c35,OpenAI Agents SDK,api_not_used,,,,,
+57fb2b35db183456,OpenAI Agents SDK,ok,0-9,149,True,True,False
+648009d6e5dbc713,OpenAI Agents SDK,api_not_used,,,,,
+5040e5367c0233ca,OpenAI Agents SDK,api_not_used,,,,,
+16e48831b9d23783,OpenAI Agents SDK,ok,0-9,649,True,True,True
+5bdb70a36f276e55,OpenAI Agents SDK,ok,0-9,1811,True,True,True
+b3c00c71eb5c815a,OpenAI Agents SDK,api_not_used,,,,,
+dc52cce805307ba6,OpenAI Agents SDK,api_not_used,,,,,
+ff9f43d647220d1d,OpenAI Agents SDK,api_not_used,,,,,
+2fd8b246142af9fb,OpenAI Agents SDK,api_not_used,,,,,
+6fb5c40431a26718,OpenAI Agents SDK,api_not_used,,,,,
+72234143d3f2abd7,OpenAI Agents SDK,ok,0-9,10347,True,True,True
+12e6a8a8ab26923a,OpenAI Agents SDK,api_not_used,,,,,
+021b44ec47a8f524,OpenAI Agents SDK,api_not_used,,,,,
+cbed7cd1ec5ece61,OpenAI Agents SDK,api_not_used,,,,,
+debfb53aaf2fb193,OpenAI Agents SDK,api_not_used,,,,,
+47ecf58dd0858672,OpenAI Agents SDK,ok,0-9,358,True,True,True
+f7357632e7fa79c7,OpenAI Agents SDK,ok,0-9,160,False,True,False
+d4defed78b614c64,OpenAI Agents SDK,api_not_used,,,,,
+8b9a413b2f3d9940,OpenAI Agents SDK,api_not_used,,,,,
+c974295de66d7621,OpenAI Agents SDK,api_not_used,,,,,
+23f2961965ccf3ce,OpenAI Agents SDK,api_not_used,,,,,
+04c27ee8cf9bcbe6,OpenAI Agents SDK,api_not_used,,,,,
+95678c30ff566c3b,OpenAI Agents SDK,api_not_used,,,,,
+7c477cc15b09dcab,OpenAI Agents SDK,api_not_used,,,,,
+61caa4edb6695596,OpenAI Agents SDK,api_not_used,,,,,
+0ddfecc78d702912,OpenAI Agents SDK,api_not_used,,,,,
+74351f5daec664b4,OpenAI Agents SDK,api_not_used,,,,,
+373f8432b7c5e0a2,OpenAI Agents SDK,api_not_used,,,,,
+3fa3d669ccea6683,OpenAI Agents SDK,api_not_used,,,,,
+39a65070ea97ec01,OpenAI Agents SDK,api_not_used,,,,,
+11240c7ce8731f68,OpenAI Agents SDK,ok,0-9,4993,True,True,True
+c53c606f9b275b02,OpenAI Agents SDK,ok,0-9,449,True,True,True
+34ec5571dd65e54a,OpenAI Agents SDK,api_not_used,,,,,
+8cf033e249fddc0b,OpenAI Agents SDK,ok,10-99,4186,False,True,True
+c5ec91eb33ce0ab6,OpenAI Agents SDK,api_not_used,,,,,
+f81a6a27ccef8d4b,OpenAI Agents SDK,ok,0-9,328,False,True,True
+f73e0e68ef0b7c8d,OpenAI Agents SDK,ok,0-9,380,True,True,True
+14f2550867dec171,OpenAI Agents SDK,api_not_used,,,,,
+bc8c35c7afbce994,OpenAI Agents SDK,api_not_used,,,,,
+a143a36efc93de89,OpenAI Agents SDK,ok,0-9,232,True,True,True
+d71a24f78fa3d527,OpenAI Agents SDK,api_not_used,,,,,
+b507ce89c93753fd,OpenAI Agents SDK,ok,10-99,697,False,True,True
+1edcbb4410d28aae,OpenAI Agents SDK,ok,0-9,296,False,True,True
+f2d758742ba8c018,OpenAI Agents SDK,api_not_used,,,,,
+be4fdb697d8b095e,OpenAI Agents SDK,api_not_used,,,,,
+296d6a9035832989,OpenAI Agents SDK,api_not_used,,,,,
+25daeb6caef21549,OpenAI Agents SDK,ok,0-9,110,True,False,False
+0b25870b2fe124c3,OpenAI Agents SDK,api_not_used,,,,,
+a7d0ccf6dfc3014d,OpenAI Agents SDK,api_not_used,,,,,
+fb737433da2d2779,OpenAI Agents SDK,api_not_used,,,,,
+c48dd04bce64223b,OpenAI Agents SDK,api_not_used,,,,,
+a5ec7bcd9e4aded6,OpenAI Agents SDK,ok,0-9,5855,True,True,True
+bf069456c30d84d8,OpenAI Agents SDK,api_not_used,,,,,
+5f2c1e71d824fad3,OpenAI Agents SDK,api_not_used,,,,,
+d02a66c409e290d2,OpenAI Agents SDK,api_not_used,,,,,
+b73d2d73a996640c,OpenAI Agents SDK,api_not_used,,,,,
+cfcc2c72ce1d2c64,OpenAI Agents SDK,api_not_used,,,,,
+9d5c79995796d44c,OpenAI Agents SDK,api_not_used,,,,,
+63c44655f4574bd8,OpenAI Agents SDK,api_not_used,,,,,
+70e0ac94edbd7c4b,OpenAI Agents SDK,ok,10-99,739,False,True,True
+c8ab94b75aaed2e3,CrewAI,ok,0-9,342,False,False,False
+73010a8e9a396701,CrewAI,api_not_used,,,,,
+54887166a15570d1,CrewAI,api_not_used,,,,,
+12a1d4c8270f6e96,CrewAI,api_not_used,,,,,
+c0b6fb6562e61497,CrewAI,api_not_used,,,,,
+fa2f14eebc37ae8b,CrewAI,api_not_used,,,,,
+9c9dcf7fb3e0aa06,CrewAI,api_not_used,,,,,
+8645857bff332930,CrewAI,ok,0-9,33,True,False,False
+46e03f927b9986d6,CrewAI,api_not_used,,,,,
+1ff636d8f3df3cc9,CrewAI,ok,0-9,169,False,False,False
+91d35440d2edf84f,CrewAI,api_not_used,,,,,
+eceb50427aab167b,CrewAI,api_not_used,,,,,
+3870f9e200593e8c,CrewAI,ok,0-9,2002,True,True,True
+c7c41e5c96d85c0c,CrewAI,api_not_used,,,,,
+953e2667d96a9d8c,CrewAI,api_not_used,,,,,
+ffd5404566cc7b8c,CrewAI,api_not_used,,,,,
+824bfa04b4f01768,CrewAI,api_not_used,,,,,
+e70e03244c275183,CrewAI,ok,0-9,33,False,False,False
+bbec558690c4731a,CrewAI,ok,0-9,28,False,False,False
+4ce82d2f85801bb3,CrewAI,api_not_used,,,,,
+0205f3e74e7ae171,CrewAI,api_not_used,,,,,
+f206b1a2948324a3,CrewAI,api_not_used,,,,,
+85d993d2a81a0f74,CrewAI,api_not_used,,,,,
+75b0d3f0b52d810f,CrewAI,api_not_used,,,,,
+6f77c3270aafebac,CrewAI,api_not_used,,,,,
+5d2e386824a9d140,CrewAI,api_not_used,,,,,
+5d68a9957076c4fc,CrewAI,ok,0-9,114,False,False,False
+e396173e8051c097,CrewAI,ok,0-9,608,True,True,True
+67390e3fc4377a97,CrewAI,ok,0-9,2198,True,True,True
+4330b3675fc21fd7,CrewAI,ok,10-99,169,False,False,False
+0a20d8480f76ee04,CrewAI,api_not_used,,,,,
+c07e80227f81d9a5,CrewAI,api_not_used,,,,,
+2cea992e444a06df,CrewAI,ok,100+,4188,True,True,True
+21759410a3010896,CrewAI,ok,0-9,123,False,False,False
+cda54ab74a553dca,CrewAI,ok,0-9,2002,True,True,True
+d4abe0a4a3624706,CrewAI,ok,0-9,35,False,True,True
+d9e07a8b9d6d1851,CrewAI,api_not_used,,,,,
+20dd388f13505255,CrewAI,ok,0-9,2078,True,True,True
+c5b3ee7977a5b5f2,CrewAI,ok,10-99,7129,False,True,True
+6d9c1df9c361de0e,CrewAI,ok,0-9,305,False,True,False
+a8cc6a013c0c955c,CrewAI,ok,0-9,506,False,False,False
+87d91b2e76ee3abc,CrewAI,api_not_used,,,,,
+83f6b26c038cd44f,CrewAI,api_not_used,,,,,
+d1c5b8dd5f332376,CrewAI,api_not_used,,,,,
+03aa363c274ce833,CrewAI,api_not_used,,,,,
+0db1583e949523b6,CrewAI,api_not_used,,,,,
+b56c54ca7eb2af0d,CrewAI,api_not_used,,,,,
+065a8640ecf29bb1,CrewAI,ok,0-9,164,False,True,True
+4356370325e192ce,CrewAI,api_not_used,,,,,
+9370017d48a1de5d,CrewAI,ok,0-9,35,False,False,False
+2506751176692f55,CrewAI,api_not_used,,,,,
+7b2643256bc3bc1d,CrewAI,api_not_used,,,,,
+ce6242b9c85d8ca2,CrewAI,ok,0-9,8,False,False,False
+073b17a95e3c25b5,CrewAI,api_not_used,,,,,
+136877bb9031eb94,CrewAI,api_not_used,,,,,
+ba0ab72035ac3bc0,CrewAI,api_not_used,,,,,
+1ff7b168086992d8,CrewAI,ok,0-9,252,False,True,True
+608b1ce3cdc16b5f,CrewAI,api_not_used,,,,,
+636bdf0f3c69ea2e,CrewAI,ok,0-9,951,False,True,True
+5568403746497d3d,CrewAI,ok,0-9,911,True,True,True
+d5eef5b6a9bffd04,CrewAI,api_not_used,,,,,
+b746a0ef0ed36a32,CrewAI,api_not_used,,,,,
+c17d41ba9e2e8a51,CrewAI,api_not_used,,,,,
+4f9db7a8785e61b4,CrewAI,api_not_used,,,,,
+2756ed78f551578c,CrewAI,api_not_used,,,,,
+5e2613fe0935bdab,CrewAI,api_not_used,,,,,
+dfcc8d98a8486724,CrewAI,ok,0-9,673,False,True,True
+a9ff6328da82a85f,CrewAI,api_not_used,,,,,
+a5ec7bcd9e4aded6,CrewAI,ok,0-9,5855,True,True,True
+1fe5f70fad2b9ff5,CrewAI,ok,0-9,4,False,False,False
+64051b773b7e0801,CrewAI,ok,0-9,90,False,True,True
+c6f59294d8f3ce68,CrewAI,ok,0-9,46,True,False,False
+e514aaf1f8dad8f1,CrewAI,api_not_used,,,,,
+71dde73b30ae3145,CrewAI,api_not_used,,,,,
+2e16cb753feaa45a,CrewAI,api_not_used,,,,,
+345bf9b4d7fe27a0,CrewAI,ok,0-9,209,False,True,True
+b570c31933894253,CrewAI,api_not_used,,,,,
+3f051224cedd57d9,CrewAI,api_not_used,,,,,
+f63f006dea28e9fd,CrewAI,api_not_used,,,,,
+7330f141c6660c33,CrewAI,api_not_used,,,,,
+9b7b54d5fa13b675,CrewAI,api_not_used,,,,,
+18ec06af59b766b4,CrewAI,ok,0-9,150,False,False,False
+13fe87db8507b46b,CrewAI,api_not_used,,,,,
+b10c06b1e04b1bc5,CrewAI,ok,0-9,51,False,True,True
+1b30deb17d63ce9b,CrewAI,ok,10-99,46,False,False,False
+902c4a4d9b2b0084,CrewAI,ok,0-9,61,True,False,False
+f12aad96dc3d6e41,CrewAI,ok,0-9,37449,False,True,True
+26ef73ee936edad8,CrewAI,ok,0-9,2,False,False,False
+d5100d67daa9d803,CrewAI,api_not_used,,,,,
+8ffbee40e4eaa392,CrewAI,api_not_used,,,,,
+dc601b46572140e1,CrewAI,api_not_used,,,,,
+280aa4571bfaf1ce,CrewAI,api_not_used,,,,,
+ca160af31310c243,CrewAI,api_not_used,,,,,
+05a654cd2ce17856,CrewAI,api_not_used,,,,,
+ddc03a520b505928,CrewAI,api_not_used,,,,,
+7f8f6d7f2173e0c0,CrewAI,ok,0-9,150,False,True,False
+a97b02a10a705390,CrewAI,ok,0-9,63,False,True,True
+0b80baff218eea23,CrewAI,api_not_used,,,,,
+72ab033a4bc3a962,CrewAI,ok,0-9,15,False,False,False
+5614f9f40fd8e2d9,CrewAI,api_not_used,,,,,
+b781a13c9486a194,CrewAI,api_not_used,,,,,
+3f782d22138bfad8,CrewAI,ok,0-9,36,False,False,False
+1caad6cf675936af,CrewAI,ok,0-9,19,False,False,False
+e3443aed23004c98,CrewAI,api_not_used,,,,,
+3b81539641a5bef0,CrewAI,api_not_used,,,,,
+43d5eebe293b9e00,CrewAI,api_not_used,,,,,
+7eb698e8dee4295b,CrewAI,ok,0-9,27,False,True,True
+289d64a5ae74988d,CrewAI,ok,0-9,72,False,False,False
+515cd0b1a32154c6,CrewAI,api_not_used,,,,,
+39d580fa6580655a,CrewAI,api_not_used,,,,,
+a211bf2e77a066a4,CrewAI,ok,0-9,32,False,False,False
+1d6218fa2983d04c,CrewAI,api_not_used,,,,,
+270bd03cd69c2714,CrewAI,api_not_used,,,,,
+4da4eba07d528b93,CrewAI,ok,0-9,16,False,False,False
+60edffe0f9d5057b,CrewAI,api_not_used,,,,,
+a58d20bdd85ec445,CrewAI,api_not_used,,,,,
+e997254b18be2c2b,CrewAI,api_not_used,,,,,
+5a500fe9d985b9b9,CrewAI,api_not_used,,,,,
+b4fbd876407db8d0,CrewAI,api_not_used,,,,,
+3da65ee6b67e66c7,CrewAI,ok,0-9,72,False,True,True
+4f86eb48a1548786,CrewAI,api_not_used,,,,,
+d27d01354a1ec085,CrewAI,api_not_used,,,,,
+adfd89be3041c800,CrewAI,api_not_used,,,,,
+a4f0815d5bdffe25,CrewAI,api_not_used,,,,,
+a9a10be016f3358c,CrewAI,api_not_used,,,,,
+96b325ed9ba39213,CrewAI,api_not_used,,,,,
+bcee030c6b6c7e27,CrewAI,ok,0-9,15,False,False,False
+a95cd1d4dbd8cc88,CrewAI,ok,0-9,12,False,False,False
+c69a4f1f456153af,CrewAI,ok,10-99,796,False,True,True
+fb2fe076521ec6af,CrewAI,ok,0-9,27,False,False,False
+2ed9ea672e7a722d,Haystack,ok,0-9,1669,True,False,False
+548c28c65e71549a,Haystack,ok,0-9,1526,True,False,False
+57fde9c61cafce60,Haystack,ok,0-9,1555,True,False,False
+a0fffa98e07e58d6,Haystack,api_not_used,,,,,
+5db05960bbe09c41,Haystack,api_not_used,,,,,
+15dad5dce297d836,Haystack,ok,0-9,1618,True,False,False
+3cff70f6b87ffda5,Haystack,api_not_used,,,,,
+8a46bc84080ef223,Haystack,api_not_used,,,,,
+dcfa45ccc748c431,Haystack,api_not_used,,,,,
+c443d73868fea9da,Haystack,ok,0-9,1438,True,False,False
+84d28b4b4220a394,AutoGen,ok,0-9,3,True,False,False
+6a650b7a0014b91c,AutoGen,ok,0-9,14,True,False,False
+bc22909ab8ca8850,AutoGen,ok,0-9,5141,True,True,True
+c0ad2a60616621eb,AutoGen,ok,0-9,6361,True,True,True
+b3484527932dff00,AutoGen,ok,0-9,182,True,False,False
+e2acab4734583103,AutoGen,ok,0-9,284,True,True,False
+dffd1e21f103be0c,AutoGen,ok,0-9,1272,True,True,True
+09a609277ef30c2b,AutoGen,ok,0-9,4,True,False,False
+3f69833a3a53f940,AutoGen,ok,0-9,46,True,True,False
+8d8b4e417ffd047d,AutoGen,ok,0-9,7,True,False,False
+427da0fc178652f5,AutoGen,ok,0-9,1291,True,True,True
+b1de70b23b010b51,AutoGen,ok,0-9,41,True,False,False
+6f7fb1dde72daa2c,AutoGen,ok,0-9,390,True,True,True
+05cccbc10d22528f,AutoGen,ok,0-9,3,True,False,False
+48372ecb424ae071,AutoGen,ok,0-9,207,True,False,False
+9a1723000a5c8385,AutoGen,ok,0-9,20,True,False,False
+274fb0f9a6a90b9d,AutoGen,ok,0-9,265,True,False,False
+5042b866a128c9c6,AutoGen,ok,0-9,34,True,False,False
+4ee5c52aa4d638b1,AutoGen,ok,0-9,320,True,False,False
+bdc61aef50ca0d0e,AutoGen,ok,0-9,95,True,False,False
+a9732a82a190bc59,AutoGen,ok,10-99,88,True,False,False
+1082072776de4d1a,AutoGen,ok,0-9,1292,True,True,True
+55bb154e317dcf27,AutoGen,ok,0-9,61,True,False,False
+e9cc1cafa491ed62,AutoGen,ok,0-9,6,True,False,False
+657bf67def950623,AutoGen,ok,0-9,1237,True,True,True
+68b9052b4ff0b8dd,AutoGen,ok,0-9,774,True,True,False
+3c0c6369bc31a0c8,AutoGen,ok,0-9,17,True,False,False
+8a05265ed41096c0,AutoGen,ok,0-9,466,True,False,False
+46e8765d8b1f4456,AutoGen,ok,0-9,34,True,False,False
+dfb58cbc4b2fa3ee,AutoGen,ok,10-99,2244,True,True,True
+5a78fc474b359c5b,AutoGen,ok,0-9,5871,True,True,True
+6ea17236300661f4,AutoGen,ok,0-9,44,True,False,False
+96c2064501ecc3c1,AutoGen,ok,0-9,257,True,False,False
+4c0170c9898bc7f5,AutoGen,ok,0-9,58226,True,True,True
+1a972085a7bdebcc,AutoGen,ok,0-9,1295,True,True,True
+72234143d3f2abd7,AutoGen,ok,0-9,10347,True,True,True
+d9ddb19966c9752a,AutoGen,ok,0-9,51,True,False,False
+02ec50f45ca1383b,AutoGen,ok,0-9,1066,True,True,True
+e43a2e6b5e48edc8,AutoGen,ok,0-9,461,True,True,True
+e45ea016e6ca7e6d,AutoGen,ok,0-9,191,True,False,False
+e923be4e7999af2b,AutoGen,ok,10-99,4722,True,True,True
+4b2c09d3eddd5015,AutoGen,ok,0-9,1034,True,True,True
+25eb679d45f83878,AutoGen,ok,0-9,18,True,False,False
+8c126e25901bb604,AutoGen,ok,0-9,12,True,False,False
+7c27b88418845039,AutoGen,ok,0-9,9,True,False,False
+9be6cf1a900fc393,AutoGen,ok,10-99,5974,True,True,True
+c6775c149bfa5481,AutoGen,clone_fail,,,,,
+a0fffa98e07e58d6,AutoGen,ok,0-9,121,False,True,True
+b48daad149adc460,AutoGen,ok,0-9,7,True,False,False
+47d55eb8a79ed5f8,AutoGen,ok,0-9,24,True,False,False
+58e9db3f3976f8b6,AutoGen,ok,0-9,166,True,False,False
+fc414cf201e6540f,LlamaIndex Workflows,ok,0-9,5791,True,True,True
+ccb1f68897ef2ce7,LlamaIndex Workflows,ok,0-9,1124,True,True,True
+6eb1d3cf5758df73,LlamaIndex Workflows,ok,0-9,9,False,False,False
+5fc3323a81d85e52,LlamaIndex Workflows,ok,10-99,20,False,False,False
+d9a57e7bfb14a1dd,LlamaIndex Workflows,ok,10-99,23,False,True,False
+00649dd4cb1f1698,LlamaIndex Workflows,ok,0-9,23,False,False,False
+a57e445436821932,LlamaIndex Workflows,ok,0-9,396,False,True,True
+24176bfe70d8dcbc,LlamaIndex Workflows,ok,0-9,4,False,False,False
+28274bdfd254c27c,LlamaIndex Workflows,ok,0-9,35,True,False,False
+b394727ff76f6ae5,LlamaIndex Workflows,ok,0-9,260,True,False,False
+4da907a44966cb93,LlamaIndex Workflows,ok,10-99,514,True,True,False
+e720c43c33dec67a,LlamaIndex Workflows,ok,0-9,4,False,False,False
+972b83fde441979b,LlamaIndex Workflows,ok,0-9,4607,True,True,True
+7682b46220978795,LlamaIndex Workflows,ok,0-9,6,False,False,False
+8e3f9bfb5248eac6,LlamaIndex Workflows,ok,10-99,879,True,True,False
+ffd3c9027a7fd2c5,LlamaIndex Workflows,ok,0-9,18,False,False,False
+0c75e9114d0c012b,LlamaIndex Workflows,ok,0-9,129,False,False,False
+30b00aee2a880aeb,LlamaIndex Workflows,ok,0-9,83,True,True,False
+0a2eab4bcccbc0c6,LlamaIndex Workflows,ok,0-9,44,False,False,False
+855e29956b409008,LlamaIndex Workflows,ok,0-9,39,True,False,False
+ec43d07f68305b4c,LlamaIndex Workflows,ok,0-9,35,False,False,False
+e0ea88d8aba878dc,LlamaIndex Workflows,ok,0-9,26,False,False,False
+c115f3834dc0c191,LlamaIndex Workflows,ok,0-9,13,True,False,False
+80a82d515eaae086,LlamaIndex Workflows,ok,0-9,332,True,False,False
+60925cac4e17c72a,LlamaIndex Workflows,ok,0-9,4941,True,True,True
+1414c4f8f7bc47bc,LlamaIndex Workflows,ok,0-9,47,False,False,False
+378a56d9f538e4a3,LlamaIndex Workflows,ok,10-99,391,True,True,False
+53f8ffd8f66c57e8,LlamaIndex Workflows,ok,0-9,94,False,False,False
+b29bb2e0f363637c,LlamaIndex Workflows,ok,0-9,196,True,True,True
+4f04cfb56e022435,LlamaIndex Workflows,ok,10-99,54,False,False,False
+1a345da912168b88,LlamaIndex Workflows,ok,0-9,6,False,False,False
+27e3f32ac08fe991,LlamaIndex Workflows,ok,0-9,18,False,True,False
+0702fc218a7e0092,LlamaIndex Workflows,ok,0-9,85,True,False,False
+d9e6069c4982d938,LlamaIndex Workflows,ok,0-9,4615,True,True,True
+a68d06086d49f2e1,LlamaIndex Workflows,ok,10-99,20,True,False,False
+2daf18af3912efb0,LlamaIndex Workflows,ok,0-9,22,False,False,False
+cf387b04027740c6,LlamaIndex Workflows,ok,0-9,695,True,True,True
+e5e3ac64ecf69028,LlamaIndex Workflows,ok,0-9,11,False,False,False
+48075cd9f3eea344,LlamaIndex Workflows,ok,0-9,23,False,False,False
+3d3fcda37f45a16e,LlamaIndex Workflows,ok,0-9,93,False,False,False
+9a081160e06f6d3b,LlamaIndex Workflows,ok,0-9,39,False,False,False
+c66a13af4bb8f2c5,LlamaIndex Workflows,ok,0-9,99,True,True,False
+6b948a1de8a7ee2e,LlamaIndex Workflows,ok,0-9,44499,True,True,False
+9118f52b8f96bc00,LlamaIndex Workflows,ok,0-9,76,True,True,False
+af685c1800073ad8,LlamaIndex Workflows,ok,0-9,138,True,True,False
+e387d9c6302fa091,LlamaIndex Workflows,ok,10-99,20,True,False,False
+e8b56a59b8f1b2a4,LlamaIndex Workflows,ok,0-9,305,True,True,True
+a0fffa98e07e58d6,LlamaIndex Workflows,ok,0-9,121,True,True,True
+636bdf0f3c69ea2e,LlamaIndex Workflows,ok,0-9,951,True,True,True
+0b1012acb3563381,LlamaIndex Workflows,ok,0-9,26,False,False,False
+0781c52012f7e14b,Semantic Kernel,ok,0-9,6,True,False,False
+a18c5cde182ab510,Semantic Kernel,ok,10-99,7185,True,True,True
+9d426ea77f6d9ec4,Semantic Kernel,ok,0-9,33,True,False,False
+471a008275a27aff,Semantic Kernel,ok,0-9,85,True,False,False
+411160b4445b0d58,Semantic Kernel,ok,0-9,5,True,False,False
+220450e416d0d603,n8n,ok,0-9,1,True,False,False
+e8ebd9ad1dcd16ab,n8n,ok,0-9,5,True,False,False
+48abeb0b111a6708,n8n,ok,0-9,4,True,False,False
+c506ce9acc4fb628,n8n,ok,0-9,4,True,False,False
+a278404162923ce8,n8n,ok,0-9,2041,True,True,True
+5b3651ff7900d140,n8n,ok,0-9,4,True,False,False
+0ff4139b8be18fcf,n8n,ok,0-9,4123,True,True,True
+6d43ba0338514eb1,n8n,ok,0-9,7922,True,True,True
+87184799ef0eab1b,n8n,ok,0-9,1,True,False,False
+2617b627d2a163cb,n8n,ok,0-9,24,True,False,False
+9dc29ba3d35b1bf2,n8n,ok,0-9,1,True,False,False
+bada901a53d69be8,n8n,ok,0-9,60,True,True,True
+1df8be065488d015,n8n,ok,0-9,3,True,False,False
+4ecbb2ba59d2d2f7,n8n,ok,0-9,1,True,False,False
+22246dfc62a37f16,n8n,ok,100+,2050,True,True,True
+527e638ebe9e0dd8,n8n,ok,0-9,1,True,False,False
+0cfe9f5bebc691b8,n8n,ok,10-99,25,True,False,False
+b61a7fc458248303,n8n,ok,0-9,6610,True,True,True
+b4f4d2c438d3ec15,n8n,ok,0-9,1,True,False,False
+1637b210414d9aed,n8n,ok,0-9,264,True,True,True
+66a2c135e7c8b3b8,n8n,ok,0-9,2111,True,True,True
+c8f32528ebd5cfe2,n8n,ok,0-9,1,True,False,False
+c3d8445aa8b56e35,n8n,ok,0-9,7021,True,True,True
+36833e1b9a0a3783,n8n,ok,0-9,1053,True,True,True
+28c87f6011a6c5b2,n8n,ok,0-9,27,True,True,True
+782e92931d2ad7c0,n8n,ok,0-9,1,True,False,False
+99e80c5c562f529e,n8n,ok,0-9,230,True,True,True
+fa098437c1421b08,n8n,ok,0-9,2,True,True,True
+3b5025ecb0473040,n8n,ok,0-9,1702,True,True,True
+47725cbceac6c567,n8n,ok,0-9,1131,True,True,True
+2fff2fe3db428711,n8n,ok,0-9,7265,True,True,True
+3142b9a255f5e2ca,n8n,ok,0-9,43412,True,True,True
+0c0ada0dd6935a87,n8n,ok,100+,21012,True,True,True
+a3b67125dbbbc6b2,n8n,ok,10-99,4,True,False,False
+1d56a3a4f428810e,n8n,ok,100+,12119,True,True,True
+ac01a6834e47bb8c,n8n,ok,0-9,11265,True,True,True
+73aa42905eb06cc5,n8n,ok,0-9,5,True,False,False
+77029168edb98f09,n8n,ok,0-9,12,True,False,False
+61f735f7ace4446a,n8n,ok,0-9,2050,True,True,True
+d71069c3afa95767,n8n,ok,0-9,1,True,False,False
+7c7457ed97de3130,n8n,ok,0-9,1,True,False,False
+a4d5da8e217866e0,n8n,ok,0-9,1,True,False,False
+545b3ab5004308ba,n8n,ok,0-9,2612,True,True,True
+77164bff0fbd671e,n8n,ok,0-9,2041,True,True,True
+7b4c3c815b928159,n8n,ok,10-99,3,True,False,False
+721de8ea342eacee,n8n,ok,0-9,164,True,True,True
+c55563bd41ad9b41,n8n,ok,0-9,69957,True,True,True
+fbdc313a32e32eec,n8n,ok,0-9,159,True,True,False
+62afe10a48586ab8,n8n,ok,100+,10353,True,True,True
+ec36a1e17152fd27,n8n,ok,0-9,4,True,False,False

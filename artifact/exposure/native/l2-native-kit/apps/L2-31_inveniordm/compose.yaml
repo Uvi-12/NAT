@@ -1,0 +1,41 @@
+# InvenioRDM (L2-31) — representative service set. A production InvenioRDM instance
+# image is built per-instance via invenio-cli; set APF_INVENIO_IMAGE to that image.
+# The forge targets the documented access.protection.record value in PostgreSQL JSONB.
+name: apf-l2-inveniordm
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: inveniordm
+      POSTGRES_PASSWORD: inveniordm
+      POSTGRES_DB: inveniordm
+    ports:
+      - "5431:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U inveniordm"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  search:
+    image: opensearchproject/opensearch:2.13.0
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+  cache:
+    image: redis:7
+  mq:
+    image: rabbitmq:3-management
+  web:
+    image: "${APF_INVENIO_IMAGE:-inveniordm/demo:latest}"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      INVENIO_SQLALCHEMY_DATABASE_URI: "postgresql+psycopg2://inveniordm:inveniordm@db:5432/inveniordm"
+      INVENIO_SEARCH_HOSTS: "[{'host':'search','port':9200}]"
+      INVENIO_BROKER_URL: "amqp://guest:guest@mq:5672/"
+      INVENIO_CACHE_REDIS_URL: "redis://cache:6379/0"
+      APF_API_TOKEN: "apf-dev-token"
+    ports:
+      - "5031:5000"

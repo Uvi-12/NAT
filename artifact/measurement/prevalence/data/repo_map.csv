@@ -1,0 +1,79 @@
+system,layer,verdict,repo
+Haystack,L1,Exposed,deepset-ai/haystack
+Dify,L1,Exposed,langgenius/dify
+Microsoft Agent Framework,L1,Exposed,microsoft/agent-framework
+Agno,L1,Exposed,agno-agi/agno
+AutoGen,L1,Exposed,microsoft/autogen
+Flowise,L1,Exposed,FlowiseAI/Flowise
+Google ADK,L1,Exposed,google/adk-python
+LlamaIndex Workflows,L1,Exposed,run-llama/llama_index
+OpenAI Agents SDK,L1,Exposed,openai/openai-agents-python
+Semantic Kernel,L1,Exposed,microsoft/semantic-kernel
+n8n,L1,Exposed,n8n-io/n8n
+CrewAI,L1,Exposed,crewAIInc/crewAI
+LangGraph,L1,Exposed,langchain-ai/langgraph
+Apache Burr,L1,Exposed,apache/burr
+Strands Agents SDK,L1,Exposed,strands-agents/sdk-python
+OpenHands Agent SDK,L1,Exposed,All-Hands-AI/OpenHands
+Vercel AI SDK,L1,Conditional,vercel/ai
+Google Genkit,L1,Exposed,firebase/genkit
+PydanticAI,L1,Resistant,pydantic/pydantic-ai
+BeeAI,L1,Resistant,i-am-bee/beeai-framework
+Mastra,L1,Resistant,mastra-ai/mastra
+CAMEL,L1,N/A,camel-ai/camel
+Langroid,L1,N/A,langroid/langroid
+DBOS,L1,Exposed,dbos-inc/dbos-transact-py
+Temporal,L1,Resistant,temporalio/temporal
+Restate,L1,Resistant,restatedev/restate
+Inngest,L1,Resistant,inngest/inngest
+Dapr Workflow,L1,Conditional,dapr/dapr
+Azure Durable Functions,L1,Conditional,Azure/azure-functions-durable-extension
+Prefect,L1,Resistant,PrefectHQ/prefect
+Apache Airflow,L1,Exposed,apache/airflow
+SpiffWorkflow,L1,Exposed,sartography/SpiffWorkflow
+Kestra,L1,Exposed,kestra-io/kestra
+Flowable,L1,Exposed,flowable/flowable-engine
+Jenkins Pipeline input,L1,Resistant,jenkinsci/pipeline-input-step-plugin
+GoCD,L1,Resistant,gocd/gocd
+Conductor,L1,Exposed,conductor-oss/conductor
+Kogito,L1,Exposed,apache/incubator-kie-kogito-runtimes
+Gitea,L1,Exposed,go-gitea/gitea
+Gerrit,L1,Resistant,GerritCodeReview/gerrit
+midPoint,L1,Exposed,Evolveum/midpoint
+Atlantis + Gitea,L1,Transitive,runatlantis/atlantis
+Argo Workflows,L2,Exposed,argoproj/argo-workflows
+Spinnaker,L2,Exposed,spinnaker/spinnaker
+Consul Democracy,L2,Exposed,consuldemocracy/consuldemocracy
+Decidim,L2,Exposed,decidim/decidim
+Your Priorities,L2,Exposed,CitizensFoundation/your-priorities-app
+Documenso,L2,Exposed,documenso/documenso
+DocuSeal,L2,Exposed,docusealco/docuseal
+LibreSign,L2,Resistant,LibreSign/libresign
+Mayan EDMS,L2,Exposed,mayan-edms/Mayan-EDMS
+OpenSign,L2,Exposed,OpenSignLabs/OpenSign
+Apache OFBiz,L2,Exposed,apache/ofbiz-framework
+Dolibarr,L2,Exposed,Dolibarr/dolibarr
+ERPNext,L2,Exposed,frappe/erpnext
+LedgerSMB,L2,Exposed,ledgersmb/LedgerSMB
+Odoo Community,L2,Exposed,odoo/odoo
+Tryton,L2,Exposed,tryton/tryton
+Apache Fineract,L2,Exposed,apache/fineract
+care (OHC Network),L2,Exposed,ohcnetwork/care
+DHIS2,L2,Exposed,dhis2/dhis2-core
+OpenELIS Global,L2,Exposed,I-TECH-UW/OpenELIS-Global-2
+OpenHIM,L2,Exposed,jembi/openhim-core
+OpenEMR,L2,Exposed,openemr/openemr
+Dogtag PKI,L2,Resistant,dogtagpki/pki
+EJBCA,L2,Exposed,Keyfactor/ejbca-ce
+OpenBao,L2,Exposed,openbao/openbao
+Sigstore Fulcio,L2,Resistant,sigstore/fulcio
+step-ca,L2,Resistant,smallstep/certificates
+Dataverse,L2,Exposed,IQSS/dataverse
+eLabFTW,L2,Resistant,elabftw/elabftw
+Galaxy,L2,Exposed,galaxyproject/galaxy
+InvenioRDM,L2,Exposed,inveniosoftware/invenio-app-rdm
+OSF,L2,Exposed,CenterForOpenScience/osf.io
+Grafeas,L2,Exposed,grafeas/grafeas
+in-toto,L2,Resistant,in-toto/in-toto
+Sigstore cosign,L2,Resistant,sigstore/cosign
+TUF python-tuf,L2,Resistant,theupdateframework/python-tuf

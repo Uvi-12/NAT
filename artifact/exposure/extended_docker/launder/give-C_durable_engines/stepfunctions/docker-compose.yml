@@ -1,0 +1,11 @@
+# AWS Step Functions Local. API on :8083 (boto3 endpoint_url).
+# Bring up:  docker compose up -d
+services:
+  stepfunctions-local:
+    image: amazon/aws-stepfunctions-local:1.13.2
+    ports:
+      - "8083:8083"
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=dummy
+      - AWS_SECRET_ACCESS_KEY=dummy

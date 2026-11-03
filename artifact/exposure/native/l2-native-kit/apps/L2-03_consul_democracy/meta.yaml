@@ -1,0 +1,14 @@
+id: L2-03
+system: Consul Democracy
+domain: civic / participation
+expected_verdict: EXPOSED
+image: consuldemocracy/consuldemocracy:master
+db: postgresql:14
+decisive_surface: "budget_investments.selected == true"
+forge_kind: db_update
+confidence: medium   # official image + documented column; Rails bring-up + FK seed may need version tweaks
+notes: >
+  Seeds a minimal budget/group/heading/investment chain via SQL, forges the
+  persisted `selected` flag, verifies the row reaches the funding ballot. If the
+  schema has drifted across versions the seed may fail and the harness records
+  INCONCLUSIVE rather than a false pass.

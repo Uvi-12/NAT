@@ -1,0 +1,8 @@
+status,count,meaning
+Vendor-confirmed advisory,1,One vendor-confirmed case
+Vendor position or documentation response,5,Vendor response or documentation response
+Acknowledged or escalated; pending,2,Acknowledged or escalated at cutoff
+Submitted; vendor review pending,3,Submitted through a vendor channel
+Notified; response awaited,19,Notification sent and response awaited
+No report required,13,Resistant or N/A systems
+Total,43,System-level entries

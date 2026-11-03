@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Serialized Workflow Context JSON",
+  "evidence_class": "N1",
+  "id": "08",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "LlamaIndex Workflows",
+  "tested_basis": "run-llama/llama_index pinned runtime",
+  "verdict": "Direct exposed"
+}

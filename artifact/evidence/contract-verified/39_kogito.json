@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Persisted process-instance snapshot and user-task phase",
+  "evidence_class": "N2",
+  "id": "39",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Kogito",
+  "tested_basis": "apache/incubator-kie-kogito-runtimes pinned",
+  "verdict": "Direct exposed"
+}

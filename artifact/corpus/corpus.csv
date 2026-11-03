@@ -1,0 +1,44 @@
+id,system,domain,tested_basis,verdict,mechanism,evidence_class,decisive_surface
+01,Haystack,agentic_ai,haystack-ai 2.30.0,Direct exposed,TCA,N1,AgentSnapshot tool-call approval field and restored arguments
+02,Dify,agentic_ai,langgenius/dify commit pinned,Direct exposed,WED,N2,Workflow execution data and human-review node status
+03,Microsoft Agent Framework,agentic_ai,semantic-kernel 1.43.0 line,Direct exposed,CRV,N1,Checkpoint channel value and approval field
+04,Agno,agentic_ai,agno 2.6.11,Direct exposed,ALS,N1,Persisted approval lifecycle status
+05,AutoGen,agentic_ai,microsoft/autogen commit pinned,Direct exposed,SRS,N1,Serialized team and run state carrying approval-shaped data
+06,FlowiseAI,agentic_ai,vendor-confirmed affected line,Direct exposed,"CRV,WED",V,executionData resolved-proceed shape
+07,Google ADK,agentic_ai,google-adk 2.2.0,Direct exposed,SRS,N1,sessions.state approval and run value
+08,LlamaIndex Workflows,agentic_ai,run-llama/llama_index pinned runtime,Direct exposed,CRV,N1,Serialized Workflow Context JSON
+09,OpenAI Agents SDK,agentic_ai,openai-agents 0.17.4,Direct exposed,SRS,N1,Serialized RunState approvals dictionary
+10,Semantic Kernel,agentic_ai,semantic-kernel 1.43.0,Direct exposed,CRV,N1,Checkpointed step-state approval Boolean
+11,n8n,agentic_ai,n8n-core 2.16.1; n8n-workflow 2.16.0,Direct exposed,WED,N1,Execution entity data and runData
+12,CrewAI,agentic_ai,crewai 1.14.6,Direct exposed,ALS,N1,FlowPersistence state across save_state and kickoff
+13,LangGraph,agentic_ai,langgraph 1.2.5; checkpoint-sqlite 3.1.0,Direct exposed,CRV,N1,Checkpointer resume value consumed by Command resume
+14,Apache Burr,agentic_ai,DAGWorks-Inc/burr commit pinned,Direct exposed,CRV,N1,Persisted application State
+15,Strands Agents SDK,agentic_ai,strands-agents/sdk-python commit pinned,Direct exposed,"SRS,APS",N1,Session snapshot and persisted trust or confirmation policy
+16,OpenHands Agent SDK,agentic_ai,All-Hands-AI/OpenHands pinned,Direct exposed,"APS,SRS",N2,ConversationState confirmation policy in state.json
+17,Vercel AI SDK,agentic_ai,vercel/ai commit pinned,Conditional exposed,TCA,N1,Tool-part approval inside persisted UIMessages
+18,Google Genkit,agentic_ai,genkit 1.40.1,Direct exposed,SRS,N1,Forged approve_payment toolResponse in persisted message history
+19,PydanticAI,agentic_ai,pydantic-ai 1.107.0,Resistant,LIVE,Runtime-tested resistance,DeferredToolResults keyed to the pending tool-call ID
+20,BeeAI,agentic_ai,beeai-framework 0.181,Resistant,LIVE,Runtime-tested resistance,Live permission-handler callback
+21,Mastra,agentic_ai,@mastra/core 1.45.0,Resistant,LIVE,Runtime-tested resistance,Schema-validated live resumeData
+22,CAMEL,agentic_ai,project basis pinned,N/A,NONE,Scope,No qualifying persisted human-approval gate
+23,Langroid,agentic_ai,project basis pinned,N/A,NONE,Scope,Live conversational input only
+24,DBOS,durable_execution,DBOS Transact on Postgres,Direct exposed,CRV,N1,Checkpointed step output in operation_outputs
+25,Temporal,durable_execution,Temporal design basis,Resistant,LIVE,Design-verified resistance,Signal or update recorded in server-owned event history
+26,Restate,durable_execution,Restate design basis,Resistant,LIVE,Design-verified resistance,Awakeable resolution in server-owned journal
+27,Inngest,durable_execution,Inngest design basis,Resistant,LIVE,Design-verified resistance,waitForEvent through managed state service
+28,Dapr Workflow,durable_execution,dapr/dapr pinned,Conditional exposed,JRN-writable,N1,Workflow history stored as actor-state keys in Redis
+29,AWS Step Functions,durable_execution,service design basis,Resistant,LIVE token,Design-verified resistance,Capability task token bound to pending execution
+30,Azure Durable Functions,durable_execution,durable extension pinned,Conditional exposed,JRN-writable,N2,EventRaised row in Azure Storage History or Instances
+31,Prefect,orchestration_bpmn,Prefect design basis,Resistant,LIVE,Design-verified resistance,Validated RunInput supplied through resume path
+32,Apache Airflow,orchestration_bpmn,apache/airflow pinned,Direct exposed,"WED,ALS",N1,XCom or HITL response in metadata database
+33,SpiffWorkflow,orchestration_bpmn,sartography/SpiffWorkflow pinned,Direct exposed,"WED,ALS",N1,Serialized workflow and user-task state
+34,Kestra,orchestration_bpmn,kestra-io/kestra pinned,Direct exposed,"ALS,WED",N1,Execution state PAUSED to RUNNING and onResume inputs
+35,Flowable,orchestration_bpmn,flowable/flowable-engine pinned,Direct exposed,"WED,ALS",N1,"ACT_RU execution token, task row, and approval variable"
+36,Jenkins Pipeline input,orchestration_bpmn,Jenkins design basis,Resistant,LIVE identity,Design-verified resistance,Identity-checked live Proceed action
+37,GoCD,orchestration_bpmn,GoCD design basis,Resistant,LIVE role,Design-verified resistance,Role-authorized live trigger
+38,Conductor,orchestration_bpmn,conductor-oss/conductor pinned,Direct exposed,"WED,ALS",N1,HUMAN task status and output
+39,Kogito,orchestration_bpmn,apache/incubator-kie-kogito-runtimes pinned,Direct exposed,"WED,ALS",N2,Persisted process-instance snapshot and user-task phase
+40,Gitea,code_review,go-gitea/gitea pinned,Direct exposed,"ALS,WED",N1,Relational pull-request review-vote rows
+41,Gerrit,code_review,Gerrit design basis,Resistant,LIVE identity,Design-verified resistance,NoteDb identity-backed votes and submit-time freeze
+42,midPoint,identity_governance,Evolveum midPoint pinned,Direct exposed,ALS,N2,Persisted approval-case outcome and work-item closure
+43,Atlantis + Gitea,infrastructure_composition,runatlantis/atlantis with Gitea pinned,Transitive exposed,Inherits Gitea,N1,Atlantis live query of upstream VCS approval status

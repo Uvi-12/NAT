@@ -1,0 +1,13 @@
+id: L2-04
+system: Decidim
+domain: civic / participation
+expected_verdict: EXPOSED
+image: decidim/decidim:0.28
+db: postgresql:14
+decisive_surface: "decidim_authorizations.granted_at IS NOT NULL"
+forge_kind: db_update
+confidence: medium   # official image + documented table; Rails bring-up + schema may vary by version
+notes: >
+  Forges a granted `decidim_authorizations` row for a user (state-only), which is
+  what gates voting/signing eligibility. Reuses a seeded user or creates a minimal
+  one; records INCONCLUSIVE if the schema/seed differs rather than a false pass.

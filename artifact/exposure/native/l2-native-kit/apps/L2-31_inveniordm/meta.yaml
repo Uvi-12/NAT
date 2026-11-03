@@ -1,0 +1,14 @@
+id: L2-31
+system: InvenioRDM
+domain: research data
+expected_verdict: EXPOSED
+image: "inveniordm (instance image; set APF_INVENIO_IMAGE)"
+db: postgresql:16
+decisive_surface: "access.protection.record == 'public'"
+forge_kind: db_update
+confidence: low   # instance-built image + heavy service set; JSONB forge on the documented field is concrete, INCONCLUSIVE otherwise
+notes: >
+  A production InvenioRDM image is built per instance via invenio-cli; set
+  APF_INVENIO_IMAGE to it. The forge targets the record's access.record value in
+  the rdm_records_metadata JSONB column. Records INCONCLUSIVE if the stack/API is
+  not reachable.

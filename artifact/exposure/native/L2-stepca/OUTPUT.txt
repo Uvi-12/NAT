@@ -1,0 +1,8 @@
+== genuine issuance: the CA signs a leaf certificate ==
+  CA-issued cert -> VERIFIED
+== state-only forge: attacker mints a cert for the same identity, no CA key ==
+  forged cert -> REJECTED (not chained to the issuing CA)
+
+VERDICT: Resistant (native) - issuance is bound to the CA signature; a
+state-only write cannot mint a cert that verifies against the CA root.
+RESULT: PASS

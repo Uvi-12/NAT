@@ -1,0 +1,14 @@
+id: L2-10
+system: OpenSign
+domain: e-signature / documents
+expected_verdict: EXPOSED
+image: opensignlabs/opensign:main + opensignlabs/opensignserver:main
+db: mongodb:6
+decisive_surface: "contracts_Document.IsCompleted == true"
+forge_kind: db_update
+confidence: medium   # official images + documented boolean; Parse/Mongo collection name assumed (contracts_Document)
+notes: >
+  Forges the IsCompleted boolean directly in MongoDB (Parse Server backend). Seeds a
+  minimal pending document in contracts_Document, forges the boolean, verifies via
+  the stored document. Collection/field names follow OpenSign's Parse classes; any
+  mismatch is recorded as INCONCLUSIVE.

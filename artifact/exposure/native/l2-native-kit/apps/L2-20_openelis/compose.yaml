@@ -1,0 +1,29 @@
+# OpenELIS Global 2 (L2-20) — official app image + its PostgreSQL schema.
+# A lab result is released to the provider once its analysis reaches a validated/
+# finalized status. OpenELIS persists this as `clinlims.analysis.status_id`. The
+# harness forges that status directly in PostgreSQL (5432).
+#
+# NOTE: OpenELIS has a large bootstrap (FHIR/other services in the full stack).
+# This minimal app+db compose is enough for the DB-level forge; seeding a result
+# through the UI order flow is version-specific, so the harness forges an existing
+# analysis row and records INCONCLUSIVE if none is present.
+name: apf-l2-openelis
+services:
+  db:
+    image: ghcr.io/i-tech-uw/openelis-database:latest
+    environment:
+      POSTGRES_PASSWORD: clinlims
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U clinlims -d clinlims"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  web:
+    image: ghcr.io/i-tech-uw/openelis-global-2:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8443:8443"

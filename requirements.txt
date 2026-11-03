@@ -1,0 +1,4 @@
+# Core dependency for the mitigation and ledger claims (C3, C4, C6, C7).
+cryptography>=41.0
+# Optional: lets the audit experiment (C5) also exercise JSON-Schema acceptance.
+# jsonschema>=4.0

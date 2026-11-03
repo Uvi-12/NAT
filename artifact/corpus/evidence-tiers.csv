@@ -1,0 +1,8 @@
+evidence_class,count,meaning
+N1,24,Native-runtime reproduction
+N2,5,Contract-level reproduction
+Runtime-tested resistance,3,State mutation rejected in runtime test
+Design-verified resistance,8,Trust anchor the writer cannot author
+V,1,Vendor-confirmed external evidence
+Scope,2,No qualifying persisted approval gate
+Total,43,All systems

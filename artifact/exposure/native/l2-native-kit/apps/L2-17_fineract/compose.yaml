@@ -1,0 +1,35 @@
+# Apache Fineract (L2-17) — official image + MariaDB.
+# Fineract exposes a REST API on 8443 (self-signed TLS). The harness seeds a loan
+# via the API and forges the persisted loan status in MariaDB.
+name: apf-l2-fineract
+services:
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    command:
+      - --max-connections=500
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  fineract:
+    image: apache/fineract:1.9.0
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      FINERACT_HIKARI_DRIVER_SOURCE_CLASS_NAME: org.mariadb.jdbc.Driver
+      FINERACT_HIKARI_JDBC_URL: jdbc:mariadb://db:3306/fineract_tenants
+      FINERACT_HIKARI_USERNAME: root
+      FINERACT_HIKARI_PASSWORD: mysql
+      FINERACT_DEFAULT_TENANTDB_HOSTNAME: db
+      FINERACT_DEFAULT_TENANTDB_PORT: "3306"
+      FINERACT_DEFAULT_TENANTDB_UID: root
+      FINERACT_DEFAULT_TENANTDB_PWD: mysql
+      FINERACT_SERVER_SSL_ENABLED: "true"
+    ports:
+      - "8443:8443"

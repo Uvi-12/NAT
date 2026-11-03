@@ -1,0 +1,16 @@
+# APF / APF - REPLAY reproduction: Conductor OSS (#36)
+# Standalone image bundles the Conductor server + Redis + Elasticsearch + UI.
+# API on :8080/api, UI on :5000. First boot can take 1-2 minutes.
+# Bring up:  docker compose up -d   (wait until http://localhost:8080/health is healthy)
+# Tear down: docker compose down -v
+services:
+  conductor:
+    image: conductoross/conductor:3.22.3
+    pull_policy: missing
+    ports:
+      - "8080:8080"   # REST API (/api)
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30

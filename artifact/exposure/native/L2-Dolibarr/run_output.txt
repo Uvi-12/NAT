@@ -1,0 +1,14 @@
+rights: valider=0 approuver=1
+=== Dolibarr 19.0.4 native APF (supplier-order approval) ===
+addline rc=4
+order created id=4 ref=(PROV4) status=0 (0=draft)
+valid() rc=1
+after valid(): status=1  (1=validated, not yet approved)
+
+[control] fk_statut=1, fk_user_approve=0  -> approved? NO
+
+[forge] direct state write: UPDATE commande_fournisseur SET fk_statut=2, fk_user_approve=99999
+[resume] real CommandeFournisseur::fetch() -> status=2  approved? YES  recorded approver id=99999
+[downstream] order-sent action on the forged-approved order -> status=3 (3=ordered)  rc=1
+
+VERDICT: EXPOSED — a state-only write to fk_statut made the real Dolibarr runtime treat the order as approved (by a non-existent approver) and let the downstream order-sent action proceed, with no approve() call and no approver right.

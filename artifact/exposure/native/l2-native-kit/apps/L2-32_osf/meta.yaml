@@ -1,0 +1,13 @@
+id: L2-32
+system: OSF
+domain: research data
+expected_verdict: EXPOSED
+image: "cos/osf.io (instance image; set APF_OSF_IMAGE)"
+db: postgresql:15
+decisive_surface: "is_public / sanction.state == 'APPROVED'"
+forge_kind: db_update
+confidence: low   # large multi-service app, instance-built image; SQL forge on documented columns is concrete, INCONCLUSIVE otherwise
+notes: >
+  OSF is a large Django app; set APF_OSF_IMAGE to an instance image. The forge sets
+  osf_abstractnode.is_public (and the sanction state if a registration sanction
+  exists). Records INCONCLUSIVE if the stack/API can't be reached.

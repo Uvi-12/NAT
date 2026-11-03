@@ -1,0 +1,28 @@
+# Your Priorities (L2-05) — official image + PostgreSQL.
+# The harness performs the state-only forge directly on PostgreSQL (5432).
+name: apf-l2-yrpri
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: yrpri
+      POSTGRES_PASSWORD: yrpri
+      POSTGRES_DB: yrpri_production
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yrpri"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  app:
+    image: openactivtech/yourpriorities:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://yrpri:yrpri@db:5432/yrpri_production
+      SESSION_SECRET: apf_dummy_session_secret_local_testing_only
+    ports:
+      - "4242:4242"

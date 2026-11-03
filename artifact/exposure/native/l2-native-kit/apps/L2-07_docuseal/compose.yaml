@@ -1,0 +1,29 @@
+# DocuSeal (L2-07) — official image + PostgreSQL.
+# The harness forges the persisted completion state (submitters.completed_at)
+# directly on PostgreSQL (5432) and verifies via the app DB / HTTP (3000).
+name: apf-l2-docuseal
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: docuseal
+      POSTGRES_PASSWORD: docuseal
+      POSTGRES_DB: docuseal
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docuseal"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  app:
+    image: docuseal/docuseal:1.8.4
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://docuseal:docuseal@db:5432/docuseal
+      SECRET_KEY_BASE: apf-test-secret-key-base-do-not-use-in-production-0000000000
+      FORCE_SSL: "false"

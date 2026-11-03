@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Serialized team and run state carrying approval-shaped data",
+  "evidence_class": "N1",
+  "id": "05",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "AutoGen",
+  "tested_basis": "microsoft/autogen commit pinned",
+  "verdict": "Direct exposed"
+}

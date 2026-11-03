@@ -1,0 +1,31 @@
+# EJBCA Community (L2-24) — official image + MariaDB.
+# EJBCA stores approval requests in the ApprovalData table with a numeric status.
+# The harness forges that status directly in MariaDB.
+name: apf-l2-ejbca
+services:
+  db:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: ejbca
+      MYSQL_DATABASE: ejbca
+      MYSQL_USER: ejbca
+      MYSQL_PASSWORD: ejbca
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  ejbca:
+    image: keyfactor/ejbca-ce:8.3.2
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_JDBC_URL: jdbc:mariadb://db:3306/ejbca
+      DATABASE_USER: ejbca
+      DATABASE_PASSWORD: ejbca
+    ports:
+      - "8443:8443"
+      - "8080:8080"

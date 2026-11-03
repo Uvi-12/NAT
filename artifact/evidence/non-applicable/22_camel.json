@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "No qualifying persisted human-approval gate",
+  "evidence_class": "Scope",
+  "id": "22",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "CAMEL",
+  "tested_basis": "project basis pinned",
+  "verdict": "N/A"
+}

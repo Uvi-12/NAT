@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Persisted approval lifecycle status",
+  "evidence_class": "N1",
+  "id": "04",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Agno",
+  "tested_basis": "agno 2.6.11",
+  "verdict": "Direct exposed"
+}

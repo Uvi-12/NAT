@@ -1,0 +1,5 @@
+The study covers a frozen corpus of 43 version-pinned systems whose outcomes are
+mutually exclusive and sum to 43: 26 directly exposed, 3 conditionally exposed,
+1 transitively exposed, 11 resistant, and 2 with no qualifying persisted approval
+gate. Each system has a matching evidence record filed under its stated tier
+(native-runtime, contract, vendor-confirmed, or resistant/non-applicable).

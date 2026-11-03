@@ -1,0 +1,3 @@
+The exported approval/guard evidence ledgers are tamper-evident and verify
+offline using only the public key embedded in each ledger: the RFC 6962 Merkle
+root recomputes to the signed value and the Ed25519 signed tree head verifies.

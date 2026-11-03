@@ -1,0 +1,10 @@
+== control: genuine approval signed by the approval authority ==
+  genuine approval -> VERIFIED
+== state-only forge 1: reuse the genuine signature over an edited record ==
+  forged record -> REJECTED (signature does not cover it)
+== state-only forge 2: attacker self-signs the forged record (no authority key) ==
+  attacker signature -> REJECTED (attacker key != approval authority)
+
+VERDICT: Resistant (native) - the decision is bound to a Sigstore signature
+the state-writer cannot produce; a state-only write cannot forge it.
+RESULT: PASS

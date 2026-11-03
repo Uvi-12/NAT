@@ -1,0 +1,14 @@
+id: L2-30
+system: Galaxy
+domain: research data
+expected_verdict: EXPOSED
+image: galaxy/galaxy:23.1
+db: postgresql:16
+decisive_surface: "history.published / importable boolean -> world-importable"
+forge_kind: db_update
+confidence: medium   # official image + documented boolean column; Galaxy user/API-key bootstrap can vary by version
+notes: >
+  Galaxy runs against an external PostgreSQL so the forge targets the published/
+  importable flags directly. Seeding uses the master API key to create a user and
+  key. If a Galaxy version changes the bootstrap flow the harness records
+  INCONCLUSIVE rather than guessing.

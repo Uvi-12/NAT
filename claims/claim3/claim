@@ -1,0 +1,4 @@
+The provenance-bound approval verifier accepts exactly one genuine approval and
+rejects every attack family — Forge, Rebind, Replay, Suppress, and Launder —
+including a 100-worker concurrent race on a single artifact in which exactly one
+execution is admitted.

@@ -1,0 +1,26 @@
+# Spinnaker (L2-02) — Orca (the orchestration engine) + Redis (its execution
+# store). A full Spinnaker is a large multi-service stack (clouddriver, front50,
+# gate, deck, echo, ...); this minimal slice is enough to hold the Orca execution
+# store the Manual Judgment stage is persisted in. Driving a real pipeline needs
+# the full stack, so this harness typically records INCONCLUSIVE while documenting
+# the exact state-only forge against the Orca store.
+name: apf-l2-spinnaker
+services:
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  orca:
+    image: us-docker.pkg.dev/spinnaker-community/docker/orca:1.35.0
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      REDIS_HOST: redis
+    ports:
+      - "8083:8083"

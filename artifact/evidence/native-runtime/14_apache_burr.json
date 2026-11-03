@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Persisted application State",
+  "evidence_class": "N1",
+  "id": "14",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Apache Burr",
+  "tested_basis": "DAGWorks-Inc/burr commit pinned",
+  "verdict": "Direct exposed"
+}

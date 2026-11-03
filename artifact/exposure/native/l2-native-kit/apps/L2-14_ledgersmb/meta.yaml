@@ -1,0 +1,13 @@
+id: L2-14
+system: LedgerSMB
+domain: ERP / procurement
+expected_verdict: EXPOSED
+image: ledgersmb/ledgersmb:1.11
+db: postgresql:16
+decisive_surface: "transactions.approved == true"
+forge_kind: db_update
+confidence: low   # company DB requires web setup; harness forges if a seeded txn is present, else INCONCLUSIVE
+notes: >
+  LedgerSMB requires a company database created via its web setup (setup.pl). The
+  harness scans company DBs for an un-approved transaction and forges the approved
+  flag; if setup has not produced one, it records INCONCLUSIVE honestly.

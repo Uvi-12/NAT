@@ -1,0 +1,59 @@
+{
+  "app_id": "L2-22",
+  "system": "OpenEMR",
+  "expected_verdict": "EXPOSED",
+  "verdict": "EXPOSED",
+  "tier": "native",
+  "version": "openemr/openemr:7.0.2",
+  "decisive_surface": "billing.authorized == 1 releases the claim/billing path",
+  "steps": [
+    {
+      "t": "2026-11-02T12:01:17Z",
+      "step": "compose up",
+      "detail": ""
+    },
+    {
+      "t": "2026-11-02T12:02:04Z",
+      "step": "tcp ready",
+      "detail": "127.0.0.1:3306"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "http ready",
+      "detail": "http://127.0.0.1:8300/interface/login/login.php -> 200"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "schema ready",
+      "detail": "billing table present"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "seeded billing line",
+      "detail": "id=1 authorized=0"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "forge",
+      "detail": "UPDATE billing SET authorized=1 WHERE id=1"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "verify authorized",
+      "detail": "1"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "verdict",
+      "detail": "state-only write authorized the claim line; the authorize ACL action was bypassed"
+    },
+    {
+      "t": "2026-11-02T12:03:08Z",
+      "step": "compose down",
+      "detail": ""
+    }
+  ],
+  "error": "",
+  "started_at": "2026-11-02T12:01:17Z",
+  "finished_at": "2026-11-02T12:03:35Z"
+}

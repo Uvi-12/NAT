@@ -1,0 +1,7 @@
+verdict,count
+Direct exposed,26
+Conditional exposed,3
+Transitive exposed,1
+Resistant,11
+N/A,2
+Total,43

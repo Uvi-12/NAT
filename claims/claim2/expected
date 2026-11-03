@@ -1,0 +1,8 @@
+The runner executes each offline harness and prints, per system,
+  control=blocked  forge=executed  OK
+for all 12 harnesses, then:
+  12 harnesses
+  RESULT: PASS
+and exits 0. (These are standard-library contract reconstructions; native
+single-framework reproductions are under artifact/exposure/native and
+artifact/exposure/resistant.)

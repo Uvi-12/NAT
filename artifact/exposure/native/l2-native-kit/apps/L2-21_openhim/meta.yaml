@@ -1,0 +1,15 @@
+id: L2-21
+system: OpenHIM
+domain: healthcare
+expected_verdict: EXPOSED
+image: jembi/openhim-core:v8.4.0
+db: mongo:4.2
+decisive_surface: "transactions.status == 'Successful' trusted by routing"
+forge_kind: db_update   # MongoDB document field
+confidence: medium   # official image + documented transactions.status field;
+                     # the transaction is seeded directly in Mongo (vs real traffic).
+targeted_column: "openhim.transactions.status (MongoDB)"
+notes: >
+  OpenHIM Core persists transactions in MongoDB. The harness seeds a Processing
+  transaction, forges status=Successful, and verifies the persisted value the
+  core reads. Mongo 4.x matches OpenHIM Core v8.

@@ -1,0 +1,19 @@
+{
+  "run_id": "run-haystack-001",
+  "framework": "Haystack",
+  "family": "TCA",
+  "action": "wire_transfer",
+  "arguments": {
+    "amount": 100000,
+    "recipient": "ACME-CORP-TW"
+  },
+  "decision": "approved",
+  "approver": "J. Smith (Senior Compliance Officer)",
+  "timestamp": "2026-06-26T14:32:01Z",
+  "action_status": "succeeded",
+  "state_transition": "paused->approved->executed",
+  "approval_source": "human_approval_gate",
+  "approval_artifact": null,
+  "state_writer": "logging-sidecar",
+  "trusted_approval_path_event": null
+}

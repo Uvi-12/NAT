@@ -1,0 +1,8 @@
+Native audit records for a genuine and a forged approval are byte-identical under
+the audit projection (exact-match 100% over 500 pairs), because the audit log is
+derived from the same persisted state the forge controls. The headline result is
+therefore a structural identity, not a classifier: no detector can separate them,
+and native AUC = 0.5 is the trivial consequence. The provenance AUC = 1.0 is
+stated plainly as true-by-construction — the provenance policy checks a signed
+field built to be present iff genuine, so it shows the field is checkable, not
+that a detector was learned.

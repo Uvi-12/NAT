@@ -1,0 +1,6 @@
+For each binding the table shows the intact verifier rejecting the attack and the
+ablated verifier accepting it, labelled "necessary":
+  binding ... intact=reject  ablated=ACCEPT  necessary
+ending with:
+  RESULT: PASS (every binding is load-bearing)
+and exit 0. Requires `pip install cryptography`.

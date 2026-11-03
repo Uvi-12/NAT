@@ -1,0 +1,12 @@
+id: L2-15
+system: Odoo Community
+domain: ERP / procurement
+expected_verdict: EXPOSED
+image: odoo:17
+db: postgresql:16
+decisive_surface: "purchase.order.state == 'purchase'"
+forge_kind: db_update
+confidence: high   # official image, documented state column, direct SQL forge
+notes: >
+  Reference harness for the kit. Seeds via Odoo XML-RPC, forges the persisted
+  state in PostgreSQL, verifies through Odoo's own API. Targets Odoo 17.

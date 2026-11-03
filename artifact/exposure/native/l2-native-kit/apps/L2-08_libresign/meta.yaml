@@ -1,0 +1,14 @@
+id: L2-08
+system: LibreSign
+domain: e-signature / documents
+expected_verdict: RESISTANT
+image: nextcloud:28-apache + libresign app
+db: postgresql:16
+decisive_surface: "PAdES signature re-parsed from the PDF and verified against the signer cert"
+forge_kind: db_update_then_reverify
+confidence: low   # LibreSign needs its certificate engine (cfssl/java) provisioned; full bring-up may not complete in all environments
+notes: >
+  Encodes the resistance logic: forge the persisted signed-status row, then invoke
+  LibreSign's own validation (which re-parses the PDF). If the LibreSign app cannot
+  be fully provisioned, the harness records INCONCLUSIVE with the reason rather than
+  asserting RESISTANT.

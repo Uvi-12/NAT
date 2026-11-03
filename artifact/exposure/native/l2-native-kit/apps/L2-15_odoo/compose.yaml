@@ -1,0 +1,28 @@
+# Odoo Community (L2-15) — official image + PostgreSQL.
+# The harness talks to Odoo over XML-RPC (8069) and performs the state-only forge
+# directly on PostgreSQL (5432). Ports are published for the harness on the host.
+name: apf-l2-odoo
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  odoo:
+    image: odoo:17
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8069:8069"
+    command: >
+      odoo -d apfdb -i purchase --without-demo=False
+      --db_host=db --db_user=odoo --db_password=odoo

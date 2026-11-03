@@ -1,0 +1,6 @@
+The corpus is a single spine of 79 version-pinned systems in two strata — 43
+approval substrates and 36 deployed applications — under one threat model and one
+selection protocol. Outcomes are mutually exclusive: 54 exposed, 3 conditional,
+1 transitive, 19 resistant, 2 non-applicable. Each system carries exactly one
+pinned version; the three earlier working corpora are folded in and their
+version/verdict conflicts resolved (see RECONCILIATION.md).

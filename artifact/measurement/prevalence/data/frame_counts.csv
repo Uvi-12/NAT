@@ -1,0 +1,12 @@
+framework,verdict,count
+LangGraph,Exposed,80000
+OpenAI Agents SDK,Exposed,614
+CrewAI,Exposed,11712
+LlamaIndex Workflows,Exposed,633
+AutoGen,Exposed,13024
+Haystack,Exposed,159
+Semantic Kernel,Exposed,16
+n8n,Exposed,9888
+Prefect,Resistant,
+PydanticAI,Resistant,
+Temporal,Resistant,

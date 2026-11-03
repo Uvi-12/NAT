@@ -1,0 +1,7 @@
+removed_property,reopened_failure
+action_or_argument_hash,Rebind
+run_checkpoint_pending_action,Replay or forking
+audience,Cross-domain reuse
+reviewed_context_hash,Changed-review context
+expiry_nonce_atomic_consume,Temporal or concurrent replay
+policy_integrity_or_version,Suppress

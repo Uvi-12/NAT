@@ -1,0 +1,64 @@
+{
+  "app_id": "L2-15",
+  "system": "Odoo Community",
+  "expected_verdict": "EXPOSED",
+  "verdict": "EXPOSED",
+  "tier": "native",
+  "version": "odoo:17",
+  "decisive_surface": "purchase.order.state == 'purchase'",
+  "steps": [
+    {
+      "t": "2026-11-02T11:28:34Z",
+      "step": "compose up",
+      "detail": ""
+    },
+    {
+      "t": "2026-11-02T11:29:29Z",
+      "step": "tcp ready",
+      "detail": "127.0.0.1:5432"
+    },
+    {
+      "t": "2026-11-02T11:29:51Z",
+      "step": "http ready",
+      "detail": "http://127.0.0.1:8069/web/login -> 200"
+    },
+    {
+      "t": "2026-11-02T11:29:51Z",
+      "step": "xmlrpc auth",
+      "detail": "uid=2"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "seeded PO",
+      "detail": "po_id=1"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "control state",
+      "detail": "draft"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "forge",
+      "detail": "UPDATE purchase_order SET state='purchase' WHERE id=1"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "verify state",
+      "detail": "{'id': 1, 'state': 'purchase', 'name': 'P00001'}"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "verdict",
+      "detail": "state-only write released the committed PO; button_confirm authorization bypassed"
+    },
+    {
+      "t": "2026-11-02T11:29:52Z",
+      "step": "compose down",
+      "detail": ""
+    }
+  ],
+  "error": "",
+  "started_at": "2026-11-02T11:28:34Z",
+  "finished_at": "2026-11-02T11:29:54Z"
+}

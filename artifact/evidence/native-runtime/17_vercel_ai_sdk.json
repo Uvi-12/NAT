@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Tool-part approval inside persisted UIMessages",
+  "evidence_class": "N1",
+  "id": "17",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Vercel AI SDK",
+  "tested_basis": "vercel/ai commit pinned",
+  "verdict": "Conditional exposed"
+}

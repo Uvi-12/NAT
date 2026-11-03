@@ -1,0 +1,46 @@
+{
+  "app_id": "L2-30",
+  "system": "Galaxy",
+  "expected_verdict": "EXPOSED",
+  "verdict": "EXPOSED",
+  "tier": "native",
+  "runtime": "pip galaxy-data; galaxy.model /tmp/claude-0/-home-claude/27fb26b1-fbd5-5ff8-a474-e7920cca3e17/scratchpad/native_runs/.galaxy/lib/python3.13/site-packages/galaxy/model/__init__.py",
+  "version": "galaxy-data 26.1.2",
+  "decisive_surface": "History.published (model/__init__.py:3656; managers/sharable.py:106,158)",
+  "mechanism": "PFV (public-flag value in a writable relational row)",
+  "steps": [
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "runtime",
+      "detail": "real schema created by galaxy.model.mapping.init; galaxy-data 26.1.2"
+    },
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "legitimate_state",
+      "detail": "History id=1 owned by 'owner', published=False (private)"
+    },
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "control",
+      "detail": "published-index query returns 0 rows; target world-visible: False. Authorized path to flip this is the owner's publish action via the sharable manager."
+    },
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "forge",
+      "detail": "UPDATE history SET published=1 (one column; no publish action, no owner)"
+    },
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "resume_readback",
+      "detail": "real ORM reload: History.published=True; published-index query now returns 1 rows; target world-visible: True"
+    },
+    {
+      "t": "2026-11-02T18:11:49Z",
+      "step": "verdict",
+      "detail": "EXPOSED \u2014 a state-only write to `published` makes the record world-visible through the real model read path, with no publish action, no owner, and no provenance check on the column."
+    }
+  ],
+  "error": "",
+  "started_at": "2026-11-02T18:11:44Z",
+  "finished_at": "2026-11-02T18:11:49Z"
+}

@@ -1,0 +1,16 @@
+id: L2-19
+system: DHIS2
+domain: healthcare
+expected_verdict: EXPOSED
+image: dhis2/core:2.40.3
+db: postgis/postgis:13-3.3
+decisive_surface: "a dataapproval row marks data approved (locked/released)"
+forge_kind: db_update   # direct INSERT into dataapproval
+confidence: low   # needs the DHIS2 demo DB (Sierra Leone) for an approval
+                  # workflow + metadata; with an empty DB this records INCONCLUSIVE.
+targeted_column: "dataapproval (row INSERT)"
+notes: >
+  For a real run, restore the DHIS2 Sierra Leone demo database into the db service
+  so a dataApprovalWorkflow, periods and org units exist. The harness forges a
+  dataapproval row directly and verifies DHIS2 treats the selection as approved.
+  Sequence name (hibernate_sequence) may differ across DHIS2 versions.

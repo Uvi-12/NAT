@@ -1,0 +1,4 @@
+For an exposed resume contract the gate blocks when no decision has been issued,
+and a single write to the persisted approval-relevant value — with no code,
+secret, or business-data change — makes the protected action execute on resume.
+This is reproduced offline, at the documented-contract (N2) tier, for 12 systems.

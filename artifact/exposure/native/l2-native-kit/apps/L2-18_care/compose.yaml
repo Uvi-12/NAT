@@ -1,0 +1,39 @@
+# care / OHC Network (L2-18) — official backend image + PostgreSQL + Redis.
+# care gates patient-transfer (shifting) requests on an approval status persisted
+# in `facility_shiftingrequest.status`. The harness forges that status directly in
+# PostgreSQL (5432).
+#
+# NOTE: care's backend needs a fuller env (see the project's own compose) to serve
+# the API; this minimal stack is enough for the DB-level forge. Seeding a shifting
+# request through the API requires facility/patient/user setup, so the harness
+# forges an existing request and records INCONCLUSIVE if none is present.
+name: apf-l2-care
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: care
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  redis:
+    image: redis:7
+  backend:
+    image: ohcnetwork/care:latest
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: "postgres://postgres:postgres@db:5432/care"
+      REDIS_URL: "redis://redis:6379"
+      CELERY_BROKER_URL: "redis://redis:6379"
+      DJANGO_SETTINGS_MODULE: "config.settings.production"
+      DJANGO_SECRET_KEY: "apf-kit-not-a-real-secret"
+    ports:
+      - "9000:9000"

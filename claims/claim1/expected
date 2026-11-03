@@ -1,0 +1,7 @@
+The validator prints:
+  corpus rows: 43
+  outcome totals: {'Direct exposed': 26, 'Conditional exposed': 3,
+                   'Transitive exposed': 1, 'Resistant': 11, 'N/A': 2}
+  evidence records matched: 43 / 43
+  RESULT: PASS
+and exits 0.

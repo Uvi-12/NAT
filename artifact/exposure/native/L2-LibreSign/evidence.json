@@ -1,0 +1,59 @@
+{
+  "app_id": "L2-08",
+  "system": "LibreSign",
+  "expected_verdict": "RESISTANT",
+  "verdict": "RESISTANT",
+  "tier": "native",
+  "version": "nextcloud 28 + libresign",
+  "decisive_surface": "PAdES signature re-parsed from the PDF and verified",
+  "steps": [
+    {
+      "t": "2026-11-02T11:21:18Z",
+      "step": "compose up",
+      "detail": ""
+    },
+    {
+      "t": "2026-11-02T11:22:11Z",
+      "step": "tcp ready",
+      "detail": "127.0.0.1:5432"
+    },
+    {
+      "t": "2026-11-02T11:22:23Z",
+      "step": "http ready",
+      "detail": "http://127.0.0.1:8080/status.php -> 200"
+    },
+    {
+      "t": "2026-11-02T11:22:39Z",
+      "step": "install libresign",
+      "detail": "libresign 8.3.2 installed\nScanning AppData for files\n\nCould not find folder: libresign\nlibresign enabled\n"
+    },
+    {
+      "t": "2026-11-02T11:22:40Z",
+      "step": "libresign tables",
+      "detail": "['oc_libresign_account_file', 'oc_libresign_file', 'oc_libresign_file_element', 'oc_libresign_file_type', 'oc_libresign_identify_method', 'oc_libresign_sign_request', 'oc_libresign_user_element']"
+    },
+    {
+      "t": "2026-11-02T11:22:40Z",
+      "step": "forge",
+      "detail": "UPDATE oc_libresign_sign_request SET signed=now()"
+    },
+    {
+      "t": "2026-11-02T11:22:40Z",
+      "step": "validate response",
+      "detail": "200 {\"ocs\":{\"meta\":{\"status\":\"ok\",\"statuscode\":200,\"message\":\"OK\"},\"data\":{\"settings\":{\"canSign\":false,\"canRequestSign\":true,\"signerFileUuid\":null,\"phoneNumber\":\"\",\"hasSignatureFile\":false}}}}"
+    },
+    {
+      "t": "2026-11-02T11:22:40Z",
+      "step": "verdict",
+      "detail": "the forged persisted status does not make the PDF validate; LibreSign re-derives the result from the document bytes and the certificate"
+    },
+    {
+      "t": "2026-11-02T11:22:40Z",
+      "step": "compose down",
+      "detail": ""
+    }
+  ],
+  "error": "",
+  "started_at": "2026-11-02T11:21:18Z",
+  "finished_at": "2026-11-02T11:22:45Z"
+}

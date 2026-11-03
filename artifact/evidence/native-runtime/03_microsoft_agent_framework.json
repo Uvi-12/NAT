@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Checkpoint channel value and approval field",
+  "evidence_class": "N1",
+  "id": "03",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Microsoft Agent Framework",
+  "tested_basis": "semantic-kernel 1.43.0 line",
+  "verdict": "Direct exposed"
+}

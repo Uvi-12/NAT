@@ -1,0 +1,16 @@
+{
+  "name": "ga-mastra",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Integrity analysis for Mastra workflow suspend/resume state (resistant case)",
+  "license": "MIT",
+  "scripts": {
+    "demo": "node examples/run_demo.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@mastra/core": "^1.41.0",
+    "@mastra/libsql": "^1.12.1",
+    "zod": "^3.25.0"
+  }
+}

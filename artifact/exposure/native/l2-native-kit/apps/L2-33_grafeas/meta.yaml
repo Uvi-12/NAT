@@ -1,0 +1,15 @@
+id: L2-33
+system: Grafeas
+domain: software supply chain
+expected_verdict: EXPOSED
+image: us.gcr.io/grafeas/grafeas-server:v0.2.3
+db: postgresql:16
+decisive_surface: "ATTESTATION occurrence trusted as a plain row; embedded signature not re-verified"
+forge_kind: db_insert
+confidence: medium   # official image + documented postgres backend; occurrences table column names are schema-tolerant (two shapes attempted)
+notes: >
+  Grafeas is a metadata store and does not verify attestation signatures itself,
+  so a forged occurrence row inserted directly in PostgreSQL is served back by the
+  API as a valid attestation. The harness tries two known column shapes for the
+  occurrences table and records INCONCLUSIVE if neither matches the running image's
+  schema.

@@ -1,0 +1,8 @@
+# Server-side Atlantis config: require a VCS approval before apply.
+# This is the gate whose provenance the REPLAY tests: Atlantis trusts the VCS approval,
+# so its binding is only as strong as the VCS setting (Gitea Dismiss stale approvals).
+repos:
+  - id: /.*/
+    apply_requirements: [approved]
+    allowed_overrides: [apply_requirements]
+    allow_custom_workflows: true

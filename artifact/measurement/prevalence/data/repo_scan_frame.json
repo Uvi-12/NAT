@@ -1,0 +1,50 @@
+{
+ "LangGraph": {
+  "query": "Command resume interrupt langgraph language:python",
+  "total": 23968,
+  "returned": 500,
+  "eligible": 245
+ },
+ "OpenAI Agents SDK": {
+  "query": "needs_approval agents language:python",
+  "total": 6144,
+  "returned": 500,
+  "eligible": 405
+ },
+ "CrewAI": {
+  "query": "crewai persist approved language:python",
+  "total": 1118,
+  "returned": 500,
+  "eligible": 304
+ },
+ "Haystack": {
+  "query": "AgentSnapshot haystack language:python",
+  "total": 50,
+  "returned": 50,
+  "eligible": 10
+ },
+ "AutoGen": {
+  "query": "autogen_agentchat UserProxyAgent save_state language:python",
+  "total": 114,
+  "returned": 118,
+  "eligible": 60
+ },
+ "LlamaIndex Workflows": {
+  "query": "InputRequiredEvent HumanResponseEvent language:python",
+  "total": 446,
+  "returned": 500,
+  "eligible": 96
+ },
+ "Semantic Kernel": {
+  "query": "semantic_kernel KernelProcessStep approved language:python",
+  "total": 5,
+  "returned": 5,
+  "eligible": 5
+ },
+ "n8n": {
+  "query": "\"n8n-nodes-base.wait\" language:JSON",
+  "total": 65280,
+  "returned": 500,
+  "eligible": 232
+ }
+}

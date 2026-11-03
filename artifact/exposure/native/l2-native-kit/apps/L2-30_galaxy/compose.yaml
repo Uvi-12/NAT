@@ -1,0 +1,29 @@
+# Galaxy (L2-30) — official all-in-one image pointed at an external PostgreSQL so
+# the harness can perform the state-only forge on the published/importable flag.
+name: apf-l2-galaxy
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: galaxy
+      POSTGRES_PASSWORD: galaxy
+      POSTGRES_DB: galaxy
+    ports:
+      - "5430:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U galaxy"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  galaxy:
+    image: galaxy/galaxy:23.1
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      GALAXY_CONFIG_DATABASE_CONNECTION: "postgresql://galaxy:galaxy@db:5432/galaxy"
+      GALAXY_CONFIG_MASTER_API_KEY: "apf-master-key"
+      GALAXY_CONFIG_ADMIN_USERS: "admin@example.com"
+      GALAXY_CONFIG_BOOTSTRAP_ADMIN_API_KEY: "apf-master-key"
+    ports:
+      - "8030:80"

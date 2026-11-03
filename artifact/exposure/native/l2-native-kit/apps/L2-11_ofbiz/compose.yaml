@@ -1,0 +1,34 @@
+# Apache OFBiz (L2-11) — official image + PostgreSQL sidecar.
+# OFBiz is configured to use PostgreSQL so the harness can perform the state-only
+# forge directly on the order_header table. The image loads demo data (which
+# includes sample sales orders) on first init.
+name: apf-l2-ofbiz
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ofbiz
+      POSTGRES_PASSWORD: ofbiz
+      POSTGRES_DB: ofbiz
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ofbiz"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  ofbiz:
+    image: apache/ofbiz:23.01.01
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # The apache/ofbiz image reads these to point its entity engine at Postgres
+      # and to load seed + demo data on first boot.
+      OFBIZ_POSTGRES_HOST: db
+      OFBIZ_POSTGRES_DB: ofbiz
+      OFBIZ_POSTGRES_USER: ofbiz
+      OFBIZ_POSTGRES_PASSWORD: ofbiz
+      OFBIZ_DATA_LOAD: demo
+    ports:
+      - "8443:8443"
