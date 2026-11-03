@@ -1,0 +1,29 @@
+{
+  "run_id": "run-dify-001",
+  "framework": "Dify",
+  "family": "WED",
+  "action": "wire_transfer",
+  "arguments": {
+    "amount": 100000,
+    "recipient": "ACME-CORP-TW"
+  },
+  "decision": "approved",
+  "approver": "J. Smith (Senior Compliance Officer)",
+  "timestamp": "2026-06-26T14:32:01Z",
+  "action_status": "succeeded",
+  "state_transition": "paused->approved->executed",
+  "approval_source": "human_input_node",
+  "approval_artifact": {
+    "run_id": "run-dify-001",
+    "action": "wire_transfer",
+    "args_hash": "2cdc8898eee889c923994ac7ec8bd2a460e250abb6faef951396acb336e1c909",
+    "approver": "J. Smith (Senior Compliance Officer)",
+    "nonce": "bffbaf1c60913e91",
+    "context_hash": "268ab822035ef3b158f36c66b4055a70",
+    "issued_at": "2026-06-26T14:32:01Z",
+    "expiry": "2026-06-26T15:32:01Z",
+    "signature": "34a43b91bdf49a35f3facd50669bfcb551402f7b32726fe8315ad18ebfe8c302"
+  },
+  "state_writer": "approval-service",
+  "trusted_approval_path_event": "approval-svc:run-dify-001"
+}

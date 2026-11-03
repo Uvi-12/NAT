@@ -1,4 +1,4 @@
-# Artifact: *Nobody Approved This, Approval-Provenance Failure across Agentic AI, Workflows, and CI/CD*
+# Artifact: *Nobody Approved This: Subverting Human Approvals in Agentic AI, Workflows, and CI/CD*
 
 This is the artifact for the IEEE S&P 2026 submission *"Nobody Approved This:
 Approval-Provenance Failure across Agentic AI, Workflows, and CI/CD."* It lets a
