@@ -1,8 +1,7 @@
 This submission is under double-blind review; author and institution are omitted.
 
 @inproceedings{apf2026,
-  title     = {Nobody Approved This: Approval-Provenance Failure across
-               Agentic AI, Workflows, and CI/CD},
+  title     = {Nobody Approved This: Subverting Human Approvals in Agentic AI, Workflows, and CI/CD},
   author    = {Anonymous},
   booktitle = {To appear, 47th IEEE Symposium on Security and Privacy (S&P)},
   year      = {2026}
