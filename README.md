@@ -1,20 +1,20 @@
-# Artifact: *Nobody Approved This, Approval-Provenance Failure across Agentic AI, Workflows, and CI/CD*
+# Artifact: *Nobody Approved This: Subverting Human Approvals in Workflows and CI/CD*
 
 This is the artifact for the IEEE S&P 2027 submission *"Nobody Approved This:
-Approval-Provenance Failure across Agentic AI, Workflows, and CI/CD."* It lets a
-reviewer reproduce the paper's central results on a commodity laptop, without
-Docker and without any third-party service, in a few minutes.
+Subverting Human Approvals in Workflows and CI/CD."* It reproduces the paper's
+central results on a commodity laptop, without Docker and without any
+third-party service, in a few minutes.
 
 The paper studies **Approval-Provenance Failure (APF)**: a resume-time
 confused-deputy weakness in which a paused, human-gated workflow treats
 approval-shaped *operational state* as proof that an authorized reviewer
-approved the exact action about to run. An adversary who can write that state , 
-a backup or migration job, a scoped database role, a sidecar, a queue consumer , 
-but who cannot approve, cannot call the protected tool, holds no keys, and runs
-no code, can make the workflow release a protected action under its own, more
-privileged identity. The paper measures this across 43 version-pinned systems,
-shows it is an architectural property (who is allowed to *author* the evidence
-the resume path trusts), and gives a provenance-bound defense that we evaluate
+approved the exact action about to run. An adversary who can write that state
+(a backup or migration job, a scoped database role, a sidecar, or a queue
+consumer) but who cannot approve, cannot call the protected tool, holds no keys,
+and runs no code, can make the workflow release a protected action under its
+own, more privileged identity. The paper measures this across 43 version-pinned
+systems, shows it is an architectural property (who is allowed to *author* the
+evidence the resume path trusts), and gives a provenance-bound defense evaluated
 with an adversarial battery and a per-binding ablation.
 
 The artifact is organised so you can start with a 30-second offline check and go
@@ -25,7 +25,7 @@ experiment runs against local, synthetic, in-process state.
 
 ### What the artifact supports
 
-Two results stand on their own and are the ones to check first, because they
+Two results are self-verifying and a natural starting point, because they
 *verify* rather than merely demonstrate:
 
 * **The provenance-bound verifier (C3, C4).** The real verifier, the same code,
@@ -41,14 +41,14 @@ Two results stand on their own and are the ones to check first, because they
 
 The remaining results give the measurement and its honest caveats:
 
-* the frozen 43-system corpus and its outcome accounting (Table in §4). 
+* the frozen 43-system corpus and its outcome accounting (table in §4).
 * that an exposed resume path releases a protected action after a *state-only*
-  forge while the same gate blocks beforehand (the exposure mechanism, §3–5) , 
-  these per-system harnesses demonstrate *exposure only*. The defense is not
-  re-litigated per harness, it is the central verifier above. 
+  forge while the same gate blocks beforehand (the exposure mechanism, §3 to §5).
+  These per-system harnesses demonstrate *exposure only*. The defense is not
+  re-litigated per harness, it is the central verifier above.
 * the audit result (C5), stated plainly as a structural identity (native records
-  are byte-identical. The provenance separation is true-by-construction), and the
-  local verification cost (C6).
+  are byte-identical, and the provenance separation is true-by-construction), and
+  the local verification cost (C6).
 
 ### Security, privacy, and ethical concerns
 None. The artifact contains no exploit against any third party, no credentials,
@@ -62,7 +62,7 @@ download is required to run the core claims.
 
 ### Hardware dependencies
 None special. Any x86-64 or arm64 machine with ~2 GB RAM. No GPU, no specific
-CPU, no testbed. See `infrastructure/`, the "testbed" is a single commodity node.
+CPU, no testbed. See `infrastructure/`. The testbed is a single commodity node.
 
 ### Software dependencies
 * Python 3.9 or newer.
@@ -163,9 +163,9 @@ pairs. Total wall-clock for all nine is about two minutes on a laptop.
   Reproduced by **E9**.
 * **C10, The exposed default extends into public code (measured).** From public
   GitHub, snapshot 2026-11-02: (A) within the audited corpus, exposed systems are
-  72.6% of the 73 resolved repositories but **88.4%** of their GitHub stars. 
+  72.6% of the 73 resolved repositories but **88.4%** of their GitHub stars.
   (B) keyword searches for eight exposed frameworks' human-in-the-loop APIs return
-  116,046 hits (approximate. Include docs and copies). (C) of 209 search-ranked
+  116,046 hits (approximate, include docs and copies). (C) of 209 search-ranked
   files using those APIs, 201 (**96.2%**) contain no provenance-verification
   signal, and of the 111 source-code files 108 (**97.3%**). The predicate is
   lexical and file-level. The Wilson intervals describe the sample, not all public
@@ -182,7 +182,7 @@ pairs. Total wall-clock for all nine is about two minutes on a laptop.
 | E3 | C3 | `bash claims/claim3/run.sh` | cryptography | 2 s | every family REJECT, genuine ACCEPT, concurrent executions=1, PASS |
 | E4 | C4 | `bash claims/claim4/run.sh` | cryptography | 2 s | each binding intact=reject, ablated=ACCEPT, necessary, PASS |
 | E5 | C5 | `bash claims/claim5/run.sh` | stdlib | 3 s | native records byte-identical 100%/5000, native_auc=0.5 (consequence), provenance_auc=1.0 (true-by-construction) |
-| E6 | C6 | `bash claims/claim6/run.sh` | cryptography | 20 s | median/p95/p99 for HMAC verify, Ed25519 sign & verify (Table XII) |
+| E6 | C6 | `bash claims/claim6/run.sh` | cryptography | 20 s | median/p95/p99 for HMAC verify, Ed25519 sign & verify (paper §6) |
 | E7 | C7 | `bash claims/claim7/run.sh` | cryptography | 1 s | 7 ledgers, merkle_root=OK, tree_head_sig=OK, PASS |
 | E8 | C8 | `bash claims/claim8/run.sh` | stdlib | 1 s | unified spine 79 systems, L1 43 (26/3/1/11/2), L2 36 (28/8), PASS |
 | E9 | C9 | `bash claims/claim9/run.sh` | stdlib | 1 s | 22 systems one reach, REACH1 Exposed=9/Cond=2/Resist=11 reproduces paper, 6 engine-dependent, 5 anchored, PASS |
@@ -196,28 +196,37 @@ non-zero on any deviation, so the set can be run in CI.
 The paper is careful about *how* each verdict was established, and so is the
 artifact. Three things are worth stating plainly:
 
-* **Evidence tiers are not all equal, and we do not pretend they are.** The
-  corpus marks each system N1 (native-runtime), N2 (documented resume contract
-  reproduced against a local store), vendor-confirmed, or design-verified. The
-  offline harnesses behind C2 are N2 by construction: they reconstruct the
-  documented consume path, they do not run the vendor's full product. Native
-  reproductions that run the real vendor code live under `artifact/exposure/native`
-  and `artifact/exposure/resistant` and require the framework/tool to be installed.
-  Seven Layer-2 deployed-application rows have been promoted N2→native this way , 
-  the exposed ERPs Tryton and Dolibarr (a state-only write to the persisted
-  approval status releases the gated action in the real app), and the
-  signature-anchored supply-chain / PKI tools TUF, in-toto, Sigstore (cosign) and
-  step-ca (a state-only write cannot forge the signed decision), each confirming
-  its corpus verdict at native tier (`artifact/exposure/native/L2-*`, with the
-  exact version pins in `artifact/corpus/UNIFIED_CORPUS.csv`). Ten of the 36 Layer-2 rows are now native (seven promoted in-build, three, Odoo, OpenEMR, LibreSign, from the included kit, each with a captured run under `artifact/exposure/native/L2-{Odoo,OpenEMR,LibreSign}/`). The remaining rows can be reproduced on any Docker host with the bundled, resumable kit at `artifact/exposure/native/l2-native-kit/` (`./run.sh`). It records a real verdict or INCONCLUSIVE+reason per app and never forces a pass. The kit needs Docker and its own dependencies, so it is not part of the gated crypto-only claim suite.
-* **The audit result is a structural identity, and we say so plainly.** The real
-  finding is that native audit records for a genuine and a forged approval are
+* **Evidence tiers are not all equal, and the artifact does not pretend they
+  are.** The corpus marks each system N1 (native-runtime), N2 (documented resume
+  contract reproduced against a local store), vendor-confirmed, or
+  design-verified. The offline harnesses behind C2 are N2 by construction: they
+  reconstruct the documented consume path, they do not run the vendor's full
+  product. Native reproductions that run the real vendor code live under
+  `artifact/exposure/native` and `artifact/exposure/resistant` and require the
+  framework/tool to be installed. Seven Layer-2 deployed-application rows have
+  been promoted from N2 to native this way: the exposed ERPs Tryton and Dolibarr
+  (a state-only write to the persisted approval status releases the gated action
+  in the real app), and the signature-anchored supply-chain and PKI tools TUF,
+  in-toto, Sigstore (cosign), and step-ca (a state-only write cannot forge the
+  signed decision), each confirming its corpus verdict at native tier
+  (`artifact/exposure/native/L2-*`, with the exact version pins in
+  `artifact/corpus/UNIFIED_CORPUS.csv`). Ten of the 36 Layer-2 rows are now native
+  (seven promoted in-build, and three more, Odoo, OpenEMR, LibreSign, from the
+  included kit, each with a captured run under
+  `artifact/exposure/native/L2-{Odoo,OpenEMR,LibreSign}/`). The remaining rows can
+  be reproduced on any Docker host with the bundled, resumable kit at
+  `artifact/exposure/native/l2-native-kit/` (`./run.sh`). It records a real verdict
+  or INCONCLUSIVE with a reason per app and never forces a pass. The kit needs
+  Docker and its own dependencies, so it is not part of the gated crypto-only
+  claim suite.
+* **The audit result is a structural identity, stated plainly.** The real finding
+  is that native audit records for a genuine and a forged approval are
   byte-identical (exact-match 100% over 5000 pairs), so *no* detector can separate
-  them, native AUC 0.5 is the trivial consequence, not a classifier score. The
+  them, and native AUC 0.5 is the trivial consequence, not a classifier score. The
   provenance AUC 1.0 is true-by-construction: the provenance policy checks a
   signed field built to be present iff genuine, so it demonstrates the field is
-  *checkable*, nothing more. C5 prints both and labels them so, so there is no
-  circular "we trained a detector and it scored 1.0" claim to mistake it for.
+  *checkable*, nothing more. C5 prints both values and labels each, so neither is
+  presented as a learned-detector score.
 * **The overhead number is the cryptographic core only.** Durable nonce storage,
   the network hop to an approval service, and identity are excluded and are
   deployment-specific.
@@ -232,44 +241,44 @@ For a one-page index of exactly what ships and where, see `MANIFEST.md`. For the
 claim-by-claim crosswalk to the paper, see `CLAIM_MAP.md`.
 
 ```
-README.md                 this file (artifact appendix)
-MANIFEST.md               authoritative index of everything in the artifact
-CLAIM_MAP.md              artifact claims (C1-C10) mapped to paper claims
-install.sh                create .venv, install dependencies
-requirements.txt          cryptography (+ optional jsonschema)
-use.txt destructive.txt   usage and (non-)destructiveness statements
-citation.txt license.*    citation and license
-infrastructure/           provisioning notes (a single commodity node)
-claims/claim1..10/        {claim, expected, run.sh} per major claim
-scripts/                  validators: counts, anonymity, ledger verification
-artifact/
-  corpus/                 the unified 79-system corpus and its reconciliation
-                          UNIFIED_CORPUS.csv, SELECTION_PROTOCOL.md,
-                          RECONCILIATION.md, UNIFIED_CORPUS_SUMMARY.md,
-                          OPENAI_AGENTS_VERSION_SENSITIVITY.md,
-                          SYMMETRIC_STATEWRITER_TEST.md,
-                          RELATED_WORK_POSITIONING.md, and the
-                          43-substrate corpus.csv it is built on
-  evidence/               per-system evidence records, by tier
-  exposure/
-    offline/              12 standard-library contract harnesses (N2)
-    symmetric/            two-reach state-writer sensitivity test (C9)
-    native/              native reproductions (need the framework/tool)
-      l2-native-kit/     resumable one-command kit to reproduce the
-                         remaining Layer-2 rows natively on a Docker host
-    resistant/           resistant-by-design controls (need the framework)
-    extended_docker/      optional durable/VCS reproductions (need Docker)
-  mitigation/
-    apf_provenance/       the provenance-bound approval protocol + verifier
-    battery.py            adversarial battery (C3)
-    ablation.py           per-binding ablation (C4)
-    overhead_bench.py     verification microbenchmark (C6)
-    ablation.csv overhead.csv   recorded reference outputs
-  audit/e3/               audit-indistinguishability experiment (C5)
-  ledger/                 signed, offline-verifiable evidence ledgers (C7)
-  measurement/
-    prevalence/           APF in public code (C10): METHODOLOGY.md,
-                          RESULTS.md, classify.py, analyze.py, collect*.py,
-                          and data/ (repo_metrics, frame_counts,
-                          sample_classified, validation)
+├── README.md                          this file (artifact appendix)
+├── MANIFEST.md                        authoritative index of everything in the artifact
+├── CLAIM_MAP.md                       artifact claims (C1-C10) mapped to paper claims
+├── install.sh                         create .venv, install dependencies
+├── requirements.txt                   cryptography (+ optional jsonschema)
+├── use.txt, destructive.txt           usage and (non-)destructiveness statements
+├── citation.txt, license.*            citation and license
+├── infrastructure/                    provisioning notes (a single commodity node)
+├── claims/claim1..10/                 {claim, expected, run.sh} per major claim
+├── scripts/                           validators: counts, anonymity, ledger verification
+└── artifact/
+    ├── corpus/                        the unified 79-system corpus and its reconciliation
+    │                                  UNIFIED_CORPUS.csv, SELECTION_PROTOCOL.md,
+    │                                  RECONCILIATION.md, UNIFIED_CORPUS_SUMMARY.md,
+    │                                  OPENAI_AGENTS_VERSION_SENSITIVITY.md,
+    │                                  SYMMETRIC_STATEWRITER_TEST.md,
+    │                                  RELATED_WORK_POSITIONING.md, and the
+    │                                  43-substrate corpus.csv it is built on
+    ├── evidence/                      per-system evidence records, by tier
+    ├── exposure/
+    │   ├── offline/                   12 standard-library contract harnesses (N2)
+    │   ├── symmetric/                 two-reach state-writer sensitivity test (C9)
+    │   ├── native/                    native reproductions (need the framework/tool)
+    │   │   └── l2-native-kit/         resumable one-command kit to reproduce the
+    │   │                              remaining Layer-2 rows natively on a Docker host
+    │   ├── resistant/                 resistant-by-design controls (need the framework)
+    │   └── extended_docker/           optional durable/VCS reproductions (need Docker)
+    ├── mitigation/
+    │   ├── apf_provenance/            the provenance-bound approval protocol + verifier
+    │   ├── battery.py                 adversarial battery (C3)
+    │   ├── ablation.py                per-binding ablation (C4)
+    │   ├── overhead_bench.py          verification microbenchmark (C6)
+    │   └── ablation.csv, overhead.csv recorded reference outputs
+    ├── audit/e3/                      audit-indistinguishability experiment (C5)
+    ├── ledger/                        signed, offline-verifiable evidence ledgers (C7)
+    └── measurement/
+        └── prevalence/                APF in public code (C10): METHODOLOGY.md,
+                                       RESULTS.md, classify.py, analyze.py, collect*.py,
+                                       and data/ (repo_metrics, frame_counts,
+                                       sample_classified, validation)
 ```
