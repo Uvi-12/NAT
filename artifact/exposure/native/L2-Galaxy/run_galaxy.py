@@ -33,7 +33,7 @@ with guard(ev, OUT):
     import galaxy.model as m
     import galaxy.model.mapping as mp
     from galaxy.version import VERSION as GV  # type: ignore
-    ev.runtime = f"pip galaxy-data; galaxy.model {getattr(m,'__file__','?')}"
+    ev.runtime = "pip galaxy-data, galaxy.model from site-packages/galaxy/model/__init__.py"
     ev.version = f"galaxy-data {GV}"
     from sqlalchemy import select, text
 

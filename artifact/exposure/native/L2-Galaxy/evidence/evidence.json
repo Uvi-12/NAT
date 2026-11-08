@@ -4,7 +4,7 @@
   "expected_verdict": "EXPOSED",
   "verdict": "EXPOSED",
   "tier": "native",
-  "runtime": "pip galaxy-data; galaxy.model /tmp/claude-0/-home-claude/27fb26b1-fbd5-5ff8-a474-e7920cca3e17/scratchpad/native_runs/.galaxy/lib/python3.13/site-packages/galaxy/model/__init__.py",
+  "runtime": "pip galaxy-data, galaxy.model from site-packages/galaxy/model/__init__.py",
   "version": "galaxy-data 26.1.2",
   "decisive_surface": "History.published (model/__init__.py:3656; managers/sharable.py:106,158)",
   "mechanism": "PFV (public-flag value in a writable relational row)",

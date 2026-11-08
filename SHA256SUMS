@@ -284,9 +284,9 @@ f3caa20d9e4c83bc483c7bf838712318f1006f800712b28600799ec549dbe048  ./artifact/exp
 c32db19951c38580d617abd4e17eafbba569e80b8f4af5236c7aeb2ac5c6288d  ./artifact/exposure/native/L2-Dolibarr/run_output.txt
 7614bbcf3630411e0e11cb4632f839fa866a717538ff465ee2b205b55251c0e5  ./artifact/exposure/native/L2-Galaxy/README.md
 bcbc566d5451e54bc200b27d9b7eb907c3dceef3d75dada30c92922e5c83e476  ./artifact/exposure/native/L2-Galaxy/apf_ev.py
-8b6c091e1f59ace7c021ed0576da771559f59ef2cd36db44c8557a8904b8e1e3  ./artifact/exposure/native/L2-Galaxy/evidence/evidence.json
+c60af418951e9e06a3fe5edcbfd35a2351444a71c4cadde213b61f6436109ec6  ./artifact/exposure/native/L2-Galaxy/evidence/evidence.json
 d637fc8bcdeb81f2d00d533cea1a17d76420111a16c2da42940a50a206dfaba0  ./artifact/exposure/native/L2-Galaxy/evidence/evidence.json.sha256
-c1f56afd9c33e6d8f6a701073246d377ed3d0e921c2b0371f45e1001ef1dc102  ./artifact/exposure/native/L2-Galaxy/run_galaxy.py
+7025b99acba5635383e8b6885e01f0ff1859a95e1c677dc40eb963f8b3f59b5d  ./artifact/exposure/native/L2-Galaxy/run_galaxy.py
 9d004df1d935b073e62990464d463ee992f4c021a04dcd84665ffaee76fdf458  ./artifact/exposure/native/L2-LibreSign/README.md
 829e86df00de7678d589188bef6c72ed14eb41bebc38a74ac06f4bb9038c10ad  ./artifact/exposure/native/L2-LibreSign/evidence.json
 e05092d71a4511e2de0cc68f34c80fa9750e2cab2be41957c118fe862e54056b  ./artifact/exposure/native/L2-Odoo/README.md
@@ -650,7 +650,7 @@ f07af9e8ae4b595ac092f3d76cb4c355637ad3775e4fb315c8b12a4af5de3d37  ./install.sh
 29823ef96524a837e50cbcc6bbe1f45c1f90f08abb9b6aa9e66f83c6b7a28bc9  ./license.txt
 96b1dfa159cda90f266087c3a6121b037052df0f43ca8d1c5c2e38d51509d4c1  ./license.url
 af2e303923dec60c9eea568d175696c32a0f2eddc690fed5306ebb9268ea2bf1  ./requirements.txt
-6dc6590d9e7b490494a4fb57179feb6ed91a95f89ec0af12223c2c752c03ebd2  ./scripts/validate_anonymity.py
+13ec3222145d95b10459b72535ee75f720480a31df1ae2faf055a431d2bf4bea  ./scripts/validate_anonymity.py
 f8d501895189d727b6d9fea3b2c60a06121c83db715aa67db5cc3487fa1d7ef5  ./scripts/validate_counts.py
 5afc46c882df71069188f2a21831e9bf2e260981d07c232a877161403f826630  ./scripts/validate_unified.py
 561727b88d3f155e7f933005c34902607f22d6ffe44c65c7b2aeccbe8396579f  ./scripts/verify_ledger.py
