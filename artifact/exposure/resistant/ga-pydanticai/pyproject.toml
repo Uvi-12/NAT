@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ga-pydanticai"
+version = "1.0.0"
+description = "Integrity analysis for PydanticAI deferred-approval human-in-the-loop (resistant case)"
+requires-python = ">=3.10"
+dependencies = ["pydantic-ai>=1.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+ga-pydanticai = "ga_pydanticai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

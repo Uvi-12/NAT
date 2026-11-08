@@ -1,0 +1,15 @@
+id: L2-29
+system: eLabFTW
+domain: research data
+expected_verdict: RESISTANT
+image: elabftw/elabimg:5.1.15
+db: mysql:8.4
+decisive_surface: "RFC-3161 trusted-timestamp token / libsodium signature re-verified over the entry"
+forge_kind: db_update
+confidence: low   # timestamp verification is a web/console path; harness forges the status and checks no valid token backs it, else INCONCLUSIVE
+notes: >
+  Resistance rests on cryptographic re-verification (RFC-3161 token / libsodium
+  signature) over the entry content, not on the persisted 'timestamped' status.
+  The harness forges that status and shows no valid token backs it; it records
+  INCONCLUSIVE rather than overclaiming if the full web verifier cannot be driven
+  headlessly in this image.

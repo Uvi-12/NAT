@@ -1,0 +1,12 @@
+framework,verdict,language,query,approval_api
+LangGraph,Exposed,Python,"interrupt Command resume langgraph",langgraph interrupt()/Command(resume=)
+OpenAI Agents SDK,Exposed,Python,"needs_approval agents tool_approval",tool needs_approval
+CrewAI,Exposed,Python,"human_input crewai task",Task(human_input=True)
+LlamaIndex Workflows,Exposed,Python,"InputRequiredEvent HumanResponseEvent workflow",HITL workflow events
+AutoGen,Exposed,Python,"UserProxyAgent human_input_mode autogen",human_input_mode=ALWAYS
+Haystack,Exposed,Python,"ConditionalRouter human haystack pipeline",human review branch
+Semantic Kernel,Exposed,Python,"function_invocation_filter approval semantic_kernel",approval filter
+n8n,Exposed,JSON,"n8n nodes Wait approval resume",Wait node + resume webhook
+Prefect,Resistant,Python,"pause_flow_run resume_flow_run RunInput",pause/resume with RunInput
+PydanticAI,Resistant,Python,"DeferredToolRequests pydantic_ai approval",deferred tool approval
+Temporal,Resistant,Python,"workflow.wait_condition signal approval temporal",signal-gated approval

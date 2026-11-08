@@ -1,0 +1,75 @@
+Output format is unaligned.
+CREATE EXTENSION
+psql:demo.sql:16: NOTICE:  table "approvals" does not exist, skipping
+psql:demo.sql:16: NOTICE:  table "secrets" does not exist, skipping
+psql:demo.sql:16: NOTICE:  table "released_actions" does not exist, skipping
+psql:demo.sql:16: NOTICE:  table "hardened_released" does not exist, skipping
+DROP TABLE
+psql:demo.sql:17: NOTICE:  role "operator" does not exist, skipping
+psql:demo.sql:17: NOTICE:  role "wsvc" does not exist, skipping
+psql:demo.sql:17: NOTICE:  role "approval_svc" does not exist, skipping
+DROP ROLE
+CREATE ROLE
+CREATE ROLE
+CREATE ROLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 1
+REVOKE
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+GRANT
+== PART 1: VULNERABLE (APF) WORKFLOW ==
+-- [control 1] operator reads secrets (must be DENIED):
+SET
+psql:demo.sql:52: ERROR:  permission denied for table secrets
+RESET
+-- [control 2] operator executes the protected action directly (must be DENIED):
+SET
+psql:demo.sql:57: ERROR:  permission denied for table released_actions
+RESET
+-- [forge] operator writes an approval-shaped row for an UNAPPROVED action:
+SET
+INSERT 0 1
+RESET
+-- [workflow] wsvc resumes and releases every action whose status = approved:
+SET
+INSERT 0 1
+RESET
+-- [RESULT-1] protected action released without human approval (expect 1):
+1
+== PART 2: HARDENED (PROVENANCE-BOUND) WORKFLOW ==
+-- [approval_svc] issues a GENUINE approval for refund_20 with a provenance token:
+SET
+INSERT 0 1
+RESET
+-- [forge] operator sets status=approved for wire_transfer_99999 (no key, no valid token):
+SET
+INSERT 0 1
+RESET
+-- [hardened workflow] wsvc releases ONLY rows whose token verifies under the key:
+SET
+INSERT 0 1
+RESET
+-- [RESULT-2a] genuine refund_20 released (expect 1):
+1
+-- [RESULT-2b] forged wire_transfer_99999 released (expect 0, forge rejected):
+0
+
+================= ASSERTIONS =================
+  PASS  operator cannot read application secrets
+  PASS  operator cannot execute the protected action directly
+  PASS  vulnerable workflow released the forged action (RESULT-1=1)
+  PASS  hardened workflow released the genuine approval (RESULT-2a=1)
+  PASS  hardened workflow rejected the forge (RESULT-2b=0)
+
+RESTRICTED-IDENTITY DEMO: PASS

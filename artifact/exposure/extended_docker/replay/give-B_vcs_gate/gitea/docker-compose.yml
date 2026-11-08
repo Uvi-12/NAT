@@ -1,0 +1,27 @@
+# APF / APF - REPLAY reproduction: Gitea (#41)
+# SQLite-backed, install-locked so no web setup wizard is needed. API on :3000.
+# Bring up:  docker compose up -d && ./init_gitea.sh   (creates users + tokens)
+# Run:       python3 harness_gitea.py
+# Tear down: docker compose down -v
+services:
+  gitea:
+    image: gitea/gitea:1.22.3-rootless
+    pull_policy: missing
+    container_name: apf-gitea
+    environment:
+      GITEA__security__INSTALL_LOCK: "true"
+      GITEA__database__DB_TYPE: "sqlite3"
+      GITEA__server__ROOT_URL: "http://localhost:3000/"
+      GITEA__server__OFFLINE_MODE: "true"
+    ports:
+      - "3000:3000"
+    volumes:
+      - gitea-data:/var/lib/gitea
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/healthz || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  gitea-data:

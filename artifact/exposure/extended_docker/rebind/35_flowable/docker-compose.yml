@@ -1,0 +1,14 @@
+# APF / APF - REPLAY reproduction: Flowable OSS (#35)
+# flowable-rest exposes the full Flowable REST API (in-memory H2 by default).
+# REST base: http://localhost:8080/flowable-rest/service   (basic auth rest-admin/test)
+# Bring up:  docker compose up -d   (wait ~40s for the REST app to start)
+# Tear down: docker compose down -v
+services:
+  flowable-rest:
+    image: flowable/flowable-rest:7.0.1
+    pull_policy: missing
+    ports:
+      - "8080:8080"
+    environment:
+      # keep the default in-memory H2 datasource; default REST admin is rest-admin/test
+      SERVER_PORT: "8080"

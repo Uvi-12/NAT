@@ -1,0 +1,21 @@
+[setup] activating purchase_requisition (+dependencies) on a fresh SQLite db...
+[run] driving the real Tryton workflow...
+created requisition id=1 state=draft approved_by=None
+after wait(): state=waiting
+
+== CONTROL (state=waiting, no approval) ==
+   processing path would act: False (blocked: not approved)
+
+== GENUINE approval path (authorized button) ==
+   approve(): state=approved approved_by=A. Requester  (genuine, authorized, attributed)
+
+== FORGE (state-only write, no approve button, no authority) ==
+   wrote state:=approved directly; state=approved approved_by=None
+   processing path now acts on it: True -> gated effect RELEASED on a forged approval
+   false evidence of oversight: approved_by is EMPTY (no genuine approver)
+
+Verdict: EXPOSED (native). A state-only write of the persisted 'state'
+field to 'approved' bypasses the authorized approve button, is trusted
+by the processing path, and leaves no genuine approver -- APF.
+
+RESULT: PASS

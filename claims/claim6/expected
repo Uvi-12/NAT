@@ -1,0 +1,4 @@
+The microbenchmark prints median / p95 / p99 for Ed25519 sign and verify, e.g.
+  Ed25519 verify   ~100-200   (microseconds median on commodity x86-64)
+Absolute numbers vary by CPU; the order of magnitude is the claim. Requires
+`pip install cryptography`.

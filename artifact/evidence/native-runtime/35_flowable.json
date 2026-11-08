@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "ACT_RU execution token, task row, and approval variable",
+  "evidence_class": "N1",
+  "id": "35",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Flowable",
+  "tested_basis": "flowable/flowable-engine pinned",
+  "verdict": "Direct exposed"
+}

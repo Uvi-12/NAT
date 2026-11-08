@@ -1,0 +1,15 @@
+id: L2-02
+system: Spinnaker
+domain: CI/CD
+expected_verdict: EXPOSED
+image: orca:1.35.0 + redis:7
+db: redis (Orca execution store)
+decisive_surface: "Orca stage context judgmentStatus = Continue (state-only)"
+forge_kind: redis_hset
+confidence: low   # full Spinnaker stack needed to run a pipeline; usually INCONCLUSIVE here
+notes: >
+  Brings up Orca + Redis only. Documents and (if an execution exists) applies the
+  state-only forge of the Manual Judgment stage context in the Orca Redis store.
+  A complete Spinnaker deployment is required to drive a pipeline end-to-end, so
+  on a minimal host this records INCONCLUSIVE with the exact forge recipe rather
+  than a false pass. Point it at a fuller Orca/Redis to complete.

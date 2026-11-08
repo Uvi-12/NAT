@@ -1,0 +1,13 @@
+id: L2-28
+system: Dataverse
+domain: research data
+expected_verdict: EXPOSED
+image: gdcc/dataverse:6.3
+db: postgresql:16
+decisive_surface: "datasetversion.versionstate == 'RELEASED'"
+forge_kind: db_update
+confidence: low   # heavy stack + bootstrap/token required; SQL forge on the documented column is concrete, INCONCLUSIVE if the API/token isn't available
+notes: >
+  Dataverse needs a bootstrap and an API token to seed a dataset. The forge targets
+  the documented datasetversion.versionstate column directly in PostgreSQL; if the
+  deployment can't seed via API the harness records INCONCLUSIVE.

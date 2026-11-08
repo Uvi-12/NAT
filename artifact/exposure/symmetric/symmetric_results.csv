@@ -1,0 +1,23 @@
+system,decisive_class,reach1_app,reach2_engine,stated_verdict,paper_verdict,sensitivity_verdict,documented_basis
+Apache Airflow,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Flowable,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Conductor,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Kogito,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+SpiffWorkflow,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Kestra,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+DBOS,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+midPoint,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Gitea,app_readback,EXECUTED,EXECUTED,Exposed,Exposed,Exposed,resume reads an approval-semantic value in application-owned persistence
+Dapr Workflow,app_conditional,EXECUTED,EXECUTED,Conditional,Conditional,Conditional,evidence in the app-configured workflow store; forge needs the writable/backing-store condition
+Azure Durable Functions,app_conditional,EXECUTED,EXECUTED,Conditional,Conditional,Conditional,evidence in the app-configured workflow store; forge needs the writable/backing-store condition
+Temporal,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+Restate,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+Inngest,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+Gerrit,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+Jenkins Pipeline input,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+GoCD,engine_mediated,BLOCKED,EXECUTED,Resistant,Resistant,Conditional (engine-store dependent),server-sequenced or identity-labelled but UNSIGNED record behind the engine's own datastore / server filesystem
+AWS Step Functions,anchored,BLOCKED,BLOCKED,Resistant,Resistant,Resistant (capability-anchored),"out-of-band secret re-checked on a live call, or fresh input revalidated at resume"
+Prefect,anchored,BLOCKED,BLOCKED,Resistant,Resistant,Resistant (capability-anchored),"out-of-band secret re-checked on a live call, or fresh input revalidated at resume"
+PydanticAI,anchored,BLOCKED,BLOCKED,Resistant,Resistant,Resistant (capability-anchored),"out-of-band secret re-checked on a live call, or fresh input revalidated at resume"
+BeeAI,anchored,BLOCKED,BLOCKED,Resistant,Resistant,Resistant (capability-anchored),"out-of-band secret re-checked on a live call, or fresh input revalidated at resume"
+Mastra,anchored,BLOCKED,BLOCKED,Resistant,Resistant,Resistant (capability-anchored),"out-of-band secret re-checked on a live call, or fresh input revalidated at resume"

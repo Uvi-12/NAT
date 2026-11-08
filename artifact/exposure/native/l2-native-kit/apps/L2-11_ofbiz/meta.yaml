@@ -1,0 +1,13 @@
+id: L2-11
+system: Apache OFBiz
+domain: ERP / procurement
+expected_verdict: EXPOSED
+image: apache/ofbiz:23.01.01
+db: postgresql:16
+decisive_surface: "OrderHeader.statusId == 'ORDER_APPROVED'"
+forge_kind: db_update
+confidence: medium   # official image + known column; depends on OFBiz->Postgres env and demo-data load
+notes: >
+  Forges order_header.status_id on a demo sales order. If the image uses a
+  different env var scheme to select Postgres, set it in compose.yaml; if demo
+  data is absent the harness records INCONCLUSIVE rather than forcing a result.

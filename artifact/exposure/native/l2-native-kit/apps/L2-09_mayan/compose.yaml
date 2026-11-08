@@ -1,0 +1,35 @@
+# Mayan EDMS (L2-09) — official image + PostgreSQL + Redis.
+# The harness forges the document workflow's current state directly in PostgreSQL
+# (5432) by inserting an approved-transition log entry, then verifies the state.
+name: apf-l2-mayan
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: mayan
+      POSTGRES_PASSWORD: mayan
+      POSTGRES_DB: mayan
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mayan"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  redis:
+    image: redis:7
+    command: ["redis-server", "--requirepass", "mayan", "--databases", "4"]
+  app:
+    image: mayanedms/mayanedms:4.9
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    environment:
+      MAYAN_DATABASES: >
+        {'default':{'ENGINE':'django.db.backends.postgresql','NAME':'mayan',
+        'USER':'mayan','PASSWORD':'mayan','HOST':'db','PORT':5432}}
+      MAYAN_CELERY_BROKER_URL: redis://:mayan@redis:6379/0
+      MAYAN_CELERY_RESULT_BACKEND: redis://:mayan@redis:6379/1
+      MAYAN_LOCK_MANAGER_BACKEND: mayan.apps.lock_manager.backends.redis_lock.RedisLock

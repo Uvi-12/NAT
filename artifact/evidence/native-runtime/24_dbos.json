@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Checkpointed step output in operation_outputs",
+  "evidence_class": "N1",
+  "id": "24",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "DBOS",
+  "tested_basis": "DBOS Transact on Postgres",
+  "verdict": "Direct exposed"
+}

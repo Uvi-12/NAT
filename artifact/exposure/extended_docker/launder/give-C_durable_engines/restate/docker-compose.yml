@@ -1,0 +1,10 @@
+# Restate server. Ingress :8080, admin :9070. The Python service runs on the host at :9080
+# and is registered with the server. host.docker.internal lets the container reach the host.
+services:
+  restate:
+    image: docker.restate.dev/restatedev/restate:1.7.2
+    ports:
+      - "8080:8080"   # ingress
+      - "9070:9070"   # admin (deployment registration)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

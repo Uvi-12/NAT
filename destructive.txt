@@ -1,0 +1,12 @@
+Nothing in this artifact is destructive.
+
+Every experiment runs against local, synthetic state created by the harness
+(in memory or in a temporary file). The artifact:
+  - contacts no network service,
+  - uses no real credentials and moves no real funds,
+  - modifies no file outside its own directory tree,
+  - requires no root and makes no system-wide change.
+
+The optional artifact/exposure/extended_docker/ reproductions start local
+Docker containers if you choose to run them; they are self-contained and are
+torn down by their own scripts. They are not part of the evaluated claims.

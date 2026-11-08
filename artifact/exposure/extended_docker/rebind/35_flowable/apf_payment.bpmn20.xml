@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:flowable="http://flowable.org/bpmn"
+             targetNamespace="apf">
+  <process id="apf_payment" name="APF Payment" isExecutable="true">
+    <startEvent id="start"/>
+    <sequenceFlow id="f1" sourceRef="start" targetRef="approve"/>
+
+    <!-- human approval: completing this task carries approved/approver variables -->
+    <userTask id="approve" name="Approve payment"/>
+    <sequenceFlow id="f2" sourceRef="approve" targetRef="pay"/>
+
+    <!-- gated action: when approved, the payment CONSUMES the beneficiary argument (records
+         who it paid). The approval gates on ${approved} only, with no re-verification of which
+         args were approved, so a mutated beneficiary is paid under the same approval. -->
+    <serviceTask id="pay" name="Execute payment"
+                 flowable:expression="${approved == true ? beneficiary : 'BLOCKED'}"
+                 flowable:resultVariable="paid_to"/>
+    <sequenceFlow id="f3" sourceRef="pay" targetRef="end"/>
+    <endEvent id="end"/>
+  </process>
+</definitions>

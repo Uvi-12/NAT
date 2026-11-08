@@ -1,0 +1,35 @@
+system,layer,domain,default_state_store,default_writer_principal,mechanism_category,evidence_default_config,holds_approval_authority,holds_secrets_tool_or_host
+LangGraph,L1,agent framework,Redis checkpoint,any client with the Redis endpoint,unauthenticated_cache,"Redis ships with requirepass unset and protected-mode only blocks non-loopback when no password; the connection string is the only gate",no,no
+Dapr Workflow,L1,durable execution,Redis state store,any client with the Redis endpoint,unauthenticated_cache,"default Dapr redis statestore component uses a shared host+password or none; no per-key ACL",no,no
+n8n,L1,workflow,PostgreSQL execution tables,the single n8n DB role,single_db_role,"default compose/Helm provision one POSTGRES_USER owning all tables including execution data",no,no
+Airflow,L1,workflow,metadata database,the metadata DB role,single_db_role,"the Airflow metadata DB role holds DML on task/xcom tables; shared by scheduler, operators, and backup",no,no
+Conductor,L1,workflow,PostgreSQL/Redis,the engine datastore role,managed_engine_datastore,"operators and backup hold the datastore credential, which is separate from any human approval UI",no,no
+Temporal,L1,durable execution,Cassandra/PostgreSQL datastore,the engine datastore role,managed_engine_datastore,"the persistence datastore credential is held by operators/backup and is distinct from the Temporal approval signal path",no,no
+Argo Workflows,L2,CI/CD,Workflow CR .status,"principal with k8s update/patch on workflows (controllers, CI bots, operators)",orchestration_rbac,"the intended resume is an authenticated Argo API PUT /resume; patching workflows/status is a separate, commonly granted RBAC verb",no,no
+Spinnaker,L2,CI/CD,Redis (orca execution),any client with the Redis endpoint,unauthenticated_cache,"orca persists pipeline/judgment state in Redis; default redis has no per-key ACL",no,no
+Odoo Community,L2,ERP,PostgreSQL,the single odoo DB role,single_db_role,"official odoo image provisions POSTGRES_USER=odoo owning all tables incl. purchase/account state",no,no
+Dolibarr,L2,ERP,PostgreSQL/MySQL,the single dolibarr DB role,single_db_role,"default deployment provisions one DB user owning llx_* tables incl. fk_statut",no,no
+Tryton,L2,ERP,PostgreSQL,the single tryton DB role,single_db_role,"one DB role owns purchase/account tables",no,no
+ERPNext,L2,ERP,MariaDB,the single site DB role,single_db_role,"bench provisions one MariaDB user per site owning docstatus-bearing tables",no,no
+LedgerSMB,L2,ERP,PostgreSQL,the company DB role,single_db_role,"the company DB role holds DML on transactions.approved/acc_trans.approved",no,no
+Apache OFBiz,L2,ERP,PostgreSQL/Derby,the single ofbiz DB role,single_db_role,"one DB user owns OrderHeader/FinAccountTrans tables",no,no
+Apache Fineract,L2,finance,MariaDB,the single fineract DB role,single_db_role,"one DB user owns m_loan incl. loan_status_id",no,no
+OpenEMR,L2,healthcare,MariaDB,the single openemr DB role,single_db_role,"official image provisions MYSQL_USER=openemr owning billing/authorization tables",no,no
+DHIS2,L2,healthcare,PostgreSQL,the single dhis DB role,single_db_role,"one dhis DB role owns data approval tables",no,no
+OpenELIS Global,L2,healthcare,PostgreSQL,the single DB role,single_db_role,"one DB role owns analysis/result tables",no,no
+care (OHC),L2,healthcare,PostgreSQL,the single DB role,single_db_role,"one DB role owns resource_request state",no,no
+OpenHIM,L2,healthcare,MongoDB,any client with the Mongo endpoint,unauthenticated_cache,"default compose runs MongoDB without auth; tasks collection writable",no,no
+Documenso,L2,e-signature,PostgreSQL,the single documenso DB role,single_db_role,"official image provisions POSTGRES_USER=documenso owning Document/Envelope.status",no,no
+DocuSeal,L2,e-signature,PostgreSQL,the single docuseal DB role,single_db_role,"one DB role owns submitters.completed_at",no,no
+Mayan EDMS,L2,e-signature/docs,PostgreSQL,the single mayan DB role,single_db_role,"one DB role owns workflow transition tables",no,no
+OpenSign,L2,e-signature,MongoDB,any client with the Mongo endpoint,unauthenticated_cache,"default compose runs MongoDB without auth; contracts_Document writable",no,no
+EJBCA,L2,PKI,MariaDB,the single ejbca DB role,single_db_role,"official image provisions one DB user owning ApprovalData.status",no,no
+OpenBao,L2,PKI,file/Raft storage,the storage-backend principal,managed_engine_datastore,"control-group Authorizations persist in the storage backend; a storage/backup principal can edit it",no,no
+Grafeas,L2,supply chain,PostgreSQL,the single grafeas DB role,single_db_role,"one DB role owns occurrences incl. ATTESTATION rows",no,no
+Consul Democracy,L2,civic,PostgreSQL,the single consul DB role,single_db_role,"one DB role owns budget investment/ballot tables",no,no
+Decidim,L2,civic,PostgreSQL,the single decidim DB role,single_db_role,"one DB role owns authorization/verification tables",no,no
+Your Priorities,L2,civic,PostgreSQL,the single yrpri DB role,single_db_role,"one DB role owns posts.official_status",no,no
+Dataverse,L2,research data,PostgreSQL,the single dataverse DB role,single_db_role,"official image provisions POSTGRES_USER=dataverse owning DatasetVersion.versionState",no,no
+Galaxy,L2,research data,PostgreSQL,the single galaxy DB role,single_db_role,"official deployment provisions one galaxy DB role owning history.published",no,no
+InvenioRDM,L2,research data,PostgreSQL,the single inveniordm DB role,single_db_role,"one DB role owns record access-protection rows",no,no
+OSF,L2,research data,PostgreSQL,the single osf DB role,single_db_role,"one DB role owns node is_public/sanction tables",no,no

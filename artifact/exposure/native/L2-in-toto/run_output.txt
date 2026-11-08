@@ -1,0 +1,12 @@
+=== in-toto native APF (signed step attestation / link) ===
+persisted signed link: 574 bytes, product dist/app.whl=bb...bb
+
+[control] verify the genuine persisted link:
+  [genuine] functionary signature verifies -> ACCEPTED (product dist/app.whl=bbbbbb)
+
+[forge] state-writer edits the PERSISTED link (no key): swap the attested
+        product hash to a malicious artifact, keep the old signature.
+[resume] verify the tampered persisted link against the functionary key:
+  [forged] signature INVALID -> REJECTED (SignatureVerificationError)
+
+VERDICT: RESISTANT — the step attestation is bound to the functionary's signature; a state-only edit of the persisted link (swapping the approved artifact) is rejected at verification, and the writer cannot re-sign without the key.

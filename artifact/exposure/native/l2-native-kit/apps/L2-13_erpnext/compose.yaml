@@ -1,0 +1,74 @@
+# ERPNext (L2-13) — frappe/erpnext image + MariaDB + Redis.
+# Trimmed single-site bring-up: a configurator sets common_site_config, a
+# create-site job provisions the site, then backend + scheduler + queue serve it.
+# The harness forges `tabPurchase Order`.docstatus directly in MariaDB.
+# NOTE: a full ERPNext run normally uses the upstream frappe_docker compose; this
+# trimmed version is sufficient for the forge against the documented column.
+name: apf-l2-erpnext
+x-backend: &backend
+  image: frappe/erpnext:v15.42.0
+  volumes:
+    - sites:/home/frappe/frappe-bench/sites
+  environment: &env
+    DB_HOST: mariadb
+    DB_PORT: "3306"
+    REDIS_CACHE: redis://redis:6379
+    REDIS_QUEUE: redis://redis:6379
+    SOCKETIO_PORT: "9000"
+services:
+  mariadb:
+    image: mariadb:10.6
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  redis:
+    image: redis:7-alpine
+  configurator:
+    <<: *backend
+    entrypoint: ["bash", "-c"]
+    command:
+      - >
+        bench set-config -g db_host $$DB_HOST &&
+        bench set-config -gp db_port $$DB_PORT &&
+        bench set-config -g redis_cache $$REDIS_CACHE &&
+        bench set-config -g redis_queue $$REDIS_QUEUE &&
+        bench set-config -g redis_socketio $$REDIS_QUEUE
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: "no"
+  create-site:
+    <<: *backend
+    entrypoint: ["bash", "-c"]
+    command:
+      - >
+        bench new-site apf.localhost --mariadb-root-password admin
+        --admin-password admin --install-app erpnext --set-default
+    depends_on:
+      configurator:
+        condition: service_completed_successfully
+    restart: "no"
+  backend:
+    <<: *backend
+    depends_on:
+      create-site:
+        condition: service_completed_successfully
+  frontend:
+    <<: *backend
+    command: ["bench", "serve", "--port", "8000"]
+    depends_on:
+      - backend
+    ports:
+      - "8000:8000"
+volumes:
+  sites:

@@ -1,0 +1,13 @@
+id: L2-24
+system: EJBCA (approval gate)
+domain: PKI / certificate issuance
+expected_verdict: EXPOSED
+image: keyfactor/ejbca-ce:8.3.2
+db: mariadb:10.6
+decisive_surface: "ApprovalData.status == STATUS_APPROVED (0)"
+forge_kind: db_update
+confidence: low   # reaching a pending approval needs CA + approval-profile setup; forge+verify are direct
+notes: >
+  EJBCA stores approvals in ApprovalData with a numeric status (-1 waiting, 0
+  approved). The harness forges a pending row to approved; if no pending approval
+  has been configured it records INCONCLUSIVE.

@@ -1,0 +1,13 @@
+id: L2-17
+system: Apache Fineract
+domain: finance
+expected_verdict: EXPOSED
+image: apache/fineract:1.9.0
+db: mariadb:10.6
+decisive_surface: "m_loan.loan_status_id == 200 (APPROVED)"
+forge_kind: db_update
+confidence: medium   # documented REST seed + known status column; Fineract bootstrap can be slow/fragile
+notes: >
+  Seeds client/loan-product/loan via the Fineract REST API (self-signed TLS,
+  mifos/password, tenant 'default'), then forges m_loan.loan_status_id=200 in
+  MariaDB and re-reads status via the API. INCONCLUSIVE if bootstrap/seed fails.

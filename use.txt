@@ -1,0 +1,16 @@
+What this artifact is for
+-------------------------
+This artifact demonstrates an authorization weakness (Approval-Provenance
+Failure) in human-gated agentic, workflow, and CI/CD systems, and a defense
+against it. Its intended use is scientific: to let reviewers reproduce the
+paper's measurements and the defense evaluation, and to let practitioners test
+their own resume path against the same predicate.
+
+The security-relevant behavior it exercises is a write to a persisted
+approval-relevant value followed by a normal resume. In this artifact that write
+always targets a local, synthetic, in-process store that the harness itself
+creates. The artifact is not an attack tool: it contacts no external service,
+uses no credentials, and carries no exploit against any third-party deployment.
+
+The provenance-bound verifier under artifact/mitigation is a reference
+implementation and may be reused under the license in license.txt.

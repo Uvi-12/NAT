@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Execution entity data and runData",
+  "evidence_class": "N1",
+  "id": "11",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "n8n",
+  "tested_basis": "n8n-core 2.16.1; n8n-workflow 2.16.0",
+  "verdict": "Direct exposed"
+}

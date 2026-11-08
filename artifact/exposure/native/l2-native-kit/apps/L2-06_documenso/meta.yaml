@@ -1,0 +1,14 @@
+id: L2-06
+system: Documenso
+domain: e-signature / documents
+expected_verdict: EXPOSED
+image: documenso/documenso:v1.11.1
+db: postgresql:16
+decisive_surface: "Document/Envelope.status == 'COMPLETED'"
+forge_kind: db_update
+confidence: medium   # official image + documented status enum; seed is schema-dependent (Prisma), tried against Envelope then Document
+notes: >
+  Forges the persisted completion status in PostgreSQL via the real Prisma schema.
+  Documenso renamed Document -> Envelope across versions; the harness detects which
+  table exists. If the Prisma column set differs in your tag, the seed step records
+  INCONCLUSIVE with the exact error rather than asserting a result.

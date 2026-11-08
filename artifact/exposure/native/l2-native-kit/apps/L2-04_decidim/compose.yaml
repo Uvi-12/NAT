@@ -1,0 +1,35 @@
+# Decidim (L2-04) — official image + PostgreSQL.
+# The harness performs the state-only forge directly on PostgreSQL (5432).
+name: apf-l2-decidim
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: decidim
+      POSTGRES_PASSWORD: decidim
+      POSTGRES_DB: decidim_prod
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U decidim"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  app:
+    image: decidim/decidim:0.28
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      RAILS_ENV: production
+      DATABASE_HOST: db
+      DATABASE_USERNAME: decidim
+      DATABASE_PASSWORD: decidim
+      DATABASE_DATABASE: decidim_prod
+      SECRET_KEY_BASE: apf_dummy_secret_key_base_for_local_testing_only_0000000000
+      RAILS_SERVE_STATIC_FILES: "true"
+    command: >
+      bash -lc "bundle exec rails db:create db:schema:load db:seed 2>/dev/null;
+                bundle exec puma -b tcp://0.0.0.0:3000"
+    ports:
+      - "3000:3000"

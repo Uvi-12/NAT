@@ -1,0 +1,13 @@
+id: L2-25
+system: OpenBao (control-group)
+domain: PKI / certificate issuance
+expected_verdict: EXPOSED
+image: openbao/openbao:2.1.0
+db: none
+decisive_surface: "control-group Authorizations present"
+forge_kind: none
+confidence: low   # Control Groups are Enterprise-only; OSS OpenBao has no gate to forge -> INCONCLUSIVE by design
+notes: >
+  Brings up a real OpenBao dev server and confirms Control Groups are not present
+  in the OSS edition, recording INCONCLUSIVE honestly. A native EXPOSED verdict
+  would require a Vault Enterprise build with Control Groups enabled.

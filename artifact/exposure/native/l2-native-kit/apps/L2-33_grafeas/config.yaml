@@ -1,0 +1,15 @@
+grafeas:
+  api:
+    address: "0.0.0.0:8080"
+    cafile:
+    keyfile:
+    certfile:
+    cors_allowed_origins:
+  storage_type: "postgres"
+  postgres:
+    host: "db:5432"
+    dbname: "grafeas"
+    user: "grafeas"
+    password: "grafeas"
+    sslmode: "disable"
+    paginationkey: "XxoPtCUzrUv4JV5dS+yQ+MdW7yLEJnRMwigVY/bpgtQ="

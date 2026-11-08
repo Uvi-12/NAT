@@ -1,0 +1,79 @@
+system,layer,verdict,repo,stars,forks,pushed_at,created_at,archived,resolved
+Haystack,L1,Exposed,deepset-ai/haystack,26910,3384,2026-11-02,2019-11-14,False,YES
+Dify,L1,Exposed,langgenius/dify,160231,25328,2026-11-02,2023-04-12,False,YES
+Microsoft Agent Framework,L1,Exposed,microsoft/agent-framework,14495,2554,2026-11-02,2025-04-28,False,YES
+Agno,L1,Exposed,agno-agi/agno,43015,6227,2026-11-02,2022-05-04,False,YES
+AutoGen,L1,Exposed,microsoft/autogen,61676,9348,2026-10-28,2023-08-18,False,YES
+Flowise,L1,Exposed,FlowiseAI/Flowise,55543,25089,2026-08-13,2023-03-31,True,YES
+Google ADK,L1,Exposed,google/adk-python,22082,4286,2026-11-02,2025-04-01,False,YES
+LlamaIndex Workflows,L1,Exposed,run-llama/llama_index,52777,8497,2026-10-26,2022-11-02,False,YES
+OpenAI Agents SDK,L1,Exposed,openai/openai-agents-python,30456,4975,2026-11-01,2025-03-11,False,YES
+Semantic Kernel,L1,Exposed,microsoft/semantic-kernel,28724,4851,2026-11-02,2023-02-27,False,YES
+n8n,L1,Exposed,n8n-io/n8n,209348,61354,2026-11-02,2019-06-22,False,YES
+CrewAI,L1,Exposed,crewAIInc/crewAI,60420,8998,2026-11-02,2023-10-27,False,YES
+LangGraph,L1,Exposed,langchain-ai/langgraph,44332,7624,2026-11-02,2023-08-09,False,YES
+Apache Burr,L1,Exposed,apache/burr,2588,215,2026-11-02,2024-01-29,False,YES
+Strands Agents SDK,L1,Exposed,strands-agents/sdk-python,,,,,,NO
+OpenHands Agent SDK,L1,Exposed,All-Hands-AI/OpenHands,,,,,,NO
+Vercel AI SDK,L1,Conditional,vercel/ai,27694,5503,2026-11-02,2023-05-23,False,YES
+Google Genkit,L1,Exposed,firebase/genkit,,,,,,NO
+PydanticAI,L1,Resistant,pydantic/pydantic-ai,20996,3079,2026-11-02,2024-06-21,False,YES
+BeeAI,L1,Resistant,i-am-bee/beeai-framework,3448,543,2026-11-02,2024-08-23,False,YES
+Mastra,L1,Resistant,mastra-ai/mastra,29277,3068,2026-11-02,2024-08-06,False,YES
+CAMEL,L1,N/A,camel-ai/camel,18007,2134,2026-11-02,2023-03-17,False,YES
+Langroid,L1,N/A,langroid/langroid,4121,429,2026-11-01,2023-04-16,False,YES
+DBOS,L1,Exposed,dbos-inc/dbos-transact-py,1661,115,2026-10-30,2024-07-19,False,YES
+Temporal,L1,Resistant,temporalio/temporal,24133,2068,2026-11-02,2019-10-16,False,YES
+Restate,L1,Resistant,restatedev/restate,4643,231,2026-11-02,2023-01-04,False,YES
+Inngest,L1,Resistant,inngest/inngest,6012,386,2026-11-02,2021-06-07,False,YES
+Dapr Workflow,L1,Conditional,dapr/dapr,26172,2172,2026-11-02,2019-06-19,False,YES
+Azure Durable Functions,L1,Conditional,Azure/azure-functions-durable-extension,767,295,2026-10-30,2017-06-02,False,YES
+Prefect,L1,Resistant,PrefectHQ/prefect,24108,2624,2026-11-02,2018-06-29,False,YES
+Apache Airflow,L1,Exposed,apache/airflow,47347,18295,2026-11-02,2015-04-13,False,YES
+SpiffWorkflow,L1,Exposed,sartography/SpiffWorkflow,1930,349,2026-10-29,2009-12-25,False,YES
+Kestra,L1,Exposed,kestra-io/kestra,30120,3495,2026-11-02,2019-08-24,False,YES
+Flowable,L1,Exposed,flowable/flowable-engine,9633,2902,2026-10-18,2016-10-13,False,YES
+Jenkins Pipeline input,L1,Resistant,jenkinsci/pipeline-input-step-plugin,18,69,2026-11-02,2016-04-05,False,YES
+GoCD,L1,Resistant,gocd/gocd,7436,986,2026-11-02,2013-12-13,False,YES
+Conductor,L1,Exposed,conductor-oss/conductor,32402,1051,2026-10-31,2023-12-08,False,YES
+Kogito,L1,Exposed,apache/incubator-kie-kogito-runtimes,609,253,2026-07-22,2019-03-07,True,YES
+Gitea,L1,Exposed,go-gitea/gitea,58825,7346,2026-11-02,2016-11-01,False,YES
+Gerrit,L1,Resistant,GerritCodeReview/gerrit,1237,280,2026-11-02,2015-12-10,False,YES
+midPoint,L1,Exposed,Evolveum/midpoint,550,246,2026-11-02,2013-12-30,False,YES
+Atlantis + Gitea,L1,Transitive,runatlantis/atlantis,9341,1366,2026-11-01,2018-02-06,False,YES
+Argo Workflows,L2,Exposed,argoproj/argo-workflows,17079,3724,2026-11-02,2017-08-21,False,YES
+Spinnaker,L2,Exposed,spinnaker/spinnaker,9816,1283,2026-11-01,2014-07-02,False,YES
+Consul Democracy,L2,Exposed,consuldemocracy/consuldemocracy,1556,1131,2026-11-02,2015-07-15,False,YES
+Decidim,L2,Exposed,decidim/decidim,1845,497,2026-11-02,2016-08-17,False,YES
+Your Priorities,L2,Exposed,CitizensFoundation/your-priorities-app,144,42,2026-10-30,2014-08-22,False,YES
+Documenso,L2,Exposed,documenso/documenso,15629,3431,2026-11-02,2023-03-12,False,YES
+DocuSeal,L2,Exposed,docusealco/docuseal,18976,1930,2026-11-02,2023-07-03,False,YES
+LibreSign,L2,Resistant,LibreSign/libresign,841,173,2026-11-02,2020-08-25,False,YES
+Mayan EDMS,L2,Exposed,mayan-edms/Mayan-EDMS,850,516,2026-05-23,2019-05-04,False,YES
+OpenSign,L2,Exposed,OpenSignLabs/OpenSign,7209,853,2026-11-02,2023-10-02,False,YES
+Apache OFBiz,L2,Exposed,apache/ofbiz-framework,1148,759,2026-11-01,2017-02-13,False,YES
+Dolibarr,L2,Exposed,Dolibarr/dolibarr,7819,3602,2026-11-02,2011-06-26,False,YES
+ERPNext,L2,Exposed,frappe/erpnext,40861,13368,2026-11-02,2011-06-08,False,YES
+LedgerSMB,L2,Exposed,ledgersmb/LedgerSMB,572,175,2026-11-02,2014-04-05,False,YES
+Odoo Community,L2,Exposed,odoo/odoo,55486,34192,2026-11-02,2014-05-13,False,YES
+Tryton,L2,Exposed,tryton/tryton,240,86,2026-11-02,2022-12-18,False,YES
+Apache Fineract,L2,Exposed,apache/fineract,2592,2922,2026-10-31,2015-12-22,False,YES
+care (OHC Network),L2,Exposed,ohcnetwork/care,418,630,2026-11-02,2020-03-17,False,YES
+DHIS2,L2,Exposed,dhis2/dhis2-core,360,405,2026-11-02,2016-08-30,False,YES
+OpenELIS Global,L2,Exposed,I-TECH-UW/OpenELIS-Global-2,,,,,,NO
+OpenHIM,L2,Exposed,jembi/openhim-core,,,,,,NO
+OpenEMR,L2,Exposed,openemr/openemr,5566,3115,2026-11-02,2010-05-21,False,YES
+Dogtag PKI,L2,Resistant,dogtagpki/pki,514,160,2026-11-02,2017-02-16,False,YES
+EJBCA,L2,Exposed,Keyfactor/ejbca-ce,967,166,2026-09-15,2021-03-12,False,YES
+OpenBao,L2,Exposed,openbao/openbao,8832,658,2026-11-02,2023-11-09,False,YES
+Sigstore Fulcio,L2,Resistant,sigstore/fulcio,894,194,2026-11-02,2021-02-23,False,YES
+step-ca,L2,Resistant,smallstep/certificates,9032,615,2026-10-27,2018-11-01,False,YES
+Dataverse,L2,Exposed,IQSS/dataverse,1077,570,2026-10-30,2013-11-01,False,YES
+eLabFTW,L2,Resistant,elabftw/elabftw,1477,361,2026-11-01,2012-12-14,False,YES
+Galaxy,L2,Exposed,galaxyproject/galaxy,1888,1183,2026-11-02,2015-02-23,False,YES
+InvenioRDM,L2,Exposed,inveniosoftware/invenio-app-rdm,186,204,2026-11-02,2019-05-22,False,YES
+OSF,L2,Exposed,CenterForOpenScience/osf.io,730,362,2026-11-02,2013-05-21,False,YES
+Grafeas,L2,Exposed,grafeas/grafeas,1568,306,2026-10-26,2017-08-01,False,YES
+in-toto,L2,Resistant,in-toto/in-toto,1053,170,2026-08-27,2016-05-24,False,YES
+Sigstore cosign,L2,Resistant,sigstore/cosign,6406,838,2026-10-29,2021-02-04,False,YES
+TUF python-tuf,L2,Resistant,theupdateframework/python-tuf,1731,306,2026-10-19,2013-01-31,False,YES

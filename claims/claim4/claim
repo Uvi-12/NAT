@@ -1,0 +1,4 @@
+Every binding in the verifier is load-bearing: removing any one binding reopens a
+specific attack that is otherwise blocked. Covered bindings include the argument
+commitment (Rebind), run and checkpoint identifiers (Replay/forking), audience and
+environment (cross-context reuse), and single-use nonce (temporal/concurrent replay).

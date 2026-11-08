@@ -1,0 +1,15 @@
+{
+  "name": "ga-n8n",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Integrity analysis for n8n persisted execution-data (resume) surface",
+  "license": "MIT",
+  "scripts": {
+    "demo": "node examples/run_demo.cjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "n8n-core": "*",
+    "n8n-workflow": "*"
+  }
+}

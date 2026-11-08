@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Checkpointed step-state approval Boolean",
+  "evidence_class": "N1",
+  "id": "10",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Semantic Kernel",
+  "tested_basis": "semantic-kernel 1.43.0",
+  "verdict": "Direct exposed"
+}

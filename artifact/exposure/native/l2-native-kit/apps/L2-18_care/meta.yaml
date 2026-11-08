@@ -1,0 +1,16 @@
+id: L2-18
+system: care (OHC Network)
+domain: healthcare
+expected_verdict: EXPOSED
+image: ohcnetwork/care:latest
+db: postgres:14
+decisive_surface: "facility_shiftingrequest.status == approved releases transfer"
+forge_kind: db_update
+confidence: low   # official image + Django model, but the status integer mapping
+                  # and a seeded shifting request are version/data dependent.
+targeted_column: "facility_shiftingrequest.status"
+notes: >
+  care gates patient-transfer (shifting) requests on an integer status. The
+  harness forges that status directly; set APF_CARE_APPROVED_STATUS to the
+  approved code for your care version. Requires a seeded shifting request;
+  otherwise INCONCLUSIVE. care's API needs facility/patient/user setup to seed.

@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Relational pull-request review-vote rows",
+  "evidence_class": "N1",
+  "id": "40",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Gitea",
+  "tested_basis": "go-gitea/gitea pinned",
+  "verdict": "Direct exposed"
+}

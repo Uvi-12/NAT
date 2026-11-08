@@ -1,0 +1,4 @@
+Authenticating the approval artifact is cheap: Ed25519 verification costs on the
+order of tens to a few hundred microseconds per call on commodity hardware,
+negligible relative to human-review latency. The measurement is the cryptographic
+core only and excludes durable nonce storage, networking, and identity.

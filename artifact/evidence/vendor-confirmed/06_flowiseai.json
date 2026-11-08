@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "executionData resolved-proceed shape",
+  "evidence_class": "V",
+  "id": "06",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "FlowiseAI",
+  "tested_basis": "vendor-confirmed affected line",
+  "verdict": "Direct exposed"
+}

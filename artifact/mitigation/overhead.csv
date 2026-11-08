@@ -1,0 +1,4 @@
+operation,median_us,p95_us,p99_us,scope
+HMAC verify,1.665,2.244,2.455,Local authentication benchmark
+Ed25519 sign,32.250,32.955,33.803,Local authentication benchmark
+Ed25519 verify,103.360,113.131,123.766,Local authentication benchmark

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://APF.example/schemas/native_approval.schema.json",
+  "title": "Native approval audit record",
+  "description": "Structure exposed by native framework/application audit logging for a completed human-approval gate. Represents ordinary approval-completeness validation: it checks presence and shape, NOT provenance. Provenance fields (approval_artifact, state_writer) are intentionally NOT part of native logging and are therefore disallowed here via additionalProperties:false.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "framework", "action", "arguments", "decision", "approver", "timestamp", "action_status", "state_transition", "approval_source"],
+  "properties": {
+    "run_id":        {"type": "string", "minLength": 1},
+    "framework":     {"type": "string", "minLength": 1},
+    "family":        {"type": "string", "enum": ["TCA", "CRV", "SRS", "WED", "ALS"]},
+    "action":        {"type": "string", "minLength": 1},
+    "arguments":     {"type": "object"},
+    "decision":      {"type": "string", "enum": ["approved", "rejected"]},
+    "approver":      {"type": "string", "minLength": 1},
+    "timestamp":     {"type": "string", "minLength": 1, "format": "date-time"},
+    "action_status": {"type": "string", "enum": ["succeeded", "blocked", "paused"]},
+    "state_transition": {"type": "string", "minLength": 1},
+    "approval_source":  {"type": "string", "minLength": 1}
+  }
+}

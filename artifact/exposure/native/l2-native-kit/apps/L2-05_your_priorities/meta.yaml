@@ -1,0 +1,14 @@
+id: L2-05
+system: Your Priorities
+domain: civic / participation
+expected_verdict: EXPOSED
+image: openactivtech/yourpriorities:latest
+db: postgresql:14
+decisive_surface: "posts.official_status == 2 (successful)"
+forge_kind: db_update
+confidence: medium   # documented column; exact image tag / port may need adjustment per release
+notes: >
+  Forges the persisted `official_status` of a post to accepted (2). Reuses an
+  app-seeded post or creates a minimal one; records INCONCLUSIVE if the schema or
+  image differs rather than a false pass. Verify the image name/tag and web port
+  (default 4242) against the deployment you run.

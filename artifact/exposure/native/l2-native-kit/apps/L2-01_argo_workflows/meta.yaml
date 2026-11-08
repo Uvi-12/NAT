@@ -1,0 +1,15 @@
+id: L2-01
+system: Argo Workflows
+domain: CI/CD
+expected_verdict: EXPOSED
+image: argoproj/argo-workflows:v3.5.8 (on rancher/k3s:v1.29.6-k3s1)
+db: kubernetes (etcd-backed CR status)
+decisive_surface: "suspend node status -> Succeeded (state-only, no argo resume)"
+forge_kind: k8s_status_patch
+confidence: low   # needs privileged k3s; heavy; often INCONCLUSIVE on a typical host
+notes: >
+  Installs Argo into a single-node k3s, submits a suspend-gated workflow, and
+  forges the suspend node's status via `kubectl patch --subresource=status`
+  (not `argo resume`) to release the downstream deploy. Requires a host that can
+  run privileged k3s; otherwise records INCONCLUSIVE with the reason. Pins may
+  need adjusting to the Argo/k3s versions available.

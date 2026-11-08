@@ -1,0 +1,14 @@
+{
+  "c9_sensitivity": {
+    "reach1_application": "Resistant",
+    "reach2_engine_datastore": "Resistant"
+  },
+  "decisive_surface": "DeferredToolResults keyed to the pending tool-call ID",
+  "evidence_class": "Runtime-tested resistance",
+  "id": "19",
+  "note": "Resistant under both application- and engine-datastore reach (C9): decisive evidence is anchored to a capability the threat model denies (out-of-band secret re-checked live, or fresh input revalidated at resume).",
+  "source": "Appendix B of the submitted paper",
+  "system": "PydanticAI",
+  "tested_basis": "pydantic-ai 1.107.0",
+  "verdict": "Resistant"
+}

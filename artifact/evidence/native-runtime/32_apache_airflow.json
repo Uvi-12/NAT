@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "XCom or HITL response in metadata database",
+  "evidence_class": "N1",
+  "id": "32",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Apache Airflow",
+  "tested_basis": "apache/airflow pinned",
+  "verdict": "Direct exposed"
+}

@@ -1,0 +1,28 @@
+# OpenHIM (L2-21) — official core image + MongoDB.
+# OpenHIM Core persists interoperability transactions in MongoDB; their `status`
+# field is the value routing/mediators trust. The harness forges that status in
+# MongoDB (27017) and verifies via the persistence the core reads.
+name: apf-l2-openhim
+services:
+  mongo:
+    image: mongo:4.2
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  core:
+    image: jembi/openhim-core:v8.4.0
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      mongo_url: "mongodb://mongo/openhim"
+      mongo_atnaUrl: "mongodb://mongo/openhim"
+      NODE_ENV: "development"
+    ports:
+      - "8080:8080"
+      - "5000:5000"
+      - "5001:5001"

@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Persisted approval-case outcome and work-item closure",
+  "evidence_class": "N2",
+  "id": "42",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "midPoint",
+  "tested_basis": "Evolveum midPoint pinned",
+  "verdict": "Direct exposed"
+}

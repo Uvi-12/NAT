@@ -1,0 +1,14 @@
+id: L2-13
+system: ERPNext
+domain: ERP / procurement
+expected_verdict: EXPOSED
+image: frappe/erpnext:v15.42.0
+db: mariadb:10.6
+decisive_surface: "tabPurchase Order.docstatus == 1 (Submitted)"
+forge_kind: db_update
+confidence: medium   # documented column + REST seed; heavy multi-container bring-up
+notes: >
+  Frappe needs a multi-service stack and a site-creation step; the trimmed compose
+  provisions one site (apf.localhost). Forge is a direct MariaDB UPDATE of
+  docstatus. If site creation or the setup wizard blocks PO creation, the harness
+  records INCONCLUSIVE.

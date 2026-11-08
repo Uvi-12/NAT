@@ -1,0 +1,12 @@
+The exposed default extends beyond the audited corpus into public code
+(artifact/measurement/prevalence/; snapshot 2026-11-02). Three measurements:
+  A. Within the audited corpus, exposed systems (including conditional and
+     transitive) are 72.6% of the 73 resolved repositories but 88.4% of their
+     1,428,446 GitHub stars: exposure concentrates in the most adopted projects.
+  B. Keyword searches for eight exposed frameworks' human-in-the-loop APIs return
+     116,046 hits in total (approximate counts; include docs, forks, copies).
+  C. Of 209 search-ranked files that use those APIs, 201 (96.2%) contain no
+     provenance-verification signal; of the 111 source-code files, 108 (97.3%).
+     Wilson 95% intervals [92.6, 98.0] and [92.4, 99.1] describe this sample, not
+     all public code. The predicate is lexical and file-level; every "verified"
+     label and a seeded sample of "trusts-state" labels were checked by hand.

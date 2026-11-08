@@ -1,0 +1,15 @@
+=== python-tuf native APF (signed targets metadata) ===
+persisted signed targets metadata: 468 bytes, 1 target(s)
+
+[control] verify the genuine persisted metadata:
+  [genuine] signature verifies -> TRUSTED (1 targets)
+
+[forge] state-writer edits the PERSISTED metadata (no signing key): inject a
+        malicious target 'backdoor.tgz' and re-serialize, keeping the old signature.
+[resume] verify the tampered persisted metadata against the trusted key:
+  [forged] signature INVALID -> REJECTED (UnverifiedSignatureError)
+
+[forge-2] attacker tries to re-sign with their OWN key (not trusted):
+  attacker re-signed with own key; trusted-key verification: REJECTED
+
+VERDICT: RESISTANT — the authorized set of artifacts is bound to a signature the state-writer cannot produce; a state-only edit of the persisted metadata is rejected at verification, and re-signing needs a key the writer does not hold.

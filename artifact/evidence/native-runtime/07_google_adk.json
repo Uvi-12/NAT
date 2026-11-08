@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "sessions.state approval and run value",
+  "evidence_class": "N1",
+  "id": "07",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Google ADK",
+  "tested_basis": "google-adk 2.2.0",
+  "verdict": "Direct exposed"
+}

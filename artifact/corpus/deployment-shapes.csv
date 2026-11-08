@@ -1,0 +1,6 @@
+system_shape,store,approval_relevant_surface,capability_still_denied
+LangGraph,Redis,Checkpointer row and resume channel value,Direct invocation of transfer node and workflow service credential
+Dapr Workflow,Redis,Actor-state keys carrying accepted workflow history under the conditional writable-history configuration,Protected callback or tool path and host execution
+Conductor,PostgreSQL,HUMAN-task status and output in execution schema,Secrets table and downstream service credential
+n8n,PostgreSQL,"Execution entity data, wait state, and runData",Credential store and direct downstream-node invocation
+Airflow,Metadata database,XCom or HITL response in metadata database,Direct execution of protected task and business-database writes

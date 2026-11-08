@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Atlantis live query of upstream VCS approval status",
+  "evidence_class": "N1",
+  "id": "43",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Atlantis + Gitea",
+  "tested_basis": "runatlantis/atlantis with Gitea pinned",
+  "verdict": "Transitive exposed"
+}

@@ -1,0 +1,33 @@
+# OpenSign (L2-10) — official images + MongoDB (Parse Server backend).
+# The harness forges the persisted contracts_Document.IsCompleted boolean directly
+# in MongoDB (27017) and verifies via the stored document.
+name: apf-l2-opensign
+services:
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  server:
+    image: opensignlabs/opensignserver:main
+    depends_on:
+      mongo:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URI: mongodb://mongo:27017/OpenSignDB
+      APP_ID: opensign
+      MASTER_KEY: apf-test-master-key
+      SERVER_URL: http://127.0.0.1:8080/app
+      PARSE_MOUNT: /app
+  app:
+    image: opensignlabs/opensign:main
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"

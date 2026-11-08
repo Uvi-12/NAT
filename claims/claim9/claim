@@ -1,0 +1,13 @@
+Modelling the documented consume predicate of each of the 22 durable /
+orchestration / CI-CD / code-review comparison systems (the 11 resistant
+substrates, 9 exposed and 2 conditional comparators) under ONE write primitive and
+ONE success predicate separates two kinds of resistance. Each model is a
+contract-level (N2) reconstruction, not the vendor product; Temporal and Gerrit
+also have native runs at the stronger reach. At the paper's stated reach
+(application persistence) the model reproduces each published verdict, which is
+expected by construction. Extending the writer to the engine's or server's own
+datastore shows which resistant verdicts are engine-store dependent (6 degrade to
+conditional: Temporal, Restate, Inngest, Gerrit, Jenkins, GoCD) and which are
+anchored to a capability the threat model denies and hold even then (5: AWS Step
+Functions, Prefect, PydanticAI, BeeAI, Mastra). The paper headline (26/3/1/11/2)
+is the stated-reach column, unchanged.

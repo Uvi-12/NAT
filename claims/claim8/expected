@@ -1,0 +1,5 @@
+The validator prints the per-layer sizes and verdict splits:
+  L1 substrate: n=43 verdicts={'Exposed':26,'Conditional':3,'Transitive':1,'Resistant':11,'N/A':2}
+  L2 deployed app: n=36 verdicts={'Exposed':28,'Resistant':8}
+  RESULT: PASS (unified corpus is internally consistent)
+and exits 0. Stdlib only.

@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "FlowPersistence state across save_state and kickoff",
+  "evidence_class": "N1",
+  "id": "12",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "CrewAI",
+  "tested_basis": "crewai 1.14.6",
+  "verdict": "Direct exposed"
+}

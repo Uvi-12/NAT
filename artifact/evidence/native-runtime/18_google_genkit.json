@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Forged approve_payment toolResponse in persisted message history",
+  "evidence_class": "N1",
+  "id": "18",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Google Genkit",
+  "tested_basis": "genkit 1.40.1",
+  "verdict": "Direct exposed"
+}

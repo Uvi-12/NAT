@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Workflow history stored as actor-state keys in Redis",
+  "evidence_class": "N1",
+  "id": "28",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Dapr Workflow",
+  "tested_basis": "dapr/dapr pinned",
+  "verdict": "Conditional exposed"
+}

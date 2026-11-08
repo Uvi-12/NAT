@@ -1,0 +1,15 @@
+id: L2-23
+system: Dogtag PKI
+domain: PKI / certificate issuance
+expected_verdict: RESISTANT
+image: dogtagpki/pki:11.6 + 389ds/dirsrv
+db: 389 Directory Server (request repository)
+decisive_surface: "agent approval re-derived at issuance; persisted request status not trusted"
+forge_kind: ldap_status_write
+confidence: low   # full CA spawn (pkispawn) is heavy/deployment-specific; usually INCONCLUSIVE here
+notes: >
+  Resistant row. The exercise forges the persisted request status in the CA's
+  389-DS and shows issuance still yields no CA-chained certificate because the
+  agent approval is re-derived at signing. Spawning a Dogtag CA headlessly is
+  environment-specific; where it cannot be done the harness records INCONCLUSIVE
+  with the documented resistance mechanism rather than a false pass.

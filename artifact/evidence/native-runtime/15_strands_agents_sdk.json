@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Session snapshot and persisted trust or confirmation policy",
+  "evidence_class": "N1",
+  "id": "15",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Strands Agents SDK",
+  "tested_basis": "strands-agents/sdk-python commit pinned",
+  "verdict": "Direct exposed"
+}

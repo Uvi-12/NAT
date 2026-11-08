@@ -1,0 +1,18 @@
+# Argo Workflows (L2-01) — a single-node k3s (Kubernetes) in Docker, into which
+# Argo is installed by the harness. The harness drives kubectl inside the k3s
+# container. k3s needs privileged mode; this runs on a host with Docker where
+# privileged containers are allowed. On a host without that, the harness records
+# INCONCLUSIVE honestly.
+name: apf-l2-argo
+services:
+  k3s:
+    image: rancher/k3s:v1.29.6-k3s1
+    command: server --disable traefik --disable servicelb --disable metrics-server
+    privileged: true
+    tmpfs:
+      - /run
+      - /var/run
+    environment:
+      K3S_KUBECONFIG_MODE: "666"
+    ports:
+      - "6443:6443"

@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Checkpointer resume value consumed by Command resume",
+  "evidence_class": "N1",
+  "id": "13",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "LangGraph",
+  "tested_basis": "langgraph 1.2.5; checkpoint-sqlite 3.1.0",
+  "verdict": "Direct exposed"
+}

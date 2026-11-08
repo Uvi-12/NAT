@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "HUMAN task status and output",
+  "evidence_class": "N1",
+  "id": "38",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Conductor",
+  "tested_basis": "conductor-oss/conductor pinned",
+  "verdict": "Direct exposed"
+}

@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Serialized workflow and user-task state",
+  "evidence_class": "N1",
+  "id": "33",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "SpiffWorkflow",
+  "tested_basis": "sartography/SpiffWorkflow pinned",
+  "verdict": "Direct exposed"
+}

@@ -1,0 +1,14 @@
+id: L2-09
+system: Mayan EDMS
+domain: e-signature / documents
+expected_verdict: EXPOSED
+image: mayanedms/mayanedms:4.9
+db: postgresql:16 + redis:7
+decisive_surface: "workflow instance current state (last transition destination) fires state actions"
+forge_kind: db_update
+confidence: medium   # official image + documented workflow model; DB-level seed is Django-schema-dependent (Mayan 4.x)
+notes: >
+  Sets up a minimal pending->approved workflow and a document instance via Mayan's
+  real schema, then forges the current state by inserting an approved-transition log
+  entry (bypassing the transition permission). Any schema mismatch is recorded as
+  INCONCLUSIVE.

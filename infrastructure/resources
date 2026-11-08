@@ -1,0 +1,12 @@
+The artifact runs on a single commodity node. There is no cluster, GPU, or
+specialized hardware requirement.
+
+Recommended:
+  - 1 node, x86-64 or arm64
+  - 2 vCPUs, 2 GB RAM
+  - ~200 MB free disk
+  - Python 3.9+ and `pip install cryptography`
+
+The paper's microbenchmark (C6) was collected on a commodity x86-64 Linux
+machine; absolute numbers will vary with CPU but the order of magnitude
+(tens to a few hundred microseconds per Ed25519 verification) is stable.

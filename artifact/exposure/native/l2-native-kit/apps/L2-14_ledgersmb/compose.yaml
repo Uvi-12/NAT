@@ -1,0 +1,29 @@
+# LedgerSMB (L2-14) — official image + PostgreSQL.
+# LedgerSMB stores GL transactions with an `approved` boolean. The harness forges
+# that column directly in the company database.
+name: apf-l2-ledgersmb
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  ledgersmb:
+    image: ledgersmb/ledgersmb:1.11
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      LSMB_DB_HOST: db
+      LSMB_DB_PORT: "5432"
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5762:5762"

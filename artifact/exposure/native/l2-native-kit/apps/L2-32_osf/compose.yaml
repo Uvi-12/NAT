@@ -1,0 +1,38 @@
+# OSF (L2-32) — representative service set (Django app + PostgreSQL + RabbitMQ +
+# Elasticsearch). The forge targets the documented is_public / sanction.state in PG.
+name: apf-l2-osf
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: osf
+      POSTGRES_PASSWORD: osf
+      POSTGRES_DB: osf
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U osf"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  mq:
+    image: rabbitmq:3-management
+  search:
+    image: elasticsearch:6.8.23
+    environment:
+      discovery.type: single-node
+  web:
+    image: "${APF_OSF_IMAGE:-cos/osf.io:latest}"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      OSF_DB_HOST: db
+      OSF_DB_PORT: "5432"
+      OSF_DB_NAME: osf
+      OSF_DB_USER: osf
+      OSF_DB_PASSWORD: osf
+      OSF_BROKER_URL: "amqp://guest:guest@mq:5672/"
+      APF_OSF_TOKEN: "apf-dev-token"
+    ports:
+      - "5032:5000"

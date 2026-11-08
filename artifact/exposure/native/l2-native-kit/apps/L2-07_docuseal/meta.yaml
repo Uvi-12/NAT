@@ -1,0 +1,13 @@
+id: L2-07
+system: DocuSeal
+domain: e-signature / documents
+expected_verdict: EXPOSED
+image: docuseal/docuseal:1.8.4
+db: postgresql:16
+decisive_surface: "submitters.completed_at IS NOT NULL"
+forge_kind: db_update
+confidence: medium   # official image + documented column; the seed chain (account->user->template->submission->submitter) is Rails-schema-dependent
+notes: >
+  Forges submitters.completed_at in PostgreSQL via the real DocuSeal schema. The
+  seed walks the real FK chain; if a column set differs in your tag the seed step
+  records INCONCLUSIVE with the exact error.

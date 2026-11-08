@@ -1,0 +1,32 @@
+# Consul Democracy (L2-03) — official image + PostgreSQL.
+# The harness performs the state-only forge directly on PostgreSQL (5432).
+name: apf-l2-consul
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: consul
+      POSTGRES_PASSWORD: consul
+      POSTGRES_DB: consul_production
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U consul"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  app:
+    image: consuldemocracy/consuldemocracy:master
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      RAILS_ENV: production
+      DATABASE_URL: postgres://consul:consul@db:5432/consul_production
+      SECRET_KEY_BASE: apf_dummy_secret_key_base_for_local_testing_only_0000000000
+      RAILS_SERVE_STATIC_FILES: "true"
+    command: >
+      bash -lc "bundle exec rake db:create db:schema:load db:seed 2>/dev/null;
+                bundle exec rails server -b 0.0.0.0 -p 3000"
+    ports:
+      - "3000:3000"

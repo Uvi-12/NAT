@@ -1,0 +1,35 @@
+# OpenEMR (L2-22) — official image + MariaDB.
+# The harness forges the billing authorization flag directly in MariaDB (3306)
+# and verifies it through the same schema. OpenEMR self-installs on first boot
+# (this can take several minutes); the harness waits for the login page.
+name: apf-l2-openemr
+services:
+  db:
+    image: mariadb:10.11
+    command: ["--max_allowed_packet=64M"]
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: openemr
+      MYSQL_USER: openemr
+      MYSQL_PASSWORD: openemr
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD-SHELL", "healthcheck.sh --connect --innodb_initialized || mysqladmin ping -proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+  openemr:
+    image: openemr/openemr:7.0.2
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      MYSQL_HOST: db
+      MYSQL_ROOT_PASS: root
+      MYSQL_USER: openemr
+      MYSQL_PASS: openemr
+      OE_USER: admin
+      OE_PASS: pass
+    ports:
+      - "8300:80"

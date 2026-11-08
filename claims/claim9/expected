@@ -1,0 +1,12 @@
+The battery prints, for each of 22 systems, its decisive-evidence class and the
+outcome under REACH 1 (application persistence) and REACH 2 (engine datastore),
+then verifies the REACH-1 verdict reproduces the published corpus verdict for
+every system. It ends with:
+  REACH 1 (stated adversary): Exposed=9 Conditional=2 Resistant=11  -> reproduces the published verdicts for all 22 systems
+  Sensitivity to REACH 2 (engine datastore):
+    engine-store dependent (degrade to Conditional): 6  [...]
+    capability-anchored (hold under both reaches):   5  [...]
+  RESULT: PASS
+and exits 0. Stdlib only. (The 22 rows are the tail where the critique applies;
+the full corpus split is C1/C8. Native evidence for the REACH-2 degradation of
+Temporal and Gerrit is under artifact/exposure/native/.)

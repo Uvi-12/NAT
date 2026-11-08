@@ -1,0 +1,14 @@
+{
+  "c9_sensitivity": {
+    "reach1_application": "Resistant",
+    "reach2_engine_datastore": "Conditional"
+  },
+  "decisive_surface": "NoteDb identity-backed votes and submit-time freeze",
+  "evidence_class": "Design-verified resistance",
+  "id": "41",
+  "note": "Resistant under the stated state-writer (application persistence). The symmetric two-reach test (C9) shows this verdict is engine-store dependent: it degrades to conditional only if the adversary additionally reaches the engine's own datastore; native evidence in artifact/exposure/native/.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Gerrit",
+  "tested_basis": "Gerrit design basis",
+  "verdict": "Resistant"
+}

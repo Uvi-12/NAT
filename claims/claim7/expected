@@ -1,0 +1,5 @@
+The verifier prints, for each of the 7 ledgers:
+  evidence-<framework>.json  entries=N  merkle_root=OK  tree_head_sig=OK  verified
+then:
+  RESULT: PASS (all ledgers verify offline)
+and exits 0. Requires `pip install cryptography`.

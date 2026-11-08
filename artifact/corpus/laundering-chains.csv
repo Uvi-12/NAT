@@ -1,0 +1,9 @@
+chain_id,upstream,downstream,terminal_effect,status
+L1,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L2,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L3,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L4,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L5,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L6,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L7,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger
+L8,Recorded upstream approval state,Recorded downstream consumer,Isolated terminal effect,Recorded in paper ledger

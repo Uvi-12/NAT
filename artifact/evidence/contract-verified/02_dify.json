@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Workflow execution data and human-review node status",
+  "evidence_class": "N2",
+  "id": "02",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Dify",
+  "tested_basis": "langgenius/dify commit pinned",
+  "verdict": "Direct exposed"
+}

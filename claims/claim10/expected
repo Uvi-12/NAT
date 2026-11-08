@@ -1,0 +1,41 @@
+analyze.py re-aggregates the frozen data offline (stdlib only) and prints:
+
+  == A. Adoption / reach (GitHub stars, resolved repos) ==
+     exposed    repos= 53 stars= 1,263,062 (88.4% of corpus stars)
+     resistant  repos= 18 stars=   143,256 (10.0% of corpus stars)
+     na         repos=  2 stars=    22,128 ( 1.5% of corpus stars)
+     corpus total stars=1,428,446  (resolved 73/78)
+  
+  == B. Keyword-search hits (approximate counts) ==
+     LangGraph              Exposed   hits=  80,000
+     OpenAI Agents SDK      Exposed   hits=     614
+     CrewAI                 Exposed   hits=  11,712
+     LlamaIndex Workflows   Exposed   hits=     633
+     AutoGen                Exposed   hits=  13,024
+     Haystack               Exposed   hits=     159
+     Semantic Kernel        Exposed   hits=      16
+     n8n                    Exposed   hits=   9,888
+     Prefect                Resistant (contrast set — not searched)
+     PydanticAI             Resistant (contrast set — not searched)
+     Temporal               Resistant (contrast set — not searched)
+     exposed-framework approval-API hits: 116,046  (approximate keyword-search hit counts; include docs and copies)
+  
+  == C. Sampled files using an exposed framework's human-in-the-loop API ==
+     sampled=226  no_gate=15  fetch_fail=2
+     all applicable files               no provenance signal: 201/209 = 96.2%  Wilson95% [92.6%, 98.0%]
+     source-code files only             no provenance signal: 108/111 = 97.3%  Wilson95% [92.4%, 99.1%]
+     (intervals describe this search-ranked sample, not all public code)
+     per framework (all files):
+       AutoGen                          no provenance signal: 28/29 = 96.6%  Wilson95% [82.8%, 99.4%]
+       CrewAI                           no provenance signal: 29/30 = 96.7%  Wilson95% [83.3%, 99.4%]
+       Haystack                         no provenance signal: 15/15 = 100.0%  Wilson95% [79.6%, 100.0%]
+       LangGraph                        no provenance signal: 30/30 = 100.0%  Wilson95% [88.6%, 100.0%]
+       LlamaIndex Workflows             no provenance signal: 30/30 = 100.0%  Wilson95% [88.6%, 100.0%]
+       OpenAI Agents SDK                no provenance signal: 29/30 = 96.7%  Wilson95% [83.3%, 99.4%]
+       Semantic Kernel                  no provenance signal: 14/15 = 93.3%  Wilson95% [70.2%, 98.8%]
+       n8n                              no provenance signal: 26/30 = 86.7%  Wilson95% [70.3%, 94.7%]
+
+Per-file rows are pseudonymous (file_id = truncated SHA-256 of repository/path).
+RESULTS.md states what the numbers do and do not support; data/validation.csv
+holds all 25 hand judgments. Re-collecting live (collect.py, collect_bc.py)
+needs gh auth and network and will differ from the frozen snapshot.

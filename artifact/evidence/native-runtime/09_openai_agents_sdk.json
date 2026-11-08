@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Serialized RunState approvals dictionary",
+  "evidence_class": "N1",
+  "id": "09",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "OpenAI Agents SDK",
+  "tested_basis": "openai-agents 0.17.4",
+  "verdict": "Direct exposed"
+}

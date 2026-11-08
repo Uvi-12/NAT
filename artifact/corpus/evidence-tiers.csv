@@ -1,0 +1,13 @@
+layer,evidence_class,count,meaning
+L1,N1,24,Native-runtime reproduction
+L1,N2,5,Contract-level reproduction (documented resume contract run)
+L1,Runtime-tested resistance,3,State mutation rejected in runtime test
+L1,Design-verified resistance,8,Trust anchor the writer cannot author
+L1,V,1,Vendor-confirmed external evidence
+L1,Scope,2,No qualifying persisted approval gate
+L1,Total,43,All Layer-1 substrates
+L2,Native (effect observed),3,Forged state drives the downstream effect natively (Dolibarr Tryton Galaxy)
+L2,Native (state-only),2,Application accepts the forged state natively (Odoo OpenEMR)
+L2,Native (resistant),6,Vendor verifier run against the forged state (LibreSign TUF in-toto step-ca two Sigstore)
+L2,Source-verified,25,Consume path traced in source to the releasing field, application not run
+L2,Total,36,All Layer-2 deployed applications

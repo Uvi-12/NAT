@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Live conversational input only",
+  "evidence_class": "Scope",
+  "id": "23",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Langroid",
+  "tested_basis": "project basis pinned",
+  "verdict": "N/A"
+}

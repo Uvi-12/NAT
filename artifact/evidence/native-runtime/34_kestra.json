@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "Execution state PAUSED to RUNNING and onResume inputs",
+  "evidence_class": "N1",
+  "id": "34",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Kestra",
+  "tested_basis": "kestra-io/kestra pinned",
+  "verdict": "Direct exposed"
+}

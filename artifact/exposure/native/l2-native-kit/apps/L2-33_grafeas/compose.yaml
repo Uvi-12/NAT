@@ -1,0 +1,29 @@
+# Grafeas (L2-33) — official server image + PostgreSQL backend.
+# Grafeas is a metadata store; it serves attestation occurrences as plain rows and
+# does NOT re-verify the embedded signature. The harness forges an ATTESTATION
+# occurrence directly in PostgreSQL and reads it back through the Grafeas API.
+name: apf-l2-grafeas
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: grafeas
+      POSTGRES_PASSWORD: grafeas
+      POSTGRES_DB: grafeas
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U grafeas"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+  grafeas:
+    image: us.gcr.io/grafeas/grafeas-server:v0.2.3
+    depends_on:
+      db:
+        condition: service_healthy
+    command: ["--config", "/etc/grafeas/config.yaml"]
+    volumes:
+      - ./config.yaml:/etc/grafeas/config.yaml:ro
+    ports:
+      - "8033:8080"

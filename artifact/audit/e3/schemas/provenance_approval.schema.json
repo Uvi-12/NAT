@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://APF.example/schemas/provenance_approval.schema.json",
+  "title": "Provenance-aware approval record",
+  "description": "Adds the context-bound approval artifact that a provenance-aware validator requires. A record satisfies this schema only if it carries a complete approval_artifact and a trusted_approval_path_event. Forged records fail because the attacker cannot mint a valid artifact.",
+  "type": "object",
+  "required": ["run_id", "action", "arguments", "decision", "approver", "timestamp", "approval_artifact", "trusted_approval_path_event"],
+  "properties": {
+    "approval_artifact": {
+      "type": "object",
+      "required": ["run_id", "action", "args_hash", "approver", "nonce", "context_hash", "issued_at", "expiry", "signature"],
+      "properties": {
+        "run_id":       {"type": "string", "minLength": 1},
+        "action":       {"type": "string", "minLength": 1},
+        "args_hash":    {"type": "string", "minLength": 1},
+        "approver":     {"type": "string", "minLength": 1},
+        "nonce":        {"type": "string", "minLength": 1},
+        "context_hash": {"type": "string", "minLength": 1},
+        "issued_at":    {"type": "string", "minLength": 1},
+        "expiry":       {"type": "string", "minLength": 1},
+        "signature":    {"type": "string", "minLength": 1}
+      }
+    },
+    "trusted_approval_path_event": {"type": "string", "minLength": 1}
+  }
+}

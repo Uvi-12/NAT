@@ -1,0 +1,5 @@
+The battery prints one line per case: ACCEPT for the genuine approval, REJECT for
+every attack, then:
+  Concurrent replay ... executions = 1 (expected 1)
+  RESULT: PASS
+and exits 0. Requires `pip install cryptography`.

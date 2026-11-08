@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "ConversationState confirmation policy in state.json",
+  "evidence_class": "N2",
+  "id": "16",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "OpenHands Agent SDK",
+  "tested_basis": "All-Hands-AI/OpenHands pinned",
+  "verdict": "Direct exposed"
+}

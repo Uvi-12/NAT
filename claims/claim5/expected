@@ -1,0 +1,7 @@
+The experiment rebuilds the records and prints, under "(3) INDISTINGUISHABILITY":
+  PRIMARY: native records byte-identical in 100% of 500 pairs -> no detector can separate them
+  endpoints forced by that identity:
+    native_auc=0.5  (trivial consequence of the identity)
+    provenance_auc=1.0  (TRUE BY CONSTRUCTION: a signed field present iff genuine; shows it is checkable, not learned)
+along with per-family field-diff and validator-acceptance tables. Exits 0. Uses
+only the standard library (optionally exercises jsonschema if installed).

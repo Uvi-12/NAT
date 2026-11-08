@@ -1,0 +1,10 @@
+{
+  "decisive_surface": "AgentSnapshot tool-call approval field and restored arguments",
+  "evidence_class": "N1",
+  "id": "01",
+  "note": "This record does not upgrade contract or design evidence to native execution.",
+  "source": "Appendix B of the submitted paper",
+  "system": "Haystack",
+  "tested_basis": "haystack-ai 2.30.0",
+  "verdict": "Direct exposed"
+}

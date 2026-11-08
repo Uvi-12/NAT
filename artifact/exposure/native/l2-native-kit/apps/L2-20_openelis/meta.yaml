@@ -1,0 +1,15 @@
+id: L2-20
+system: OpenELIS Global
+domain: healthcare
+expected_verdict: EXPOSED
+image: ghcr.io/i-tech-uw/openelis-global-2:latest
+db: ghcr.io/i-tech-uw/openelis-database:latest
+decisive_surface: "analysis.status_id == finalized releases the result"
+forge_kind: db_update
+confidence: low   # official images, but the clinlims status reference and creds
+                  # vary by version, and an analysis row must exist (seed an order).
+targeted_column: "clinlims.analysis.status_id"
+notes: >
+  Resolves the finalized/validated analysis status id from status_of_sample and
+  forges analysis.status_id. Needs a seeded lab order; otherwise INCONCLUSIVE.
+  DB creds/schema (clinlims) may differ across OpenELIS releases.
